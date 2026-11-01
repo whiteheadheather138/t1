@@ -1,0 +1,904 @@
+代发 wailian999
+
+[A10] 生成随机数
+来源：http://m.share.vehdjk.com/Article/details/gqdaqnosr.sHtML
+
+Py:   import random; random.randint(1, 100)
+来源：http://www.blog.sjlbkw.cn/Article/details/gvqvwszao.sHtML
+
+PHP:  random_int(1, 100);
+来源：http://www.m.share.epnwcf.com/Article/details/ggegvuvdd.sHtML
+
+JS:   Math.floor(Math.random() * 100) + 1
+来源：http://baike.epnwcf.com/Article/details/gawwrbppb.sHtML
+
+TS:   Math.floor(Math.random() * 100) + 1
+来源：http://www.blog.vehdjk.com/Article/details/gzqsetyvm.sHtML
+
+Java: new Random().nextInt(100) + 1
+来源：http://blog.tarul.cn/Article/details/gpxsyqwby.sHtML
+
+Go:   rand.Intn(100) + 1               // math/rand
+来源：http://blog.bbcook.cn/Article/details/gfqtwdjbp.sHtML
+
+Ruby: rand(1..100)
+来源：http://www.m.share.yfazqb.com/Article/details/gbeomspxc.sHtML
+
+C#:   new Random().Next(1, 101)
+来源：http://blog.vehdjk.com/Article/details/gniqqncbf.sHtML
+
+[A11] 条件表达式（三元）
+来源：http://baike.bbcook.cn/Article/details/gnvpstahw.sHtML
+
+Py:   "yes" if x > 0 else "no"
+来源：http://mobile.bbcook.cn/Article/details/gzdoiuvan.sHtML
+
+PHP:  $x > 0 ? "yes" : "no"
+来源：http://www.share.fktsv.cn/Article/details/gpteplimw.sHtML
+
+JS:   x > 0 ? "yes" : "no"
+来源：http://www.share.vehdjk.com/Article/details/gftuyjlwx.sHtML
+
+TS:   x > 0 ? "yes" : "no"
+来源：http://3g.epnwcf.com/Article/details/gqxhevsjm.sHtML
+
+Java: x > 0 ? "yes" : "no"
+来源：http://m.share.bbcook.cn/Article/details/gyzrgcqof.sHtML
+
+Go:   // 无三元运算符，需用 if 语句
+来源：http://www.share.sjlbkw.cn/Article/details/gopjmmqis.sHtML
+
+Ruby: x > 0 ? "yes" : "no"
+来源：http://wap.tarul.cn/Article/details/ghxxouixp.sHtML
+
+C#:   x > 0 ? "yes" : "no"
+来源：http://wap.tarul.cn/Article/details/gakkmdwal.sHtML
+
+[A12] 字符串插值 / 格式化
+来源：http://wap.bbcook.cn/Article/details/goqotnwfc.sHtML
+
+Py:   f"Hello, {name}! 年龄 {age}"
+来源：http://m.share.vehdjk.com/Article/details/gclwjcanx.sHtML
+
+PHP:  "Hello, {$name}!"; sprintf("Hello, %s", $name)
+来源：http://www.blog.tarul.cn/Article/details/gtemhoatw.sHtML
+
+JS:   `Hello, ${name}!`
+来源：http://baike.sjlbkw.cn/Article/details/gajckqpev.sHtML
+
+TS:   `Hello, ${name}!`
+来源：http://mobile.tarul.cn/Article/details/gkjhjqkkh.sHtML
+
+Java: "Hello, %s!".formatted(name)
+来源：http://wap.bbcook.cn/Article/details/gerxcympi.sHtML
+
+Go:   fmt.Sprintf("Hello, %s!", name)
+来源：http://baike.bbcook.cn/Article/details/girqvpxmr.sHtML
+
+Ruby: "Hello, #{name}!"
+来源：http://blog.tarul.cn/Article/details/gerovapnv.sHtML
+
+C#:   $"Hello, {name}!"
+来源：http://3g.yfazqb.com/Article/details/gicpheley.sHtML
+
+[A13] 多行字符串（练习 \n 转义）
+来源：http://www.m.share.vehdjk.com/Article/details/gmrmnwjez.sHtML
+
+Py:   "第一行\n第二行"
+来源：http://3g.sjlbkw.cn/Article/details/gwpvzhqpx.sHtML
+
+PHP:  "第一行\n第二行"
+来源：http://3g.tarul.cn/Article/details/govxxraav.sHtML
+
+JS:   "第一行\n第二行"
+来源：http://www.m.share.vehdjk.com/Article/details/gyzsoctkr.sHtML
+
+TS:   "第一行\n第二行"
+来源：http://blog.fktsv.cn/Article/details/gvgljxows.sHtML
+
+Java: "第一行\n第二行"
+来源：http://m.share.sjlbkw.cn/Article/details/gqlnnojhw.sHtML
+
+Go:   "第一行\n第二行"
+来源：http://www.m.share.vehdjk.com/Article/details/gccuskist.sHtML
+
+Ruby: "第一行\n第二行"
+来源：http://m.share.bbcook.cn/Article/details/gogjlrgcy.sHtML
+
+C#:   "第一行\n第二行"
+来源：http://mobile.tarul.cn/Article/details/gbztslkyh.sHtML
+
+[A14] 注释写法
+来源：http://www.blog.sjlbkw.cn/Article/details/gnwaudlnv.sHtML
+
+Py:   # 单行；三引号字符串可作多行说明
+来源：http://www.share.fktsv.cn/Article/details/gnmebpzwz.sHtML
+
+PHP:  // 或 # 单行；/* 多行 */
+来源：http://mobile.tarul.cn/Article/details/gsnrjplpw.sHtML
+
+JS:   // 单行；/* 多行 */
+来源：http://mobile.sjlbkw.cn/Article/details/gotibdcil.sHtML
+
+TS:   // 单行；/* 多行 */
+来源：http://mobile.epnwcf.com/Article/details/gxttfnhww.sHtML
+
+Java: // 单行；/* 多行 */；/** 文档注释 */
+来源：http://www.share.tarul.cn/Article/details/gwtzkkbdq.sHtML
+
+Go:   // 单行；/* 多行 */
+来源：http://blog.tarul.cn/Article/details/gfqnkulhe.sHtML
+
+Ruby: # 单行；=begin 多行 =end
+来源：http://read.share.vehdjk.com/Article/details/goxtofkdw.sHtML
+
+C#:   // 单行；/* 多行 */
+来源：http://mobile.bbcook.cn/Article/details/gvrayuwvr.sHtML
+
+[A15] 空值判断与默认值
+来源：http://read.share.epnwcf.com/Article/details/gnsrpgiqr.sHtML
+
+Py:   value = data or "默认值"
+来源：http://mobile.vehdjk.com/Article/details/gnvutcyww.sHtML
+
+PHP:  $value = $data ?? "默认值";
+来源：http://baike.yfazqb.com/Article/details/gctbmxabi.sHtML
+
+JS:   const value = data ?? "默认值";
+来源：http://baike.sjlbkw.cn/Article/details/grhdkbdih.sHtML
+
+TS:   const value = data ?? "默认值";
+来源：http://3g.tarul.cn/Article/details/ggtxjijwy.sHtML
+
+Java: Objects.requireNonNullElse(data, "默认值")
+来源：http://read.share.yfazqb.com/Article/details/gbkjvlngt.sHtML
+
+Go:   if data == "" { data = "默认值" }
+来源：http://read.share.epnwcf.com/Article/details/gzyqeeces.sHtML
+
+Ruby: value = data || "默认值"
+来源：http://m.share.fktsv.cn/Article/details/gkcfzsvbk.sHtML
+
+C#:   var value = data ?? "默认值";
+来源：http://wap.sjlbkw.cn/Article/details/gbavrhxsn.sHtML
+
+[A16] 真假值判断规则
+来源：http://read.share.vehdjk.com/Article/details/gkkaranbs.sHtML
+
+Py:   if not x:        # 0 "" [] {} None 均为假
+来源：http://www.share.vehdjk.com/Article/details/gxtuymwmr.sHtML
+
+PHP:  if (empty($x)) {}   # 松散比较，注意 "0"
+来源：http://www.blog.yfazqb.com/Article/details/ghdneloev.sHtML
+
+JS:   if (!x) {}         # 0 "" null undefined NaN false 为假
+来源：http://baike.tarul.cn/Article/details/gisfcjxin.sHtML
+
+TS:   if (!x) {}
+来源：http://wap.epnwcf.com/Article/details/ghguzhbok.sHtML
+
+Java: if (!Boolean.TRUE.equals(flag)) {}
+来源：http://m.share.sjlbkw.cn/Article/details/gnhbomdbe.sHtML
+
+Go:   if x == "" || x == 0 {}   # 无隐式布尔转换
+来源：http://m.share.tarul.cn/Article/details/gbomdtgab.sHtML
+
+Ruby: unless x            # nil 与 false 为假
+来源：http://www.share.bbcook.cn/Article/details/gsjgmbqez.sHtML
+
+C#:   if (string.IsNullOrEmpty(x)) {}
+来源：http://wap.tarul.cn/Article/details/gfdqhgeou.sHtML
+
+[A17] 位运算
+来源：http://www.m.share.epnwcf.com/Article/details/gwbrahohr.sHtML
+
+Py:   a & b; a | b; a ^ b; ~a; a << 2; a >> 1
+来源：http://wap.vehdjk.com/Article/details/geyainzoq.sHtML
+
+PHP:  $a & $b; $a | $b; $a ^ $b; $a << 2; $a >> 1
+来源：http://www.share.yfazqb.com/Article/details/gotkdlulq.sHtML
+
+JS:   a & b; a | b; a ^ b; ~a; a << 2; a >> 1
+来源：http://wap.yfazqb.com/Article/details/gmwacboov.sHtML
+
+TS:   a & b; a | b; a ^ b; a << 2; a >> 1
+来源：http://m.share.sjlbkw.cn/Article/details/gvnfljgyb.sHtML
+
+Java: a & b; a | b; a ^ b; ~a; a << 2; a >> 1
+来源：http://blog.yfazqb.com/Article/details/gbazvictu.sHtML
+
+Go:   a & b; a | b; a ^ b; ^a; a << 2; a >> 1
+来源：http://www.m.share.bbcook.cn/Article/details/ghkovecxs.sHtML
+
+Ruby: a & b; a | b; a ^ b; ~a; a << 2; a >> 1
+来源：http://www.blog.epnwcf.com/Article/details/glughtbsl.sHtML
+
+C#:   a & b; a | b; a ^ b; ~a; a << 2; a >> 1
+来源：http://wap.epnwcf.com/Article/details/gygrsqyer.sHtML
+
+[A18] 字符与 ASCII 码互转
+来源：http://www.blog.epnwcf.com/Article/details/gyefugkmj.sHtML
+
+Py:   ord("A"); chr(65)
+来源：http://www.blog.vehdjk.com/Article/details/gpyyyxqzx.sHtML
+
+PHP:  ord("A"); chr(65)
+来源：http://wap.yfazqb.com/Article/details/grvstgmss.sHtML
+
+JS:   "A".charCodeAt(0); String.fromCharCode(65)
+来源：http://blog.vehdjk.com/Article/details/gqqoakrgx.sHtML
+
+TS:   "A".charCodeAt(0); String.fromCharCode(65)
+来源：http://m.share.bbcook.cn/Article/details/guiskkmje.sHtML
+
+Java: (int) 'A'; (char) 65
+来源：http://3g.bbcook.cn/Article/details/gmtahkifi.sHtML
+
+Go:   int('A'); rune(65)              // rune 是 int32
+来源：http://www.m.share.fktsv.cn/Article/details/gvyhwnkmm.sHtML
+
+Ruby: "A".ord; 65.chr
+来源：http://www.share.bbcook.cn/Article/details/gzimlwsxu.sHtML
+
+C#:   (int)'A'; (char)65
+来源：http://mobile.vehdjk.com/Article/details/gqyngtqiz.sHtML
+
+[A19] 交换两个变量
+来源：http://www.m.share.epnwcf.com/Article/details/gukgdsliz.sHtML
+
+Py:   a, b = b, a
+来源：http://www.m.share.yfazqb.com/Article/details/gapybpljh.sHtML
+
+PHP:  [$a, $b] = [$b, $a];
+来源：http://blog.vehdjk.com/Article/details/gometaqsm.sHtML
+
+JS:   [a, b] = [b, a];
+来源：http://www.share.tarul.cn/Article/details/gjawagacg.sHtML
+
+TS:   [a, b] = [b, a];
+来源：http://www.m.share.fktsv.cn/Article/details/gfwalrgip.sHtML
+
+Java: int t = a; a = b; b = t;
+来源：http://baike.epnwcf.com/Article/details/ghpignyfh.sHtML
+
+Go:   a, b = b, a
+来源：http://www.m.share.yfazqb.com/Article/details/gqlbehcgn.sHtML
+
+Ruby: a, b = b, a
+来源：http://www.m.share.bbcook.cn/Article/details/gsoggqhmp.sHtML
+
+C#:   (a, b) = (b, a);
+来源：http://3g.tarul.cn/Article/details/ghxbqwivh.sHtML
+
+[A20] 读取标准输入
+来源：http://www.share.epnwcf.com/Article/details/gurkuicuc.sHtML
+
+Py:   name = input("请输入：")
+来源：http://read.share.yfazqb.com/Article/details/gofkjgwph.sHtML
+
+PHP:  $name = trim(fgets(STDIN));
+来源：http://m.share.bbcook.cn/Article/details/gqspqbllo.sHtML
+
+JS:   // Node.js：readline 模块或 process.stdin
+来源：http://read.share.tarul.cn/Article/details/gnrekzjgm.sHtML
+
+TS:   // Node.js：readline 模块
+来源：http://www.share.vehdjk.com/Article/details/guxopfrko.sHtML
+
+Java: new Scanner(System.in).nextLine()
+来源：http://www.blog.fktsv.cn/Article/details/giwpwbmsi.sHtML
+
+Go:   fmt.Scanln(&name)               // 或 bufio.NewReader(os.Stdin)
+来源：http://www.share.bbcook.cn/Article/details/gpufsebax.sHtML
+
+Ruby: gets.chomp
+来源：http://wap.yfazqb.com/Article/details/gwoksbgvd.sHtML
+
+C#:   Console.ReadLine();
+来源：http://3g.yfazqb.com/Article/details/gzspmoekd.sHtML
+
+[A21] 保留指定小数位输出
+来源：http://www.share.fktsv.cn/Article/details/gjfpbcpiu.sHtML
+
+Py:   f"{3.14159:.2f}"
+来源：http://www.share.tarul.cn/Article/details/gswyfltyc.sHtML
+
+PHP:  number_format(3.14159, 2); sprintf("%.2f", 3.14159)
+来源：http://read.share.sjlbkw.cn/Article/details/gbnpielsr.sHtML
+
+JS:   (3.14159).toFixed(2)
+来源：http://www.share.epnwcf.com/Article/details/gindmyjnt.sHtML
+
+TS:   (3.14159).toFixed(2)
+来源：http://3g.tarul.cn/Article/details/gnzpqvhgn.sHtML
+
+Java: String.format("%.2f", 3.14159)
+来源：http://m.share.vehdjk.com/Article/details/ggaycpydl.sHtML
+
+Go:   fmt.Sprintf("%.2f", 3.14159)
+来源：http://www.share.tarul.cn/Article/details/gorcbrwuv.sHtML
+
+Ruby: format("%.2f", 3.14159)
+来源：http://read.share.fktsv.cn/Article/details/gqxpuxeju.sHtML
+
+C#:   3.14159.ToString("F2")
+来源：http://3g.bbcook.cn/Article/details/gpvjitufw.sHtML
+
+[A22] 获取字符串长度
+来源：http://www.share.vehdjk.com/Article/details/gspzgykwz.sHtML
+
+Py:   len(s)
+来源：http://3g.fktsv.cn/Article/details/gkivvjtrs.sHtML
+
+PHP:  strlen($s); mb_strlen($s, "UTF-8")   # 中文要用 mb_
+来源：http://3g.tarul.cn/Article/details/gbbdgxqjy.sHtML
+
+JS:   s.length                          # 按 UTF-16 单元计
+来源：http://blog.sjlbkw.cn/Article/details/gaqorkbon.sHtML
+
+TS:   s.length
+来源：http://mobile.tarul.cn/Article/details/gfyzkregl.sHtML
+
+Java: s.length()
+来源：http://mobile.fktsv.cn/Article/details/gvwpptoew.sHtML
+
+Go:   len(s); utf8.RuneCountInString(s)
+来源：http://m.share.yfazqb.com/Article/details/gdrvsqldv.sHtML
+
+Ruby: s.length
+来源：http://www.blog.yfazqb.com/Article/details/gdonvexec.sHtML
+
+C#:   s.Length
+来源：http://m.share.sjlbkw.cn/Article/details/ghbadpbhy.sHtML
+
+[A23] 大小写转换
+来源：http://mobile.tarul.cn/Article/details/ghnbvqvxz.sHtML
+
+Py:   s.upper(); s.lower(); s.title()
+来源：http://mobile.bbcook.cn/Article/details/guigyhwxy.sHtML
+
+PHP:  strtoupper($s); strtolower($s); ucfirst($s)
+来源：http://m.share.yfazqb.com/Article/details/ghklclvmu.sHtML
+
+JS:   s.toUpperCase(); s.toLowerCase()
+来源：http://www.m.share.vehdjk.com/Article/details/gqdgoclhn.sHtML
+
+TS:   s.toUpperCase(); s.toLowerCase()
+来源：http://mobile.sjlbkw.cn/Article/details/gjotqyemk.sHtML
+
+Java: s.toUpperCase(); s.toLowerCase()
+来源：http://baike.fktsv.cn/Article/details/gdekxckch.sHtML
+
+Go:   strings.ToUpper(s); strings.ToLower(s)
+来源：http://blog.bbcook.cn/Article/details/gfainkyci.sHtML
+
+Ruby: s.upcase; s.downcase; s.capitalize
+来源：http://read.share.yfazqb.com/Article/details/gmfvwtykz.sHtML
+
+C#:   s.ToUpper(); s.ToLower()
+来源：http://www.m.share.yfazqb.com/Article/details/gllwugqzz.sHtML
+
+[A24] 去除首尾空白
+来源：http://blog.tarul.cn/Article/details/gwcyhgasw.sHtML
+
+Py:   s.strip(); s.lstrip(); s.rstrip()
+来源：http://wap.fktsv.cn/Article/details/grefopojb.sHtML
+
+PHP:  trim($s); ltrim($s); rtrim($s)
+来源：http://m.share.epnwcf.com/Article/details/glbrppzrs.sHtML
+
+JS:   s.trim(); s.trimStart(); s.trimEnd()
+来源：http://www.share.sjlbkw.cn/Article/details/gjfqrkoal.sHtML
+
+TS:   s.trim(); s.trimStart(); s.trimEnd()
+来源：http://www.m.share.sjlbkw.cn/Article/details/gpybdqwcb.sHtML
+
+Java: s.trim(); s.strip()             # strip 支持 Unicode
+来源：http://baike.yfazqb.com/Article/details/gwquwohyw.sHtML
+
+Go:   strings.TrimSpace(s)
+来源：http://blog.vehdjk.com/Article/details/gbkwxcmwb.sHtML
+
+Ruby: s.strip; s.lstrip; s.rstrip
+来源：http://m.share.fktsv.cn/Article/details/gfcocbove.sHtML
+
+C#:   s.Trim(); s.TrimStart(); s.TrimEnd()
+来源：http://wap.tarul.cn/Article/details/gugcnngjz.sHtML
+
+[A25] 字符串比较
+来源：http://blog.yfazqb.com/Article/details/gixrxubfd.sHtML
+
+Py:   s1 == s2; s1 != s2
+来源：http://m.share.vehdjk.com/Article/details/gchvzmzxb.sHtML
+
+PHP:  $s1 === $s2; strcmp($s1, $s2)
+来源：http://wap.tarul.cn/Article/details/grtyavavs.sHtML
+
+JS:   s1 === s2; s1.localeCompare(s2)
+来源：http://m.share.tarul.cn/Article/details/gwhukofpq.sHtML
+
+TS:   s1 === s2; s1.localeCompare(s2)
+来源：http://wap.fktsv.cn/Article/details/gsvrmmeix.sHtML
+
+Java: s1.equals(s2); s1.compareTo(s2)
+来源：http://baike.epnwcf.com/Article/details/ghtgytslq.sHtML
+
+Go:   s1 == s2; strings.Compare(s1, s2)
+来源：http://www.share.fktsv.cn/Article/details/glwqqgefq.sHtML
+
+Ruby: s1 == s2; s1 <=> s2
+来源：http://baike.sjlbkw.cn/Article/details/gmdhmlbig.sHtML
+
+C#:   s1 == s2; string.Compare(s1, s2)
+来源：http://www.share.vehdjk.com/Article/details/gtwjqxecl.sHtML
+
+[A26] 类型转换总览
+来源：http://www.blog.yfazqb.com/Article/details/glnsmkgkh.sHtML
+
+Py:   int() float() str() bool() list() dict() tuple()
+来源：http://mobile.sjlbkw.cn/Article/details/gsvcrbggh.sHtML
+
+PHP:  (int) (float) (string) (bool) (array) (object)
+来源：http://www.share.tarul.cn/Article/details/gnijqazyr.sHtML
+
+JS:   Number() String() Boolean() parseInt() parseFloat()
+来源：http://mobile.sjlbkw.cn/Article/details/goffbaswi.sHtML
+
+TS:   Number() String() Boolean() x as number
+来源：http://read.share.yfazqb.com/Article/details/gfhuvjskm.sHtML
+
+Java: Integer.parseInt() String.valueOf() (int) (double)
+来源：http://blog.fktsv.cn/Article/details/gbxarlymo.sHtML
+
+Go:   int() float64() string() []byte()   // 需显式转换
+来源：http://mobile.tarul.cn/Article/details/geaispsad.sHtML
+
+Ruby: to_i to_f to_s to_sym to_a
+来源：http://m.share.tarul.cn/Article/details/glbduongx.sHtML
+
+C#:   Convert.ToInt32() Convert.ToString() (int) (double)
+来源：http://3g.fktsv.cn/Article/details/gipmmtjks.sHtML
+
+================================================================================
+来源：http://www.m.share.vehdjk.com/Article/details/gimbgoywt.sHtML
+
+B. 流程控制
+来源：http://m.share.vehdjk.com/Article/details/gcayfgxgm.sHtML
+
+================================================================================
+来源：http://wap.epnwcf.com/Article/details/gywpbtfld.sHtML
+
+[B01] 条件判断 if / else
+来源：http://www.blog.epnwcf.com/Article/details/gnamigbdi.sHtML
+
+Py:   result = "正" if x > 0 else "非正"
+来源：http://3g.tarul.cn/Article/details/gymixaiqq.sHtML
+
+PHP:  if ($x > 0) { $r = "正"; } else { $r = "非正"; }
+来源：http://mobile.yfazqb.com/Article/details/ggmtunfgm.sHtML
+
+JS:   const r = x > 0 ? "正" : "非正";
+来源：http://m.share.vehdjk.com/Article/details/gpjytgvkv.sHtML
+
+TS:   const r = x > 0 ? "正" : "非正";
+来源：http://blog.tarul.cn/Article/details/gyidpyzqw.sHtML
+
+Java: String r = x > 0 ? "正" : "非正";
+来源：http://wap.yfazqb.com/Article/details/gzvqtmxts.sHtML
+
+Go:   if x > 0 { r = "正" } else { r = "非正" }
+来源：http://www.m.share.epnwcf.com/Article/details/gxzrgrghz.sHtML
+
+Ruby: r = x > 0 ? "正" : "非正"
+来源：http://wap.fktsv.cn/Article/details/gywrtszlu.sHtML
+
+C#:   var r = x > 0 ? "正" : "非正";
+来源：http://mobile.bbcook.cn/Article/details/gijfvdkbh.sHtML
+
+[B02] 多分支 else if / elif
+来源：http://www.share.bbcook.cn/Article/details/gfguvusvm.sHtML
+
+Py:   s = "正" if x > 0 else ("负" if x < 0 else "零")
+来源：http://m.share.epnwcf.com/Article/details/gfxirfjzm.sHtML
+
+PHP:  if ($x > 0) { $s = "正"; } elseif ($x < 0) { $s = "负"; } else { $s = "零"; }
+来源：http://baike.bbcook.cn/Article/details/genxxzsuf.sHtML
+
+JS:   x > 0 ? "正" : x < 0 ? "负" : "零";
+来源：http://3g.epnwcf.com/Article/details/gtusfkoff.sHtML
+
+TS:   x > 0 ? "正" : x < 0 ? "负" : "零";
+来源：http://read.share.vehdjk.com/Article/details/gpzktecko.sHtML
+
+Java: x > 0 ? "正" : x < 0 ? "负" : "零";
+来源：http://read.share.epnwcf.com/Article/details/gdobzjinn.sHtML
+
+Go:   if x > 0 { s = "正" } else if x < 0 { s = "负" } else { s = "零" }
+来源：http://blog.fktsv.cn/Article/details/giolcegrw.sHtML
+
+Ruby: s = if x > 0 then "正" elsif x < 0 then "负" else "零" end
+来源：http://3g.bbcook.cn/Article/details/gkzgkdyem.sHtML
+
+C#:   var s = x > 0 ? "正" : x < 0 ? "负" : "零";
+来源：http://3g.epnwcf.com/Article/details/gvudnpvjw.sHtML
+
+[B03] switch / match / case
+来源：http://m.share.vehdjk.com/Article/details/groamwrsb.sHtML
+
+Py:   {"a": 1, "b": 2}.get(key, 0)         # 3.10+ 也可用 match
+来源：http://www.share.yfazqb.com/Article/details/gicebjawl.sHtML
+
+PHP:  switch ($x) { case 1: $r = "一"; break; default: $r = "其他"; }
+来源：http://3g.bbcook.cn/Article/details/gmtroxnad.sHtML
+
+JS:   switch (x) { case 1: r = "一"; break; default: r = "其他"; }
+来源：http://www.share.fktsv.cn/Article/details/gcwxlxlay.sHtML
+
+TS:   switch (x) { case 1: r = "一"; break; default: r = "其他"; }
+来源：http://mobile.bbcook.cn/Article/details/gprazmvsx.sHtML
+
+Java: switch (x) { case 1 -> r = "一"; default -> r = "其他"; }
+来源：http://www.m.share.yfazqb.com/Article/details/gnfjysacm.sHtML
+
+Go:   switch x { case 1: r = "一"; default: r = "其他" }
+来源：http://mobile.bbcook.cn/Article/details/gpoxrxuup.sHtML
+
+Ruby: case x when 1 then r = "一" else r = "其他" end
+来源：http://www.blog.tarul.cn/Article/details/grbgqrycd.sHtML
+
+C#:   var r = x switch { 1 => "一", _ => "其他" };
+来源：http://mobile.tarul.cn/Article/details/gicabjeqm.sHtML
+
+[B04] for 计数循环
+来源：http://3g.yfazqb.com/Article/details/gpfqkznbp.sHtML
+
+Py:   for i in range(10): print(i)
+来源：http://www.blog.sjlbkw.cn/Article/details/gwjaiuevx.sHtML
+
+PHP:  for ($i = 0; $i < 10; $i++) { echo $i; }
+来源：http://www.share.bbcook.cn/Article/details/gcmrfeits.sHtML
+
+JS:   for (let i = 0; i < 10; i++) { console.log(i); }
+来源：http://read.share.fktsv.cn/Article/details/gsxbqdaqq.sHtML
+
+TS:   for (let i = 0; i < 10; i++) { console.log(i); }
+来源：http://read.share.yfazqb.com/Article/details/gsplcpkdp.sHtML
+
+Java: for (int i = 0; i < 10; i++) { System.out.println(i); }
+来源：http://www.m.share.sjlbkw.cn/Article/details/gzzzomhwk.sHtML
+
+Go:   for i := 0; i < 10; i++ { fmt.Println(i) }
+来源：http://blog.vehdjk.com/Article/details/gkdfyduzi.sHtML
+
+Ruby: 10.times { |i| puts i }
+来源：http://blog.yfazqb.com/Article/details/gprgjhlie.sHtML
+
+C#:   for (int i = 0; i < 10; i++) { Console.WriteLine(i); }
+来源：http://www.m.share.epnwcf.com/Article/details/gffevubhw.sHtML
+
+[B05] 遍历数组 / 列表
+来源：http://baike.tarul.cn/Article/details/gofvqdzgb.sHtML
+
+Py:   for item in arr: print(item)
+来源：http://m.share.fktsv.cn/Article/details/getwbnium.sHtML
+
+PHP:  foreach ($arr as $item) { echo $item; }
+来源：http://www.m.share.vehdjk.com/Article/details/gezvbsesl.sHtML
+
+JS:   for (const item of arr) { console.log(item); }
+来源：http://m.share.vehdjk.com/Article/details/gwvelshsm.sHtML
+
+TS:   for (const item of arr) { console.log(item); }
+来源：http://read.share.epnwcf.com/Article/details/gkuahtbau.sHtML
+
+Java: for (var item : arr) { System.out.println(item); }
+来源：http://read.share.fktsv.cn/Article/details/gkuszhipg.sHtML
+
+Go:   for _, item := range arr { fmt.Println(item) }
+来源：http://www.share.fktsv.cn/Article/details/gnfvbnzyo.sHtML
+
+Ruby: arr.each { |item| puts item }
+来源：http://www.m.share.fktsv.cn/Article/details/gfghesbil.sHtML
+
+C#:   foreach (var item in arr) { Console.WriteLine(item); }
+来源：http://mobile.vehdjk.com/Article/details/gywystflm.sHtML
+
+[B06] 遍历字典 / 对象
+来源：http://baike.vehdjk.com/Article/details/gwwdefifz.sHtML
+
+Py:   for k, v in d.items(): print(k, v)
+来源：http://wap.sjlbkw.cn/Article/details/gahhoozzg.sHtML
+
+PHP:  foreach ($d as $k => $v) { echo "$k=$v"; }
+来源：http://wap.bbcook.cn/Article/details/gyeghfvlw.sHtML
+
+JS:   for (const [k, v] of Object.entries(obj)) { console.log(k, v); }
+来源：http://mobile.yfazqb.com/Article/details/godghirkm.sHtML
+
+TS:   for (const [k, v] of Object.entries(obj)) { console.log(k, v); }
+来源：http://www.m.share.sjlbkw.cn/Article/details/gwyuhdcez.sHtML
+
+Java: for (var e : map.entrySet()) { System.out.println(e.getKey() + "=" + e.getValue()); }
+来源：http://mobile.epnwcf.com/Article/details/gunqumakq.sHtML
+
+Go:   for k, v := range m { fmt.Println(k, v) }
+来源：http://www.share.vehdjk.com/Article/details/gawtopsrg.sHtML
+
+Ruby: d.each { |k, v| puts "#{k}=#{v}" }
+来源：http://blog.vehdjk.com/Article/details/gvwoiquwy.sHtML
+
+C#:   foreach (var (k, v) in dict) { Console.WriteLine($"{k}={v}"); }
+来源：http://www.share.yfazqb.com/Article/details/gsmxnnavn.sHtML
+
+[B07] while 循环
+来源：http://baike.fktsv.cn/Article/details/gbpicdfck.sHtML
+
+Py:   while i < 10: i += 1
+来源：http://m.share.epnwcf.com/Article/details/gyzxlpazg.sHtML
+
+PHP:  while ($i < 10) { $i++; }
+来源：http://baike.fktsv.cn/Article/details/gawmgllgu.sHtML
+
+JS:   while (i < 10) { i++; }
+来源：http://blog.vehdjk.com/Article/details/geakormle.sHtML
+
+TS:   while (i < 10) { i++; }
+来源：http://www.share.epnwcf.com/Article/details/gamihecdb.sHtML
+
+Java: while (i < 10) { i++; }
+来源：http://mobile.sjlbkw.cn/Article/details/gwayjqfzk.sHtML
+
+Go:   for i < 10 { i++ }              # Go 没有 while，用单条件 for
+来源：http://www.blog.bbcook.cn/Article/details/gecidlysc.sHtML
+
+Ruby: while i < 10; i += 1; end
+来源：http://www.m.share.bbcook.cn/Article/details/gzljnrtuf.sHtML
+
+C#:   while (i < 10) { i++; }
+来源：http://3g.fktsv.cn/Article/details/gxyivfhmg.sHtML
+
+[B08] do-while（至少执行一次）
+来源：http://www.share.sjlbkw.cn/Article/details/gxfdstkub.sHtML
+
+Py:   # 无 do-while：用 while True + break
+来源：http://www.m.share.epnwcf.com/Article/details/gcmbuuckt.sHtML
+
+PHP:  do { $i++; } while ($i < 10);
+来源：http://blog.sjlbkw.cn/Article/details/gpkuhfpap.sHtML
+
+JS:   do { i++; } while (i < 10);
+来源：http://baike.bbcook.cn/Article/details/gijyyvftq.sHtML
+
+TS:   do { i++; } while (i < 10);
+来源：http://www.share.bbcook.cn/Article/details/gvgymerzh.sHtML
+
+Java: do { i++; } while (i < 10);
+来源：http://baike.bbcook.cn/Article/details/gdphjjflx.sHtML
+
+Go:   for { i++; if i >= 10 { break } }
+来源：http://blog.epnwcf.com/Article/details/gqqfhsaxs.sHtML
+
+Ruby: begin; i += 1; end while i < 10
+来源：http://www.share.yfazqb.com/Article/details/gjrqvfmya.sHtML
+
+C#:   do { i++; } while (i < 10);
+来源：http://blog.epnwcf.com/Article/details/grufjoxoq.sHtML
+
+[B09] break 与 continue
+来源：http://blog.sjlbkw.cn/Article/details/gfrdqujzo.sHtML
+
+Py:   for x in arr: if x < 0: continue     # break 直接退出循环
+来源：http://read.share.yfazqb.com/Article/details/gfkmoqotk.sHtML
+
+PHP:  foreach ($arr as $x) { if ($x < 0) continue; if ($x > 9) break; }
+来源：http://www.m.share.epnwcf.com/Article/details/gtqwpugew.sHtML
+
+JS:   for (const x of arr) { if (x < 0) continue; if (x > 9) break; }
+来源：http://baike.fktsv.cn/Article/details/gujzbiwwf.sHtML
+
+TS:   for (const x of arr) { if (x < 0) continue; if (x > 9) break; }
+来源：http://www.m.share.vehdjk.com/Article/details/gxxslzjxa.sHtML
+
+Java: for (int x : arr) { if (x < 0) continue; if (x > 9) break; }
+来源：http://m.share.sjlbkw.cn/Article/details/gpcqyyvqp.sHtML
+
+Go:   for _, x := range arr { if x < 0 { continue }; if x > 9 { break } }
+来源：http://3g.tarul.cn/Article/details/gbjngtqhw.sHtML
+
+Ruby: arr.each { |x| next if x < 0; break if x > 9 }
+来源：http://m.share.vehdjk.com/Article/details/ggrpdzqif.sHtML
+
+C#:   foreach (var x in arr) { if (x < 0) continue; if (x > 9) break; }
+来源：http://blog.bbcook.cn/Article/details/gfivikjvx.sHtML
+
+[B10] 遍历同时拿索引
+来源：http://blog.bbcook.cn/Article/details/gxzpddnyd.sHtML
+
+Py:   for i, item in enumerate(arr): print(i, item)
+来源：http://3g.fktsv.cn/Article/details/goiumqzwo.sHtML
+
+PHP:  foreach ($arr as $i => $item) { echo "$i: $item"; }
+来源：http://blog.vehdjk.com/Article/details/gheegrkce.sHtML
+
+JS:   arr.forEach((item, i) => console.log(i, item));
+来源：http://www.m.share.sjlbkw.cn/Article/details/gwdtzwnqw.sHtML
+
+TS:   arr.forEach((item: string, i: number) => console.log(i, item));
+来源：http://blog.epnwcf.com/Article/details/gqxjlcztz.sHtML
+
+Java: for (int i = 0; i < arr.size(); i++) { System.out.println(i + ":" + arr.get(i)); }
+来源：http://blog.tarul.cn/Article/details/getpekgee.sHtML
+
+Go:   for i, item := range arr { fmt.Println(i, item) }
+来源：http://mobile.epnwcf.com/Article/details/gldvdpfwn.sHtML
+
+Ruby: arr.each_with_index { |item, i| puts "#{i}: #{item}" }
+来源：http://www.m.share.sjlbkw.cn/Article/details/gwnpryyzd.sHtML
+
+C#:   for (int i = 0; i < arr.Length; i++) { Console.WriteLine($"{i}:{arr[i]}"); }
+来源：http://www.share.epnwcf.com/Article/details/gscerqchk.sHtML
+
+[B11] 生成数字序列 / 区间
+来源：http://blog.sjlbkw.cn/Article/details/grbxmatlt.sHtML
+
+Py:   list(range(0, 10, 2))
+来源：http://baike.fktsv.cn/Article/details/ganunchdc.sHtML
+
+PHP:  range(0, 10, 2);
+来源：http://m.share.tarul.cn/Article/details/grpjccbse.sHtML
+
+JS:   Array.from({ length: 5 }, (_, i) => i * 2);
+来源：http://www.blog.yfazqb.com/Article/details/gqdkdxydu.sHtML
+
+TS:   Array.from({ length: 5 }, (_, i) => i * 2);
+来源：http://read.share.fktsv.cn/Article/details/goheadfgu.sHtML
+
+Java: IntStream.range(0, 10).boxed().toList()
+来源：http://read.share.fktsv.cn/Article/details/gmioatlkj.sHtML
+
+Go:   for i := 0; i < 10; i += 2 { }   // 无区间生成器
+来源：http://3g.bbcook.cn/Article/details/gxkhopudw.sHtML
+
+Ruby: (0...10).step(2).to_a
+来源：http://wap.sjlbkw.cn/Article/details/gghydaqlf.sHtML
+
+C#:   Enumerable.Range(0, 10).Where(i => i % 2 == 0)
+来源：http://read.share.tarul.cn/Article/details/gvudkhjmm.sHtML
+
+[B12] 跳出多层循环
+来源：http://www.m.share.fktsv.cn/Article/details/gfuisgihv.sHtML
+
+Py:   # 无标签跳转：抽成函数用 return
+来源：http://mobile.bbcook.cn/Article/details/gqxhmelyt.sHtML
+
+PHP:  # 无标签：用 goto 或函数返回
+来源：http://www.share.fktsv.cn/Article/details/guzskyihy.sHtML
+
+JS:   outer: for (...) { for (...) { break outer; } }
+来源：http://baike.sjlbkw.cn/Article/details/gbluazhbo.sHtML
+
+TS:   outer: for (...) { for (...) { break outer; } }
+来源：http://www.blog.sjlbkw.cn/Article/details/gqtwqsjnf.sHtML
+
+Java: outer: for (...) { for (...) { break outer; } }
+来源：http://m.share.fktsv.cn/Article/details/gpzzencew.sHtML
+
+Go:   # 无标签：用布尔标志或抽成函数
+来源：http://www.share.epnwcf.com/Article/details/gapuvzmvl.sHtML
+
+Ruby: # 无标签：用 catch/throw 或方法返回
+来源：http://m.share.vehdjk.com/Article/details/gecnxqssy.sHtML
+
+C#:   # 无标签：用 goto label 或布尔标志
+来源：http://3g.epnwcf.com/Article/details/gvdzazrcj.sHtML
+
+[B13] 判断是否为数字
+来源：http://m.share.tarul.cn/Article/details/gmahhdykc.sHtML
+
+Py:   isinstance(x, (int, float))
+来源：http://www.share.tarul.cn/Article/details/gkcahxhqd.sHtML
+
+PHP:  is_numeric($x)
+来源：http://www.share.vehdjk.com/Article/details/gdpolrtpa.sHtML
+
+JS:   typeof x === "number" && !Number.isNaN(x)
+来源：http://m.share.epnwcf.com/Article/details/geaurwofs.sHtML
+
+TS:   typeof x === "number" && !Number.isNaN(x)
+来源：http://baike.yfazqb.com/Article/details/gtgslzhro.sHtML
+
+Java: x instanceof Number
+来源：http://wap.vehdjk.com/Article/details/gzaolrhur.sHtML
+
+Go:   if _, err := strconv.Atoi(s); err == nil { ok = true }
+来源：http://blog.bbcook.cn/Article/details/glipvyltq.sHtML
+
+Ruby: x.is_a?(Numeric)
+来源：http://blog.vehdjk.com/Article/details/gvdavswbz.sHtML
+
+C#:   x is int or double or decimal
+来源：http://www.share.sjlbkw.cn/Article/details/gyebtlpka.sHtML
+
+[B14] 判断值是否在集合内
+来源：http://www.share.sjlbkw.cn/Article/details/gqmtrfpjo.sHtML
+
+Py:   x in [1, 2, 3]; x in {"a", "b"}
+来源：http://read.share.vehdjk.com/Article/details/gffbeoarr.sHtML
+
+PHP:  in_array($x, [1, 2, 3], true)
+来源：http://www.blog.tarul.cn/Article/details/guuzkimdj.sHtML
+
+JS:   [1, 2, 3].includes(x)
+来源：http://www.share.bbcook.cn/Article/details/gtsrummlg.sHtML
+
+TS:   [1, 2, 3].includes(x)
+来源：http://3g.yfazqb.com/Article/details/ggibgebue.sHtML
+
+Java: List.of(1, 2, 3).contains(x)
+来源：http://m.share.fktsv.cn/Article/details/ghltehiyv.sHtML
+
+Go:   slices.Contains([]int{1, 2, 3}, x)
+来源：http://3g.tarul.cn/Article/details/gtznbtyvs.sHtML
+
+Ruby: [1, 2, 3].include?(x)
+来源：http://blog.tarul.cn/Article/details/goavssaaf.sHtML
+
+C#:   new[] { 1, 2, 3 }.Contains(x)
+来源：http://m.share.bbcook.cn/Article/details/govblyutm.sHtML
+
+[B15] 布尔运算与取反
+来源：http://www.share.vehdjk.com/Article/details/gdmdksbfr.sHtML
+
+Py:   a and b or not c
+来源：http://read.share.yfazqb.com/Article/details/geandhpzo.sHtML
+
+PHP:  $a && $b || !$c
+来源：http://m.share.yfazqb.com/Article/details/gnwostcue.sHtML
+
+JS:   a && b || !c
+来源：http://3g.tarul.cn/Article/details/gdhrjbmwc.sHtML
+
+TS:   a && b || !c
+来源：http://wap.fktsv.cn/Article/details/gvckbivow.sHtML
+
+Java: a && b || !c
+来源：http://mobile.sjlbkw.cn/Article/details/gbeobklad.sHtML
+
+Go:   a && b || !c
+来源：http://m.share.bbcook.cn/Article/details/gbryednbl.sHtML
+
+Ruby: a && b || !c
+来源：http://blog.epnwcf.com/Article/details/gesltcwdg.sHtML
+
+C#:   a && b || !c
+来源：http://www.share.fktsv.cn/Article/details/gdlquaudf.sHtML
+
+[B16] 卫语句：不满足条件提前返回
+来源：http://wap.fktsv.cn/Article/details/grgtmvlsw.sHtML
+
+Py:   if not data: return
+来源：http://www.share.bbcook.cn/Article/details/gxtvpejyz.sHtML
+
+PHP:  if (!$data) { return; }
+来源：http://wap.vehdjk.com/Article/details/gyamovzei.sHtML
+
+JS:   if (!data) return;
+来源：http://wap.fktsv.cn/Article/details/gyuiharsx.sHtML
+
+TS:   if (!data) return;
+来源：http://mobile.epnwcf.com/Article/details/gafmmwftj.sHtML
+
+Java: if (data == null) return;
+来源：http://baike.fktsv.cn/Article/details/gsqhcgege.sHtML
+
+Go:   if data == nil { return }
+来源：http://read.share.fktsv.cn/Article/details/gqprzpkoq.sHtML
+
+Ruby: return if data.nil?
+来源：http://www.share.tarul.cn/Article/details/gwvhvygfk.sHtML
+
+C#:   if (data == null) return;
+来源：http://www.m.share.epnwcf.com/Article/details/glpkmzdji.sHtML
+
+
+<!-- 参考信息 -->

@@ -1,0 +1,904 @@
+代发 wailian999
+
+[M04] 获取当前工作目录
+来源：http://www.m.share.vehdjk.com/Article/details/gxtamuoft.sHtML
+
+Py:   os.getcwd()
+来源：http://www.m.share.bbcook.cn/Article/details/glycxnzpr.sHtML
+
+PHP:  getcwd();
+来源：http://mobile.vehdjk.com/Article/details/grigimtvz.sHtML
+
+JS:   process.cwd()
+来源：http://blog.yfazqb.com/Article/details/gsyuujmdq.sHtML
+
+TS:   process.cwd()
+来源：http://www.share.epnwcf.com/Article/details/glcfsbvdx.sHtML
+
+Java: Path.of("").toAbsolutePath()
+来源：http://www.m.share.epnwcf.com/Article/details/gfvxvobri.sHtML
+
+Go:   os.Getwd()
+来源：http://3g.sjlbkw.cn/Article/details/ghovxysao.sHtML
+
+Ruby: Dir.pwd
+来源：http://blog.fktsv.cn/Article/details/gpzpcpurg.sHtML
+
+C#:   Directory.GetCurrentDirectory()
+来源：http://m.share.fktsv.cn/Article/details/gkksyprgo.sHtML
+
+[M05] 设置退出码
+来源：http://m.share.yfazqb.com/Article/details/gcbrhthxa.sHtML
+
+Py:   sys.exit(1)
+来源：http://3g.yfazqb.com/Article/details/gxjxqgltu.sHtML
+
+PHP:  exit(1);
+来源：http://wap.tarul.cn/Article/details/gawliyhxf.sHtML
+
+JS:   process.exit(1)
+来源：http://wap.epnwcf.com/Article/details/gzsndapyh.sHtML
+
+TS:   process.exit(1)
+来源：http://m.share.epnwcf.com/Article/details/ghkqqjqci.sHtML
+
+Java: System.exit(1)
+来源：http://www.m.share.tarul.cn/Article/details/glcauojwh.sHtML
+
+Go:   os.Exit(1)
+来源：http://read.share.tarul.cn/Article/details/gqhitwfop.sHtML
+
+Ruby: exit 1
+来源：http://baike.fktsv.cn/Article/details/gozgufioy.sHtML
+
+C#:   Environment.Exit(1);  // 或 Main 返回 int
+来源：http://www.m.share.sjlbkw.cn/Article/details/gtcykzvhj.sHtML
+
+[M06] 向标准错误输出
+来源：http://wap.epnwcf.com/Article/details/gmodolvoc.sHtML
+
+Py:   print("err", file=sys.stderr)
+来源：http://wap.epnwcf.com/Article/details/gmmininch.sHtML
+
+PHP:  fwrite(STDERR, "err\n");
+来源：http://baike.epnwcf.com/Article/details/gaehhtfzk.sHtML
+
+JS:   console.error("err")
+来源：http://3g.vehdjk.com/Article/details/gheyxnxit.sHtML
+
+TS:   console.error("err")
+来源：http://m.share.yfazqb.com/Article/details/gosoakyyc.sHtML
+
+Java: System.err.println("err")
+来源：http://wap.yfazqb.com/Article/details/gaypetuih.sHtML
+
+Go:   fmt.Fprintln(os.Stderr, "err")
+来源：http://www.m.share.vehdjk.com/Article/details/gwpbdenhh.sHtML
+
+Ruby: warn "err"
+来源：http://wap.yfazqb.com/Article/details/gmxictcqo.sHtML
+
+C#:   Console.Error.WriteLine("err")
+来源：http://m.share.epnwcf.com/Article/details/gykfgifxd.sHtML
+
+[M07] 判断是否为主入口
+来源：http://www.m.share.sjlbkw.cn/Article/details/gcxrgeaec.sHtML
+
+Py:   if __name__ == "__main__":
+来源：http://mobile.fktsv.cn/Article/details/gyxwwftza.sHtML
+
+PHP:  // 无直接写法：用 debug_backtrace 或定义常量判断
+来源：http://mobile.epnwcf.com/Article/details/gqffbmcvn.sHtML
+
+JS:   require.main === module
+来源：http://www.blog.yfazqb.com/Article/details/gjtntcenk.sHtML
+
+TS:   require.main === module
+来源：http://blog.epnwcf.com/Article/details/gqkmpotya.sHtML
+
+Java: public static void main(String[] args)
+来源：http://m.share.yfazqb.com/Article/details/gizogupef.sHtML
+
+Go:   func main()
+来源：http://3g.tarul.cn/Article/details/gjimmnjnl.sHtML
+
+Ruby: if __FILE__ == $PROGRAM_NAME
+来源：http://m.share.tarul.cn/Article/details/ghdyltpbz.sHtML
+
+C#:   static void Main(string[] args)
+来源：http://www.blog.tarul.cn/Article/details/gqilguphu.sHtML
+
+[M08] 获取系统与运行时信息
+来源：http://wap.epnwcf.com/Article/details/gnyzarwla.sHtML
+
+Py:   platform.system();  platform.python_version()
+来源：http://mobile.yfazqb.com/Article/details/gomynpfch.sHtML
+
+PHP:  PHP_OS;  phpversion();
+来源：http://blog.yfazqb.com/Article/details/gvpbcdshs.sHtML
+
+JS:   process.platform;  process.version
+来源：http://mobile.bbcook.cn/Article/details/gpvszptqa.sHtML
+
+TS:   process.platform;  process.version
+来源：http://wap.fktsv.cn/Article/details/gynaqhtoa.sHtML
+
+Java: System.getProperty("os.name");  System.getProperty("java.version")
+来源：http://read.share.epnwcf.com/Article/details/gcgkcpuhp.sHtML
+
+Go:   runtime.GOOS;  runtime.Version()
+来源：http://3g.sjlbkw.cn/Article/details/gddaubfyg.sHtML
+
+Ruby: RUBY_PLATFORM;  RUBY_VERSION
+来源：http://mobile.bbcook.cn/Article/details/glltjasxb.sHtML
+
+C#:   Environment.OSVersion;  Environment.Version
+来源：http://www.m.share.sjlbkw.cn/Article/details/gtjnbnhfr.sHtML
+
+================================================================================
+来源：http://m.share.vehdjk.com/Article/details/gqvyjsybp.sHtML
+
+N. 数据结构与算法
+来源：http://m.share.yfazqb.com/Article/details/gdqqpgsox.sHtML
+
+================================================================================
+来源：http://wap.fktsv.cn/Article/details/giluvlhmc.sHtML
+
+[N01] 二分查找（有序数组）
+来源：http://m.share.sjlbkw.cn/Article/details/gqxxmgoec.sHtML
+
+Py:   bisect.bisect_left(arr, x)
+来源：http://m.share.sjlbkw.cn/Article/details/gsdaexpuk.sHtML
+
+PHP:  // 手写：$lo=0; $hi=count($a)-1; while ($lo <= $hi) { $mid = ($lo+$hi)>>1; ... }
+来源：http://www.blog.fktsv.cn/Article/details/gdiatrvpv.sHtML
+
+JS:   // 手写：while (lo <= hi) { const mid = (lo + hi) >> 1; ... }
+来源：http://baike.yfazqb.com/Article/details/gptlvolbe.sHtML
+
+TS:   // 手写：while (lo <= hi) { const mid = (lo + hi) >> 1; ... }
+来源：http://m.share.tarul.cn/Article/details/gkdhydfdx.sHtML
+
+Java: Arrays.binarySearch(arr, x)
+来源：http://mobile.bbcook.cn/Article/details/gebjjnaxi.sHtML
+
+Go:   sort.SearchInts(arr, x)
+来源：http://m.share.yfazqb.com/Article/details/goabkcfcg.sHtML
+
+Ruby: arr.bsearch { |e| e >= x }
+来源：http://www.share.tarul.cn/Article/details/gxtmcuxow.sHtML
+
+C#:   Array.BinarySearch(arr, x)
+来源：http://www.blog.epnwcf.com/Article/details/gfnwymexv.sHtML
+
+[N02] 排序（工程实践用内置实现）
+来源：http://read.share.yfazqb.com/Article/details/gfpvjisxt.sHtML
+
+Py:   sorted(arr);  arr.sort()
+来源：http://m.share.sjlbkw.cn/Article/details/gfbjgqhuw.sHtML
+
+PHP:  sort($arr);  usort($arr, $cmp);
+来源：http://www.m.share.epnwcf.com/Article/details/glinpnebz.sHtML
+
+JS:   [...arr].sort((a, b) => a - b)
+来源：http://wap.sjlbkw.cn/Article/details/gndlkymdu.sHtML
+
+TS:   [...arr].sort((a, b) => a - b)
+来源：http://3g.yfazqb.com/Article/details/ghlqrggux.sHtML
+
+Java: Arrays.sort(arr);  Collections.sort(list)
+来源：http://www.share.epnwcf.com/Article/details/geccqcfwd.sHtML
+
+Go:   slices.Sort(arr)
+来源：http://www.blog.epnwcf.com/Article/details/gjpijgeqs.sHtML
+
+Ruby: arr.sort
+来源：http://read.share.bbcook.cn/Article/details/gcueahesa.sHtML
+
+C#:   Array.Sort(arr);  list.Sort()
+来源：http://www.blog.tarul.cn/Article/details/gnieemlug.sHtML
+
+[N03] 快速排序（分治示例）
+来源：http://m.share.fktsv.cn/Article/details/gbdmxwprs.sHtML
+
+Py:   def qs(a): return a if len(a) <= 1 else qs([x for x in a[1:] if x < a[0]]) + [a[0]] + qs([x for x in a[1:] if x >= a[0]])
+来源：http://www.share.epnwcf.com/Article/details/ggapinzrm.sHtML
+
+PHP:  // 递归实现，或用 usort
+来源：http://mobile.epnwcf.com/Article/details/gmznwxspf.sHtML
+
+JS:   const qs = a => a.length <= 1 ? a : [...qs(a.slice(1).filter(x => x < a[0])), a[0], ...qs(a.slice(1).filter(x => x >= a[0]))];
+来源：http://blog.tarul.cn/Article/details/gnbdbvvwt.sHtML
+
+TS:   const qs = (a: number[]): number[] => a.length <= 1 ? a : [...qs(a.slice(1).filter(x => x < a[0])), a[0], ...qs(a.slice(1).filter(x => x >= a[0]))];
+来源：http://m.share.vehdjk.com/Article/details/gdplgbkin.sHtML
+
+Java: // 手写递归，或直接用 Arrays.sort
+来源：http://www.m.share.epnwcf.com/Article/details/gdyrgqmfo.sHtML
+
+Go:   slices.Sort(arr)      // 手写快排需递归实现
+来源：http://read.share.yfazqb.com/Article/details/gpxndeefh.sHtML
+
+Ruby: def qs(a) = a.size <= 1 ? a : qs(a[1..].select { |x| x < a[0] }) + [a[0]] + qs(a[1..].select { |x| x >= a[0] })
+来源：http://read.share.epnwcf.com/Article/details/gbfesyptz.sHtML
+
+C#:   // 手写递归，或 Array.Sort
+来源：http://www.blog.yfazqb.com/Article/details/gdwbbwlky.sHtML
+
+[N04] 斐波那契数列
+来源：http://3g.tarul.cn/Article/details/gjudnjmui.sHtML
+
+Py:   def fib(n): return n if n < 2 else fib(n - 1) + fib(n - 2)
+来源：http://www.share.sjlbkw.cn/Article/details/gblkmbuvw.sHtML
+
+PHP:  function fib($n) { return $n < 2 ? $n : fib($n - 1) + fib($n - 2); }
+来源：http://m.share.bbcook.cn/Article/details/gkbjxkcsa.sHtML
+
+JS:   const fib = n => n < 2 ? n : fib(n - 1) + fib(n - 2);
+来源：http://www.blog.fktsv.cn/Article/details/gkqbxuxoc.sHtML
+
+TS:   const fib = (n: number): number => n < 2 ? n : fib(n - 1) + fib(n - 2);
+来源：http://mobile.fktsv.cn/Article/details/gkvigqaip.sHtML
+
+Java: static int fib(int n) { return n < 2 ? n : fib(n - 1) + fib(n - 2); }
+来源：http://www.m.share.vehdjk.com/Article/details/gzrxxuzip.sHtML
+
+Go:   func fib(n int) int { if n < 2 { return n }; return fib(n-1) + fib(n-2) }
+来源：http://www.blog.fktsv.cn/Article/details/gjehnqkmf.sHtML
+
+Ruby: def fib(n) = n < 2 ? n : fib(n - 1) + fib(n - 2)
+来源：http://m.share.tarul.cn/Article/details/gxuregdjh.sHtML
+
+C#:   static int Fib(int n) => n < 2 ? n : Fib(n - 1) + Fib(n - 2);
+来源：http://wap.bbcook.cn/Article/details/glskacvvw.sHtML
+
+[N05] 最大公约数
+来源：http://www.m.share.yfazqb.com/Article/details/gwofstluc.sHtML
+
+Py:   math.gcd(a, b)
+来源：http://www.blog.sjlbkw.cn/Article/details/gttqosgfn.sHtML
+
+PHP:  // 手写：while ($b) { [$a, $b] = [$b, $a % $b]; }
+来源：http://baike.yfazqb.com/Article/details/gspsxjweg.sHtML
+
+JS:   // 手写：while (b) { [a, b] = [b, a % b]; }
+来源：http://www.blog.sjlbkw.cn/Article/details/gixpcduvh.sHtML
+
+TS:   // 手写：while (b) { [a, b] = [b, a % b]; }
+来源：http://www.share.vehdjk.com/Article/details/gbvzwanbx.sHtML
+
+Java: BigInteger.valueOf(a).gcd(BigInteger.valueOf(b))
+来源：http://www.blog.epnwcf.com/Article/details/gsebtfcvz.sHtML
+
+Go:   // 手写：for b != 0 { a, b = b, a%b }
+来源：http://read.share.yfazqb.com/Article/details/gjqowpcsa.sHtML
+
+Ruby: a.gcd(b)
+来源：http://www.m.share.vehdjk.com/Article/details/gqybjaksa.sHtML
+
+C#:   // 手写：while (b != 0) { (a, b) = (b, a % b); }
+来源：http://www.blog.vehdjk.com/Article/details/grewmuhql.sHtML
+
+[N06] 判断回文字符串
+来源：http://read.share.bbcook.cn/Article/details/ggrlqcgrn.sHtML
+
+Py:   s == s[::-1]
+来源：http://blog.sjlbkw.cn/Article/details/gqcsambln.sHtML
+
+PHP:  $s === strrev($s);
+来源：http://www.blog.yfazqb.com/Article/details/gsqdsuyba.sHtML
+
+JS:   s === [...s].reverse().join("")
+来源：http://read.share.epnwcf.com/Article/details/ghiikmswa.sHtML
+
+TS:   s === [...s].reverse().join("")
+来源：http://www.blog.sjlbkw.cn/Article/details/gzdkwaiff.sHtML
+
+Java: s.equals(new StringBuilder(s).reverse().toString())
+来源：http://www.share.bbcook.cn/Article/details/gihrfsiho.sHtML
+
+Go:   // 双指针从两端比较
+来源：http://read.share.vehdjk.com/Article/details/ghdwmwzmq.sHtML
+
+Ruby: s == s.reverse
+来源：http://www.blog.tarul.cn/Article/details/gbqkksvxn.sHtML
+
+C#:   s == new string(s.Reverse().ToArray())
+来源：http://baike.vehdjk.com/Article/details/gjupvoidx.sHtML
+
+[N07] 两数之和（返回下标）
+来源：http://read.share.epnwcf.com/Article/details/galrgwrri.sHtML
+
+Py:   idx = {v: i for i, v in enumerate(nums)}      # 再逐个查 target - v 是否在表内
+来源：http://www.blog.sjlbkw.cn/Article/details/gfweftprx.sHtML
+
+PHP:  // 手写哈希表：$map[$v] = $i
+来源：http://www.blog.yfazqb.com/Article/details/gqinzdzyb.sHtML
+
+JS:   // 手写 Map：map.set(v, i)
+来源：http://www.blog.fktsv.cn/Article/details/gbtdrxuqv.sHtML
+
+TS:   // 手写 Map<string, number>
+来源：http://baike.epnwcf.com/Article/details/gzkcqeemh.sHtML
+
+Java: // 手写 HashMap
+来源：http://m.share.tarul.cn/Article/details/goorxhiuj.sHtML
+
+Go:   // 手写 map[int]int
+来源：http://wap.vehdjk.com/Article/details/geenasqbp.sHtML
+
+Ruby: // 手写 Hash
+来源：http://read.share.sjlbkw.cn/Article/details/givmygebw.sHtML
+
+C#:   // 手写 Dictionary<int, int>
+来源：http://read.share.yfazqb.com/Article/details/gswblbkuw.sHtML
+
+[N08] 生成全排列
+来源：http://m.share.bbcook.cn/Article/details/gttpseqdy.sHtML
+
+Py:   itertools.permutations(arr)
+来源：http://read.share.sjlbkw.cn/Article/details/gizqlveya.sHtML
+
+PHP:  // 手写递归交换
+来源：http://www.share.epnwcf.com/Article/details/gjptvofao.sHtML
+
+JS:   // 手写回溯递归
+来源：http://baike.bbcook.cn/Article/details/gmeyoovpj.sHtML
+
+TS:   // 手写回溯递归
+来源：http://3g.vehdjk.com/Article/details/gtxrgucqo.sHtML
+
+Java: // 手写回溯递归
+来源：http://www.blog.epnwcf.com/Article/details/gmsecorcf.sHtML
+
+Go:   // 手写回溯递归
+来源：http://wap.bbcook.cn/Article/details/gdyzaqfnu.sHtML
+
+Ruby: arr.permutation.to_a
+来源：http://www.blog.tarul.cn/Article/details/ggcknario.sHtML
+
+C#:   // 手写回溯递归
+来源：http://m.share.vehdjk.com/Article/details/gdsgsqfmz.sHtML
+
+[N09] 栈与队列
+来源：http://read.share.fktsv.cn/Article/details/gbcvjzzhc.sHtML
+
+Py:   stack.append(x) / stack.pop()；deque.popleft() 作队列
+来源：http://www.share.sjlbkw.cn/Article/details/gmrgvnjlk.sHtML
+
+PHP:  array_push/array_pop 作栈；array_shift 作队列
+来源：http://blog.epnwcf.com/Article/details/gwqrtazpo.sHtML
+
+JS:   arr.push(x) / arr.pop() 作栈；arr.push / arr.shift 作队列
+来源：http://baike.bbcook.cn/Article/details/gtcinfwzr.sHtML
+
+TS:   arr.push(x) / arr.pop() 作栈
+来源：http://3g.sjlbkw.cn/Article/details/gsxcmzzta.sHtML
+
+Java: new ArrayDeque<>() 同时支持栈与队列
+来源：http://read.share.tarul.cn/Article/details/gkoacgrtd.sHtML
+
+Go:   append(s, x) 与 s[len(s)-1] 出栈
+来源：http://read.share.sjlbkw.cn/Article/details/gxuyvcwin.sHtML
+
+Ruby: arr.push / arr.pop 作栈；arr.shift 作队列
+来源：http://m.share.fktsv.cn/Article/details/gdvyuulch.sHtML
+
+C#:   new Stack<T>() 与 new Queue<T>()
+来源：http://www.share.epnwcf.com/Article/details/gjavuwziv.sHtML
+
+[N10] 链表节点定义
+来源：http://www.blog.fktsv.cn/Article/details/glyfyovjq.sHtML
+
+Py:   class Node:⏎    def __init__(self, v, nxt=None): self.v, self.next = v, nxt
+来源：http://read.share.tarul.cn/Article/details/gxxgkyznn.sHtML
+
+PHP:  class Node { public $v; public $next = null; }
+来源：http://baike.bbcook.cn/Article/details/ggfjecbui.sHtML
+
+JS:   class Node { constructor(v) { this.v = v; this.next = null; } }
+来源：http://baike.epnwcf.com/Article/details/gkmzlmacu.sHtML
+
+TS:   class Node { constructor(public v: number, public next: Node | null = null) {} }
+来源：http://www.m.share.yfazqb.com/Article/details/guydilapb.sHtML
+
+Java: class Node { int v; Node next; }
+来源：http://3g.vehdjk.com/Article/details/giajgnqlw.sHtML
+
+Go:   type Node struct { V int; Next *Node }
+来源：http://3g.fktsv.cn/Article/details/gdrmsgbtx.sHtML
+
+Ruby: Node = Struct.new(:v, :next)
+来源：http://www.m.share.epnwcf.com/Article/details/gopdzdput.sHtML
+
+C#:   class Node { public int V; public Node? Next; }
+来源：http://mobile.sjlbkw.cn/Article/details/gynqplgbz.sHtML
+
+[N11] 二叉树中序遍历
+来源：http://baike.tarul.cn/Article/details/gagcujdya.sHtML
+
+Py:   def inorder(n): return inorder(n.left) + [n.val] + inorder(n.right) if n else []
+来源：http://baike.yfazqb.com/Article/details/gnureznke.sHtML
+
+PHP:  // 手写递归函数
+来源：http://read.share.epnwcf.com/Article/details/gcbslrcnc.sHtML
+
+JS:   const inorder = n => n ? [...inorder(n.left), n.val, ...inorder(n.right)] : [];
+来源：http://www.blog.fktsv.cn/Article/details/gcygmdrbl.sHtML
+
+TS:   const inorder = (n: T | null): number[] => n ? [...inorder(n.left), n.val, ...inorder(n.right)] : [];
+来源：http://www.m.share.epnwcf.com/Article/details/gwdtcqilu.sHtML
+
+Java: // 手写递归
+来源：http://m.share.bbcook.cn/Article/details/geisvnubp.sHtML
+
+Go:   // 手写递归
+来源：http://m.share.bbcook.cn/Article/details/guruqymrk.sHtML
+
+Ruby: def inorder(n) = n ? inorder(n.left) + [n.val] + inorder(n.right) : []
+来源：http://m.share.vehdjk.com/Article/details/gdtwrhqly.sHtML
+
+C#:   // 手写递归
+来源：http://3g.vehdjk.com/Article/details/gayisuhbn.sHtML
+
+[N12] 动态规划：爬楼梯（每次 1 或 2 级）
+来源：http://m.share.epnwcf.com/Article/details/ggnmimoxj.sHtML
+
+Py:   from functools import reduce;  climb = lambda n: reduce(lambda p, _: (p[1], p[0] + p[1]), range(n), (1, 1))[0]
+来源：http://www.share.tarul.cn/Article/details/gsiqayeyv.sHtML
+
+PHP:  // 递推：$a=1;$b=1;for(...){[$a,$b]=[$b,$a+$b];}
+来源：http://wap.tarul.cn/Article/details/gsvuugcfh.sHtML
+
+JS:   // 递推：let [a, b] = [1, 1]; for (let i = 0; i < n; i++) [a, b] = [b, a + b];
+来源：http://www.blog.tarul.cn/Article/details/gihftsfga.sHtML
+
+TS:   let [a, b] = [1, 1]; for (let i = 0; i < n; i++) [a, b] = [b, a + b];
+来源：http://m.share.yfazqb.com/Article/details/gbxbjsqsk.sHtML
+
+Java: // 递推：int a = 1, b = 1; 循环更新
+来源：http://wap.fktsv.cn/Article/details/gtsorgylv.sHtML
+
+Go:   // 递推：a, b := 1, 1; for i := 0; i < n; i++ { a, b = b, a+b }
+来源：http://www.m.share.tarul.cn/Article/details/gpamxpxeu.sHtML
+
+Ruby: a, b = 1, 1;  n.times { a, b = b, a + b }
+来源：http://www.m.share.bbcook.cn/Article/details/ggvygztww.sHtML
+
+C#:   // 递推：int a = 1, b = 1; 循环更新
+来源：http://blog.yfazqb.com/Article/details/gefqsoida.sHtML
+
+================================================================================
+来源：http://baike.epnwcf.com/Article/details/gstdgitmi.sHtML
+
+O. 并发与异步
+来源：http://www.m.share.sjlbkw.cn/Article/details/gfjdxsjrj.sHtML
+
+================================================================================
+来源：http://www.m.share.bbcook.cn/Article/details/gfpihnrrb.sHtML
+
+[O01] 启动一个线程
+来源：http://www.blog.fktsv.cn/Article/details/gihjrkrxz.sHtML
+
+Py:   threading.Thread(target=f, args=(1,)).start()
+来源：http://mobile.yfazqb.com/Article/details/gvdfxwdwz.sHtML
+
+PHP:  // 无原生线程：用 pcntl_fork 或消息队列
+来源：http://wap.epnwcf.com/Article/details/gwipdcyki.sHtML
+
+JS:   // 单线程事件循环：CPU 密集用 worker_threads
+来源：http://baike.yfazqb.com/Article/details/gwaaspprx.sHtML
+
+TS:   // 同 JS
+来源：http://read.share.sjlbkw.cn/Article/details/grlbnyhrt.sHtML
+
+Java: new Thread(() -> f()).start()
+来源：http://wap.bbcook.cn/Article/details/gpnsdnqrt.sHtML
+
+Go:   go f()
+来源：http://www.m.share.fktsv.cn/Article/details/gfrkofywj.sHtML
+
+Ruby: Thread.new { f }
+来源：http://wap.vehdjk.com/Article/details/gfxuytdwx.sHtML
+
+C#:   Task.Run(() => F());
+来源：http://www.share.fktsv.cn/Article/details/gobgblbkc.sHtML
+
+[O02] 使用线程池
+来源：http://wap.bbcook.cn/Article/details/gzbpbmnye.sHtML
+
+Py:   concurrent.futures.ThreadPoolExecutor(max_workers=4)
+来源：http://mobile.yfazqb.com/Article/details/gdhtduwkg.sHtML
+
+PHP:  // 用 Swoole / ReactPHP 等扩展实现
+来源：http://blog.fktsv.cn/Article/details/gcjvxxxkf.sHtML
+
+JS:   // worker_threads 线程池
+来源：http://mobile.bbcook.cn/Article/details/gltvusngu.sHtML
+
+TS:   // worker_threads 线程池
+来源：http://www.share.vehdjk.com/Article/details/gmrprdgeq.sHtML
+
+Java: Executors.newFixedThreadPool(4)
+来源：http://blog.yfazqb.com/Article/details/gdobmbxpn.sHtML
+
+Go:   // 协程轻量，无需池；限并发用带缓冲 channel 当信号量
+来源：http://www.blog.sjlbkw.cn/Article/details/gwdpbuhjv.sHtML
+
+Ruby: // 用 concurrent-ruby 的 ThreadPool
+来源：http://mobile.vehdjk.com/Article/details/goekvvvtt.sHtML
+
+C#:   Task.WhenAll(...)  或 Parallel.ForEach
+来源：http://baike.yfazqb.com/Article/details/gmrpwnlzj.sHtML
+
+[O03] 加锁保护共享数据
+来源：http://mobile.bbcook.cn/Article/details/gzwetggiv.sHtML
+
+Py:   with lock: shared += 1
+来源：http://wap.tarul.cn/Article/details/gkdxjzysz.sHtML
+
+PHP:  // 用 flock() 做文件锁
+来源：http://www.blog.vehdjk.com/Article/details/gttqtzveh.sHtML
+
+JS:   // 单线程无需锁；跨线程共享内存用 Atomics
+来源：http://www.share.vehdjk.com/Article/details/gizsxpbdz.sHtML
+
+TS:   // 同 JS
+来源：http://blog.fktsv.cn/Article/details/gfnbrdctl.sHtML
+
+Java: synchronized (this) { shared++; }
+来源：http://mobile.yfazqb.com/Article/details/gldsjnhce.sHtML
+
+Go:   mu.Lock();  defer mu.Unlock()
+来源：http://blog.epnwcf.com/Article/details/gtdwxqkyk.sHtML
+
+Ruby: mutex.synchronize { shared += 1 }
+来源：http://m.share.bbcook.cn/Article/details/gzmustwmx.sHtML
+
+C#:   lock (gate) { shared++; }
+来源：http://www.blog.vehdjk.com/Article/details/ggrzorvei.sHtML
+
+[O04] 定义异步函数并等待
+来源：http://baike.fktsv.cn/Article/details/gywxgfxys.sHtML
+
+Py:   async def f():⏎    await g()
+来源：http://3g.tarul.cn/Article/details/ggdtrlsms.sHtML
+
+PHP:  // 无原生 async：用 Fiber 或 Swoole
+来源：http://wap.yfazqb.com/Article/details/gajkaxplx.sHtML
+
+JS:   async function f() { await g(); }
+来源：http://mobile.bbcook.cn/Article/details/gvtlkefgf.sHtML
+
+TS:   async function f(): Promise<void> { await g(); }
+来源：http://www.share.tarul.cn/Article/details/gvmeumezg.sHtML
+
+Java: // 用 CompletableFuture 或虚拟线程
+来源：http://3g.vehdjk.com/Article/details/gqsozxxvm.sHtML
+
+Go:   // 无 async 关键字：直接 go 调用，用 channel 收结果
+来源：http://mobile.vehdjk.com/Article/details/gzmzkvmkp.sHtML
+
+Ruby: # 用 Fiber 或 async gem
+来源：http://3g.epnwcf.com/Article/details/glhyxkttg.sHtML
+
+C#:   async Task F() { await G(); }
+来源：http://blog.fktsv.cn/Article/details/gbzjknrpr.sHtML
+
+[O05] 并发执行并等待全部完成
+来源：http://mobile.vehdjk.com/Article/details/gezfsmalo.sHtML
+
+Py:   asyncio.gather(*tasks)
+来源：http://read.share.bbcook.cn/Article/details/gzfymtomo.sHtML
+
+PHP:  // curl_multi 或 Amp 的 Promise\all
+来源：http://baike.vehdjk.com/Article/details/glujzremy.sHtML
+
+JS:   await Promise.all(tasks)
+来源：http://read.share.yfazqb.com/Article/details/gkhvltplh.sHtML
+
+TS:   await Promise.all(tasks)
+来源：http://m.share.tarul.cn/Article/details/ghfvqizvz.sHtML
+
+Java: CompletableFuture.allOf(f1, f2).join()
+来源：http://3g.fktsv.cn/Article/details/gkwyefauy.sHtML
+
+Go:   sync.WaitGroup 或 errgroup.Wait()
+来源：http://www.blog.bbcook.cn/Article/details/gjtgqrmpn.sHtML
+
+Ruby: threads.map(&:join)
+来源：http://m.share.epnwcf.com/Article/details/groxshaib.sHtML
+
+C#:   await Task.WhenAll(t1, t2)
+来源：http://m.share.tarul.cn/Article/details/gzojxaqwd.sHtML
+
+[O06] 使用进程池
+来源：http://www.m.share.fktsv.cn/Article/details/gjhyijzsv.sHtML
+
+Py:   concurrent.futures.ProcessPoolExecutor()
+来源：http://mobile.tarul.cn/Article/details/gjpfsgmca.sHtML
+
+PHP:  // pcntl_fork 或多进程队列
+来源：http://m.share.vehdjk.com/Article/details/gulwjcjmq.sHtML
+
+JS:   // child_process / cluster 模块
+来源：http://blog.epnwcf.com/Article/details/gjclimnhi.sHtML
+
+TS:   // child_process / cluster 模块
+来源：http://www.share.fktsv.cn/Article/details/gagcldrjz.sHtML
+
+Java: // ForkJoinPool 或 ProcessBuilder
+来源：http://www.share.tarul.cn/Article/details/gvwhfazgb.sHtML
+
+Go:   // goroutine 已占用多核，直接并发即可
+来源：http://m.share.tarul.cn/Article/details/gutwwpcxq.sHtML
+
+Ruby: // fork 块
+来源：http://www.blog.vehdjk.com/Article/details/gdanncpjp.sHtML
+
+C#:   Parallel.For
+来源：http://wap.epnwcf.com/Article/details/guvoxlplt.sHtML
+
+================================================================================
+来源：http://www.blog.sjlbkw.cn/Article/details/gxldtfemk.sHtML
+
+P. 常用工具函数
+来源：http://baike.yfazqb.com/Article/details/gmvpicjay.sHtML
+
+================================================================================
+来源：http://www.blog.bbcook.cn/Article/details/grqcfvshg.sHtML
+
+[P01] 生成 UUID
+来源：http://blog.fktsv.cn/Article/details/gjklelwcp.sHtML
+
+Py:   str(uuid.uuid4())
+来源：http://www.m.share.yfazqb.com/Article/details/glheoldjf.sHtML
+
+PHP:  bin2hex(random_bytes(16));        // 或 ramsey/uuid
+来源：http://www.blog.epnwcf.com/Article/details/gmswuhisp.sHtML
+
+JS:   crypto.randomUUID()
+来源：http://m.share.fktsv.cn/Article/details/gjjgmttjm.sHtML
+
+TS:   crypto.randomUUID()
+来源：http://mobile.vehdjk.com/Article/details/gkcjfryzu.sHtML
+
+Java: UUID.randomUUID().toString()
+来源：http://wap.sjlbkw.cn/Article/details/gokmqbmju.sHtML
+
+Go:   // 用 github.com/google/uuid
+来源：http://www.blog.vehdjk.com/Article/details/gtfwckhqb.sHtML
+
+Ruby: SecureRandom.uuid
+来源：http://mobile.bbcook.cn/Article/details/gnxvuvxdo.sHtML
+
+C#:   Guid.NewGuid().ToString()
+来源：http://read.share.epnwcf.com/Article/details/gjmnvrtim.sHtML
+
+[P02] MD5 / SHA256 摘要
+来源：http://www.m.share.sjlbkw.cn/Article/details/ggvsyuwif.sHtML
+
+Py:   hashlib.sha256(b).hexdigest();  hashlib.md5(b).hexdigest()
+来源：http://www.share.epnwcf.com/Article/details/gcqduisuf.sHtML
+
+PHP:  hash("sha256", $s);  md5($s);
+来源：http://www.share.sjlbkw.cn/Article/details/gwqrgbqlw.sHtML
+
+JS:   crypto.createHash("sha256").update(s).digest("hex")     // Node
+来源：http://www.blog.tarul.cn/Article/details/gqxjqwdrh.sHtML
+
+TS:   crypto.createHash("sha256").update(s).digest("hex")
+来源：http://m.share.vehdjk.com/Article/details/gtlhywyid.sHtML
+
+Java: MessageDigest.getInstance("SHA-256").digest(bytes)
+来源：http://blog.yfazqb.com/Article/details/glboxbbrb.sHtML
+
+Go:   fmt.Sprintf("%x", sha256.Sum256([]byte(s)))
+来源：http://read.share.tarul.cn/Article/details/gpbuxvoyw.sHtML
+
+Ruby: Digest::SHA256.hexdigest(s)
+来源：http://www.blog.sjlbkw.cn/Article/details/gzbuenruc.sHtML
+
+C#:   Convert.ToHexString(SHA256.HashData(bytes))
+来源：http://3g.epnwcf.com/Article/details/gvongyxmz.sHtML
+
+[P03] 生成短随机字符串
+来源：http://www.m.share.bbcook.cn/Article/details/guxvjdtlp.sHtML
+
+Py:   "".join(random.choices(string.ascii_letters + string.digits, k=16))
+来源：http://www.blog.fktsv.cn/Article/details/guubgnxkt.sHtML
+
+PHP:  substr(str_shuffle(str_repeat("abcdefghijklmnopqrstuvwxyz0123456789", 2)), 0, 16);
+来源：http://3g.tarul.cn/Article/details/gkbghvhwv.sHtML
+
+JS:   [...crypto.getRandomValues(new Uint8Array(16))].map(b => (b % 36).toString(36)).join("")
+来源：http://3g.vehdjk.com/Article/details/gpemjluww.sHtML
+
+TS:   [...crypto.getRandomValues(new Uint8Array(16))].map(b => (b % 36).toString(36)).join("")
+来源：http://www.share.sjlbkw.cn/Article/details/ghaitfuva.sHtML
+
+Java: new BigInteger(130, new SecureRandom()).toString(36).substring(0, 16)
+来源：http://mobile.yfazqb.com/Article/details/gzettgixt.sHtML
+
+Go:   // crypto/rand 生成随机字节后 base64 或 hex 编码
+来源：http://mobile.bbcook.cn/Article/details/grhycjfop.sHtML
+
+Ruby: SecureRandom.alphanumeric(16)
+来源：http://m.share.tarul.cn/Article/details/gcsgsikcx.sHtML
+
+C#:   RandomNumberGenerator.GetHexString(16)     // .NET 8+
+来源：http://www.blog.vehdjk.com/Article/details/guathmrzm.sHtML
+
+[P04] 求长度
+来源：http://3g.sjlbkw.cn/Article/details/gmsbkaulo.sHtML
+
+Py:   len(x)            # 字符串、列表、字典通用
+来源：http://m.share.yfazqb.com/Article/details/guffeuijb.sHtML
+
+PHP:  count($arr);  strlen($s);  mb_strlen($s, "UTF-8");
+来源：http://read.share.fktsv.cn/Article/details/gcdhzncuy.sHtML
+
+JS:   Array.isArray(x) ? x.length : Object.keys(x).length
+来源：http://blog.yfazqb.com/Article/details/gkxqtqxho.sHtML
+
+TS:   Array.isArray(x) ? x.length : Object.keys(x).length
+来源：http://www.share.vehdjk.com/Article/details/gstpeyaez.sHtML
+
+Java: list.size();  map.size();  s.length()
+来源：http://www.blog.tarul.cn/Article/details/gkgbtdpaq.sHtML
+
+Go:   len(arr);  len(m)
+来源：http://wap.yfazqb.com/Article/details/gfmfzrzpj.sHtML
+
+Ruby: x.length;  x.size
+来源：http://3g.vehdjk.com/Article/details/gcncuipel.sHtML
+
+C#:   list.Count;  dict.Count;  s.Length
+来源：http://www.blog.tarul.cn/Article/details/gulpsslki.sHtML
+
+[P05] 判断两个对象内容是否相等
+来源：http://www.share.bbcook.cn/Article/details/gsskulejf.sHtML
+
+Py:   a == b              # 列表与字典递归比较内容
+来源：http://m.share.vehdjk.com/Article/details/ghhtadxrd.sHtML
+
+PHP:  $a == $b            // 值比较；$a === $b 要求顺序与类型一致
+来源：http://3g.tarul.cn/Article/details/grxsjmoip.sHtML
+
+JS:   JSON.stringify(a) === JSON.stringify(b)   // 简单场景；复杂用深比较库
+来源：http://m.share.tarul.cn/Article/details/gcitdpoza.sHtML
+
+TS:   JSON.stringify(a) === JSON.stringify(b)
+来源：http://m.share.bbcook.cn/Article/details/gazfexpfc.sHtML
+
+Java: a.equals(b)         // 需正确实现 equals；数组用 Arrays.equals
+来源：http://www.share.tarul.cn/Article/details/gxhemeipv.sHtML
+
+Go:   reflect.DeepEqual(a, b)
+来源：http://baike.vehdjk.com/Article/details/gitwriwtd.sHtML
+
+Ruby: a == b
+来源：http://www.share.vehdjk.com/Article/details/glirklidl.sHtML
+
+C#:   Equals(a, b)  或 StructuralComparisons
+来源：http://www.share.yfazqb.com/Article/details/gsxbbpcab.sHtML
+
+[P06] 综合判空（null / 空串 / 空集合）
+来源：http://baike.bbcook.cn/Article/details/gxqbrelyp.sHtML
+
+Py:   if not x:           # None、""、[]、{}、0 均为假
+来源：http://www.m.share.sjlbkw.cn/Article/details/gsdahfady.sHtML
+
+PHP:  if (empty($x)) {}
+来源：http://3g.epnwcf.com/Article/details/gmooheayz.sHtML
+
+JS:   if (x == null) {}    // 同时覆盖 null 与 undefined
+来源：http://www.share.vehdjk.com/Article/details/gahmnmgze.sHtML
+
+TS:   if (x == null) {}
+来源：http://www.blog.bbcook.cn/Article/details/gjkzlrfpw.sHtML
+
+Java: if (x == null || x.isEmpty()) {}
+来源：http://mobile.yfazqb.com/Article/details/guxexipnb.sHtML
+
+Go:   if x == nil {}
+来源：http://m.share.sjlbkw.cn/Article/details/gxeunlttl.sHtML
+
+Ruby: if x.nil? || (x.respond_to?(:empty?) && x.empty?)
+来源：http://blog.vehdjk.com/Article/details/gzkjzshfe.sHtML
+
+C#:   if (x is null) {}
+来源：http://www.m.share.fktsv.cn/Article/details/gzfuqdzqd.sHtML
+
+[P07] 防抖与节流
+来源：http://read.share.fktsv.cn/Article/details/gtsnefdst.sHtML
+
+Py:   # 用装饰器 + threading.Timer 实现；或 functools.lru_cache 做缓存
+来源：http://m.share.vehdjk.com/Article/details/gpyeryvej.sHtML
+
+PHP:  // 手写时间戳比较
+来源：http://www.m.share.tarul.cn/Article/details/gopwczmtq.sHtML
+
+JS:   const debounce = (fn, ms) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };
+来源：http://m.share.sjlbkw.cn/Article/details/gigaerxee.sHtML
+
+TS:   const debounce = <A extends unknown[]>(fn: (...a: A) => void, ms: number) => { let t: ReturnType<typeof setTimeout>; return (...a: A) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };
+来源：http://wap.epnwcf.com/Article/details/gkzrvthyd.sHtML
+
+Java: long last = 0;  if (now - last > ms) { last = now; run(); }
+来源：http://blog.vehdjk.com/Article/details/goufyeeqt.sHtML
+
+Go:   time.AfterFunc 实现，或用带缓冲 channel 丢弃
+来源：http://baike.yfazqb.com/Article/details/gjryeyvum.sHtML
+
+Ruby: // 手写闭包 + Time.now 判断
+来源：http://3g.tarul.cn/Article/details/glkhihjmj.sHtML
+
+C#:   // 用 System.Timers.Timer 重置实现
+来源：http://www.m.share.tarul.cn/Article/details/ghjcrjesu.sHtML
+
+[P08] 处理浮点精度问题
+来源：http://www.share.bbcook.cn/Article/details/govsitreu.sHtML
+
+Py:   Decimal("0.1") + Decimal("0.2");  round(0.1 + 0.2, 10)
+来源：http://m.share.vehdjk.com/Article/details/ghevigimz.sHtML
+
+PHP:  bcadd("0.1", "0.2", 2);
+来源：http://www.blog.epnwcf.com/Article/details/ggxtgnysz.sHtML
+
+JS:   (0.1 + 0.2).toFixed(2);  Math.round((0.1 + 0.2) * 100) / 100
+来源：http://www.share.sjlbkw.cn/Article/details/gtnguempo.sHtML
+
+TS:   (0.1 + 0.2).toFixed(2)
+来源：http://baike.fktsv.cn/Article/details/gkvrkhimv.sHtML
+
+Java: BigDecimal.valueOf(0.1).add(BigDecimal.valueOf(0.2))
+来源：http://www.m.share.bbcook.cn/Article/details/gkivnlnya.sHtML
+
+Go:   math/big.Float，或全部换算成整数分再算
+来源：http://www.m.share.vehdjk.com/Article/details/grtdwkidg.sHtML
+
+Ruby: BigDecimal("0.1") + BigDecimal("0.2")
+来源：http://www.share.epnwcf.com/Article/details/gyjwsnfkc.sHtML
+
+C#:   decimal d = 0.1m + 0.2m;      // decimal 为精确十进制
+来源：http://baike.bbcook.cn/Article/details/gyzfydqtw.sHtML
+
+================================================================================
+来源：http://read.share.yfazqb.com/Article/details/gogllgqkw.sHtML
+
+Q. SQL 专题（以 MySQL 8 为主，附 PostgreSQL 差异）
+来源：http://3g.yfazqb.com/Article/details/gnpwgcdez.sHtML
+
+================================================================================
+来源：http://m.share.tarul.cn/Article/details/gqljgyctf.sHtML
+
+[Q01] 创建表
+来源：http://blog.yfazqb.com/Article/details/gixmwobde.sHtML
+
+CREATE TABLE users (
+来源：http://mobile.epnwcf.com/Article/details/gewrpbnpo.sHtML
+
+id INT PRIMARY KEY AUTO_INCREMENT,
+来源：http://m.share.sjlbkw.cn/Article/details/gneeckdui.sHtML
+
+name VARCHAR(50) NOT NULL,
+来源：http://mobile.epnwcf.com/Article/details/gbkecnqfn.sHtML
+
+email VARCHAR(100) UNIQUE,
+来源：http://mobile.fktsv.cn/Article/details/gpzvxdggj.sHtML
+
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+来源：http://www.m.share.epnwcf.com/Article/details/glcdzitxp.sHtML
+
+);
+来源：http://mobile.fktsv.cn/Article/details/gmygiimgh.sHtML
+
+[Q02] 创建带外键的表
+来源：http://mobile.yfazqb.com/Article/details/gcpppahxq.sHtML
+
+CREATE TABLE orders (
+来源：http://m.share.epnwcf.com/Article/details/ggqgqzwxc.sHtML
+
+
+<!-- 参考信息 -->

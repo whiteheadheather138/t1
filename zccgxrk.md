@@ -1,0 +1,904 @@
+代发 wailian999
+
+[Q44] IN 子查询
+来源：http://baike.sjlbkw.cn/Article/details/gluzzhbpz.sHtML
+
+SELECT * FROM users WHERE id IN (SELECT user_id FROM orders);
+来源：http://blog.tarul.cn/Article/details/gqttiuuer.sHtML
+
+[Q45] EXISTS 判断存在
+来源：http://www.m.share.tarul.cn/Article/details/gvlqmizzh.sHtML
+
+SELECT * FROM users u WHERE EXISTS (SELECT 1 FROM orders o WHERE o.user_id = u.id);
+来源：http://3g.epnwcf.com/Article/details/grdpzreze.sHtML
+
+[Q46] NOT EXISTS 判断不存在
+来源：http://www.blog.yfazqb.com/Article/details/graxlvbnw.sHtML
+
+SELECT * FROM users u WHERE NOT EXISTS (SELECT 1 FROM orders o WHERE o.user_id = u.id);
+来源：http://www.share.vehdjk.com/Article/details/gbupumgbv.sHtML
+
+[Q47] 与平均值比较
+来源：http://mobile.sjlbkw.cn/Article/details/gdbbmrmaa.sHtML
+
+SELECT * FROM users WHERE age > (SELECT AVG(age) FROM users);
+来源：http://www.m.share.epnwcf.com/Article/details/gosttcyud.sHtML
+
+[Q48] CTE 公用表表达式
+来源：http://www.m.share.tarul.cn/Article/details/gdifspoac.sHtML
+
+WITH t AS (SELECT city, COUNT(*) AS c FROM users GROUP BY city)
+来源：http://3g.bbcook.cn/Article/details/grdcujyhi.sHtML
+
+SELECT * FROM t WHERE c > 5;
+来源：http://www.m.share.vehdjk.com/Article/details/gdyeqeqsd.sHtML
+
+[Q49] 更新单行
+来源：http://blog.bbcook.cn/Article/details/gnjaxztrt.sHtML
+
+UPDATE users SET status = 1 WHERE id = 10;
+来源：http://www.m.share.tarul.cn/Article/details/gafuwxeqf.sHtML
+
+[Q50] 批量更新
+来源：http://m.share.sjlbkw.cn/Article/details/guxuvnnll.sHtML
+
+UPDATE users SET status = 2 WHERE created_at < '2024-01-01';
+来源：http://mobile.yfazqb.com/Article/details/glrslmnrd.sHtML
+
+[Q51] 用子查询更新
+来源：http://read.share.vehdjk.com/Article/details/glpskjkgd.sHtML
+
+UPDATE users SET age = (SELECT MAX(age) FROM users) WHERE id = 1;
+来源：http://mobile.tarul.cn/Article/details/goategcnn.sHtML
+
+[Q52] 删除指定行
+来源：http://www.blog.fktsv.cn/Article/details/gwyshvieo.sHtML
+
+DELETE FROM users WHERE id = 10;
+来源：http://3g.epnwcf.com/Article/details/gbsfvstbq.sHtML
+
+[Q53] 按条件删除
+来源：http://mobile.sjlbkw.cn/Article/details/gavqbqtau.sHtML
+
+DELETE FROM orders WHERE created_at < '2020-01-01';
+来源：http://m.share.sjlbkw.cn/Article/details/ggjwobpwr.sHtML
+
+[Q54] 清空表
+来源：http://www.m.share.epnwcf.com/Article/details/galdnqvic.sHtML
+
+TRUNCATE TABLE logs;
+来源：http://wap.bbcook.cn/Article/details/gginxvpls.sHtML
+
+[Q55] 排名（并列占位）
+来源：http://blog.vehdjk.com/Article/details/gpggoyetn.sHtML
+
+SELECT name, RANK() OVER (ORDER BY score DESC) AS rk FROM scores;
+来源：http://www.share.bbcook.cn/Article/details/gtotjolgv.sHtML
+
+[Q56] 密集排名（并列不占位）
+来源：http://wap.bbcook.cn/Article/details/ggnophatc.sHtML
+
+SELECT name, DENSE_RANK() OVER (ORDER BY score DESC) FROM scores;
+来源：http://www.m.share.fktsv.cn/Article/details/gtcazscgi.sHtML
+
+[Q57] 行号
+来源：http://wap.epnwcf.com/Article/details/gbwnhshwg.sHtML
+
+SELECT ROW_NUMBER() OVER (ORDER BY id) AS seq FROM users;
+来源：http://m.share.epnwcf.com/Article/details/guybkcxbm.sHtML
+
+[Q58] 累计求和
+来源：http://www.m.share.vehdjk.com/Article/details/gsdazlzvu.sHtML
+
+SELECT id, amount, SUM(amount) OVER (ORDER BY id) AS running FROM orders;
+来源：http://read.share.tarul.cn/Article/details/gqlqwsjal.sHtML
+
+[Q59] 分组内累计
+来源：http://3g.yfazqb.com/Article/details/gtgrhjvnd.sHtML
+
+SELECT city, id, SUM(amount) OVER (PARTITION BY city ORDER BY id) FROM orders;
+来源：http://www.share.tarul.cn/Article/details/gurntoxfr.sHtML
+
+[Q60] 取上一行 / 下一行
+来源：http://mobile.epnwcf.com/Article/details/gjzgdawtg.sHtML
+
+SELECT id, LAG(amount) OVER (ORDER BY id) AS prev,
+来源：http://www.m.share.vehdjk.com/Article/details/gucmrphoh.sHtML
+
+LEAD(amount) OVER (ORDER BY id) AS next FROM orders;
+来源：http://read.share.tarul.cn/Article/details/glmakdspt.sHtML
+
+[Q61] 移动平均
+来源：http://3g.epnwcf.com/Article/details/gkcelnirl.sHtML
+
+SELECT id, AVG(amount) OVER (ORDER BY id ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) FROM orders;
+来源：http://m.share.yfazqb.com/Article/details/gclqkdesf.sHtML
+
+[Q62] 分组占比
+来源：http://www.share.bbcook.cn/Article/details/gtfrivjgy.sHtML
+
+SELECT city, COUNT(*) * 100.0 / SUM(COUNT(*)) OVER () AS pct FROM users GROUP BY city;
+来源：http://read.share.yfazqb.com/Article/details/gwqppaduq.sHtML
+
+[Q63] 开启事务
+来源：http://www.blog.bbcook.cn/Article/details/gjcvfdnis.sHtML
+
+START TRANSACTION;                -- 或 BEGIN
+来源：http://baike.tarul.cn/Article/details/gdvtepmyg.sHtML
+
+[Q64] 提交事务
+来源：http://m.share.epnwcf.com/Article/details/gksddcueh.sHtML
+
+COMMIT;
+来源：http://m.share.bbcook.cn/Article/details/gnomvdroz.sHtML
+
+[Q65] 回滚事务
+来源：http://3g.fktsv.cn/Article/details/gaillmuje.sHtML
+
+ROLLBACK;
+来源：http://3g.bbcook.cn/Article/details/gqvwfglri.sHtML
+
+[Q66] 行锁查询
+来源：http://mobile.tarul.cn/Article/details/glicwbkhc.sHtML
+
+SELECT * FROM users WHERE id = 1 FOR UPDATE;
+来源：http://www.blog.bbcook.cn/Article/details/gcwrulqcj.sHtML
+
+[Q67] 设置隔离级别
+来源：http://mobile.fktsv.cn/Article/details/gywssiiju.sHtML
+
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+来源：http://3g.sjlbkw.cn/Article/details/gmsxzlebt.sHtML
+
+[Q68] 保存点
+来源：http://wap.yfazqb.com/Article/details/ggttoidzg.sHtML
+
+SAVEPOINT sp1;
+来源：http://wap.fktsv.cn/Article/details/gwncfsoha.sHtML
+
+ROLLBACK TO sp1;
+来源：http://m.share.bbcook.cn/Article/details/grqszfacd.sHtML
+
+[Q69] 查看执行计划
+来源：http://read.share.yfazqb.com/Article/details/gfelexxgi.sHtML
+
+EXPLAIN SELECT * FROM users WHERE email = 'a@a.com';
+来源：http://m.share.tarul.cn/Article/details/gngvyaobx.sHtML
+
+[Q70] 更新统计信息
+来源：http://baike.epnwcf.com/Article/details/gwtywuuff.sHtML
+
+ANALYZE TABLE users;
+来源：http://blog.bbcook.cn/Article/details/gvslohdtw.sHtML
+
+[Q71] 查看建表语句
+来源：http://www.share.tarul.cn/Article/details/gofmtyudq.sHtML
+
+SHOW CREATE TABLE users;          -- PostgreSQL: \d users
+来源：http://www.blog.epnwcf.com/Article/details/gghmhjhrb.sHtML
+
+[Q72] 查看索引
+来源：http://baike.tarul.cn/Article/details/gvlcguoms.sHtML
+
+SHOW INDEX FROM users;
+来源：http://wap.sjlbkw.cn/Article/details/geqdlrfgh.sHtML
+
+[Q73] 查看表状态
+来源：http://www.share.epnwcf.com/Article/details/gxnndvfka.sHtML
+
+SHOW TABLE STATUS LIKE 'users';
+来源：http://mobile.vehdjk.com/Article/details/gazihvnti.sHtML
+
+[Q74] 强制使用索引
+来源：http://www.m.share.tarul.cn/Article/details/gywxzooza.sHtML
+
+SELECT * FROM users FORCE INDEX (idx_users_email) WHERE email = 'x';
+来源：http://read.share.fktsv.cn/Article/details/gwessrklu.sHtML
+
+[Q75] 日期格式化
+来源：http://mobile.yfazqb.com/Article/details/gicjusckc.sHtML
+
+SELECT DATE_FORMAT(created_at, '%Y-%m') FROM orders;
+来源：http://www.m.share.epnwcf.com/Article/details/gaxelxxoe.sHtML
+
+-- PostgreSQL: to_char(created_at, 'YYYY-MM')
+来源：http://www.m.share.vehdjk.com/Article/details/goeeolkzo.sHtML
+
+[Q76] 按天统计
+来源：http://baike.fktsv.cn/Article/details/gagtcdwda.sHtML
+
+SELECT DATE(created_at) AS d, COUNT(*) FROM orders GROUP BY d;
+来源：http://read.share.yfazqb.com/Article/details/gienvnwbj.sHtML
+
+[Q77] 时间加减
+来源：http://blog.vehdjk.com/Article/details/gixtxgpxr.sHtML
+
+SELECT DATE_ADD(NOW(), INTERVAL 7 DAY);   -- PostgreSQL: now() + interval '7 day'
+来源：http://m.share.yfazqb.com/Article/details/geaoavkha.sHtML
+
+[Q78] 当前时间
+来源：http://mobile.yfazqb.com/Article/details/gpxjaquxr.sHtML
+
+SELECT NOW(), CURDATE(), UNIX_TIMESTAMP();
+来源：http://www.blog.epnwcf.com/Article/details/gjwhuciot.sHtML
+
+[Q79] 字符串拼接
+来源：http://mobile.sjlbkw.cn/Article/details/gulrdjkmp.sHtML
+
+SELECT CONCAT(first_name, ' ', last_name) FROM users;   -- PostgreSQL: ||
+来源：http://wap.tarul.cn/Article/details/gcfqjegog.sHtML
+
+[Q80] 字符串截取
+来源：http://3g.yfazqb.com/Article/details/gmcscxjea.sHtML
+
+SELECT SUBSTRING(name, 1, 3) FROM users;
+来源：http://mobile.bbcook.cn/Article/details/gsqpkoglv.sHtML
+
+[Q81] 字符串替换
+来源：http://3g.tarul.cn/Article/details/gcozmrsav.sHtML
+
+SELECT REPLACE(name, 'a', 'b') FROM users;
+来源：http://blog.vehdjk.com/Article/details/gfjkqyttt.sHtML
+
+[Q82] 字符长度与字节长度
+来源：http://mobile.epnwcf.com/Article/details/giddsxcfr.sHtML
+
+SELECT CHAR_LENGTH(name), LENGTH(name) FROM users;
+来源：http://3g.fktsv.cn/Article/details/gafxjcjcd.sHtML
+
+[Q83] 大小写转换
+来源：http://mobile.epnwcf.com/Article/details/geknktxue.sHtML
+
+SELECT UPPER(name), LOWER(name) FROM users;
+来源：http://www.share.yfazqb.com/Article/details/goibpebiw.sHtML
+
+[Q84] 去除首尾空格
+来源：http://www.m.share.tarul.cn/Article/details/gkeaidznm.sHtML
+
+SELECT TRIM(name) FROM users;
+来源：http://read.share.sjlbkw.cn/Article/details/gqocenhcu.sHtML
+
+[Q85] 数值取整
+来源：http://blog.tarul.cn/Article/details/gkrhooitg.sHtML
+
+SELECT ROUND(3.567, 2), CEIL(3.1), FLOOR(3.9);
+来源：http://www.m.share.fktsv.cn/Article/details/gbxbvhmse.sHtML
+
+[Q86] 读取 JSON 字段
+来源：http://blog.vehdjk.com/Article/details/gylknvkda.sHtML
+
+SELECT data->>'$.name' FROM t;    -- PostgreSQL: data->>'name'
+来源：http://www.share.tarul.cn/Article/details/gqunflxei.sHtML
+
+[Q87] JSON 字段做条件
+来源：http://m.share.tarul.cn/Article/details/gojtmohvq.sHtML
+
+SELECT * FROM t WHERE JSON_EXTRACT(data, '$.age') > 18;
+来源：http://mobile.vehdjk.com/Article/details/gfjiiuksl.sHtML
+
+[Q88] 行转列（条件聚合）
+来源：http://wap.vehdjk.com/Article/details/ggvqqhrih.sHtML
+
+SELECT SUM(CASE WHEN status = 1 THEN 1 ELSE 0 END) AS s1,
+来源：http://read.share.vehdjk.com/Article/details/goktyxell.sHtML
+
+SUM(CASE WHEN status = 2 THEN 1 ELSE 0 END) AS s2 FROM users;
+来源：http://www.blog.bbcook.cn/Article/details/gwaudfsiq.sHtML
+
+[Q89] 判断表是否存在
+来源：http://www.share.bbcook.cn/Article/details/goidagnsg.sHtML
+
+SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'users';
+来源：http://read.share.yfazqb.com/Article/details/gochaprqp.sHtML
+
+[Q90] 生成序号列
+来源：http://mobile.epnwcf.com/Article/details/gspykeokk.sHtML
+
+SELECT @i := @i + 1 AS seq, name FROM users, (SELECT @i := 0) x;
+来源：http://www.blog.epnwcf.com/Article/details/geyxatcfm.sHtML
+
+================================================================================
+来源：http://mobile.tarul.cn/Article/details/gcotegtuq.sHtML
+
+R. Bash 专题
+来源：http://baike.yfazqb.com/Article/details/gkigutzvo.sHtML
+
+================================================================================
+来源：http://www.m.share.tarul.cn/Article/details/gipppjuyl.sHtML
+
+[R01] shebang 与严格模式
+来源：http://3g.bbcook.cn/Article/details/gtfegluiu.sHtML
+
+#!/usr/bin/env bash
+来源：http://www.m.share.tarul.cn/Article/details/giugjtxse.sHtML
+
+set -euo pipefail
+来源：http://wap.sjlbkw.cn/Article/details/glbpgjhhk.sHtML
+
+[R02] 变量赋值与使用
+来源：http://mobile.tarul.cn/Article/details/gomnnytoe.sHtML
+
+name="Tom"; echo "$name"
+来源：http://read.share.fktsv.cn/Article/details/glwgtzfbn.sHtML
+
+[R03] 只读变量
+来源：http://3g.yfazqb.com/Article/details/gzoqzupyw.sHtML
+
+readonly PI=3.14
+来源：http://baike.sjlbkw.cn/Article/details/gcrsgrtsy.sHtML
+
+[R04] 位置参数
+来源：http://www.m.share.bbcook.cn/Article/details/ghadvitnj.sHtML
+
+echo "$0 $1 $2 | 全部: $@ | 个数: $#"
+来源：http://www.share.bbcook.cn/Article/details/grdpuwcga.sHtML
+
+[R05] 参数默认值
+来源：http://blog.fktsv.cn/Article/details/gqtidjiei.sHtML
+
+name="${1:-default}"
+来源：http://www.m.share.vehdjk.com/Article/details/gjvfxhmec.sHtML
+
+[R06] 判断命令是否存在
+来源：http://www.share.vehdjk.com/Article/details/ggvogbtbn.sHtML
+
+command -v git >/dev/null || { echo "缺少 git"; exit 1; }
+来源：http://www.m.share.epnwcf.com/Article/details/grvejaent.sHtML
+
+[R07] if 判断文件
+来源：http://mobile.vehdjk.com/Article/details/gahytnrln.sHtML
+
+if [[ -f "$f" ]]; then echo "是文件"; fi
+来源：http://baike.tarul.cn/Article/details/goychezdx.sHtML
+
+[R08] 数值比较
+来源：http://www.blog.fktsv.cn/Article/details/gaijnfxpt.sHtML
+
+if (( a > b )); then echo "a 更大"; fi
+来源：http://www.m.share.vehdjk.com/Article/details/gydphtwgt.sHtML
+
+[R09] 字符串比较
+来源：http://www.blog.bbcook.cn/Article/details/gzjkiucvu.sHtML
+
+if [[ "$a" == "$b" ]]; then echo "相等"; fi
+来源：http://wap.fktsv.cn/Article/details/gjwikcutp.sHtML
+
+[R10] 正则匹配
+来源：http://www.blog.tarul.cn/Article/details/gidcfubql.sHtML
+
+if [[ "$s" =~ ^[0-9]+$ ]]; then echo "纯数字"; fi
+来源：http://m.share.vehdjk.com/Article/details/gahmhrcyf.sHtML
+
+[R11] case 多分支
+来源：http://read.share.fktsv.cn/Article/details/goyxrukgi.sHtML
+
+case "$1" in
+来源：http://baike.vehdjk.com/Article/details/gdzuhpffs.sHtML
+
+start) echo "启动" ;;
+来源：http://www.share.fktsv.cn/Article/details/gsrcsldeg.sHtML
+
+stop)  echo "停止" ;;
+来源：http://www.share.bbcook.cn/Article/details/gpbojtftg.sHtML
+
+*)     echo "未知命令" ;;
+来源：http://baike.bbcook.cn/Article/details/gxqbrrrua.sHtML
+
+esac
+来源：http://www.blog.yfazqb.com/Article/details/gkpvjorfk.sHtML
+
+[R12] for 遍历文件
+来源：http://mobile.fktsv.cn/Article/details/goaimjxsd.sHtML
+
+for f in *.txt; do echo "$f"; done
+来源：http://m.share.tarul.cn/Article/details/ggzlqqtlz.sHtML
+
+[R13] for 计数循环
+来源：http://www.share.sjlbkw.cn/Article/details/guoazeuir.sHtML
+
+for i in {1..10}; do echo "$i"; done
+来源：http://mobile.bbcook.cn/Article/details/gyspbllln.sHtML
+
+[R14] C 风格 for
+来源：http://3g.fktsv.cn/Article/details/gkzzmprzl.sHtML
+
+for ((i = 0; i < 10; i++)); do echo "$i"; done
+来源：http://3g.bbcook.cn/Article/details/gefrmokad.sHtML
+
+[R15] while 逐行读文件
+来源：http://www.m.share.sjlbkw.cn/Article/details/grypfrnsb.sHtML
+
+while IFS= read -r line; do echo "$line"; done < file.txt
+来源：http://m.share.yfazqb.com/Article/details/gwcbnowrq.sHtML
+
+[R16] until 等待条件
+来源：http://m.share.yfazqb.com/Article/details/gxuhdgpup.sHtML
+
+until [[ -f done.flag ]]; do sleep 1; done
+来源：http://www.blog.epnwcf.com/Article/details/gyjpsutrr.sHtML
+
+[R17] 数组定义与取值
+来源：http://m.share.yfazqb.com/Article/details/gkaaphcmw.sHtML
+
+arr=(a b c); echo "${arr[0]}"
+来源：http://mobile.epnwcf.com/Article/details/gwsupemmj.sHtML
+
+[R18] 遍历数组
+来源：http://www.m.share.bbcook.cn/Article/details/gctktcnod.sHtML
+
+for x in "${arr[@]}"; do echo "$x"; done
+来源：http://wap.yfazqb.com/Article/details/gipuvfpyx.sHtML
+
+[R19] 数组长度
+来源：http://www.blog.fktsv.cn/Article/details/gbnctloaw.sHtML
+
+echo "${#arr[@]}"
+来源：http://wap.epnwcf.com/Article/details/gowpmsuzz.sHtML
+
+[R20] 关联数组（字典）
+来源：http://blog.sjlbkw.cn/Article/details/gmisqtpoc.sHtML
+
+declare -A m; m[k]=v; echo "${m[k]}"
+来源：http://wap.fktsv.cn/Article/details/giqznfukw.sHtML
+
+[R21] 字符串长度
+来源：http://wap.tarul.cn/Article/details/gfbzqurpd.sHtML
+
+echo "${#s}"
+来源：http://baike.tarul.cn/Article/details/gcojwkrwl.sHtML
+
+[R22] 截取子串
+来源：http://www.blog.bbcook.cn/Article/details/gtrtknmyh.sHtML
+
+echo "${s:0:5}"
+来源：http://www.m.share.yfazqb.com/Article/details/gzjchiswr.sHtML
+
+[R23] 字符串替换
+来源：http://read.share.bbcook.cn/Article/details/gwxqehqhg.sHtML
+
+echo "${s/old/new}"; echo "${s//old/new}"    # 后者全部替换
+来源：http://www.share.fktsv.cn/Article/details/gyifckscg.sHtML
+
+[R24] 大小写转换
+来源：http://blog.bbcook.cn/Article/details/gcpysugzz.sHtML
+
+echo "${s^^}"; echo "${s,,}"
+来源：http://3g.sjlbkw.cn/Article/details/gmgjdzelf.sHtML
+
+[R25] 去后缀 / 去前缀
+来源：http://www.share.epnwcf.com/Article/details/gdsephewp.sHtML
+
+echo "${f%.txt}"; echo "${f#./}"
+来源：http://3g.tarul.cn/Article/details/gljzogcow.sHtML
+
+[R26] 命令替换
+来源：http://baike.tarul.cn/Article/details/gkczikddf.sHtML
+
+now=$(date +%F); echo "$now"
+来源：http://3g.epnwcf.com/Article/details/ggvihzqdj.sHtML
+
+[R27] 算术展开
+来源：http://blog.tarul.cn/Article/details/ggcnlxpqu.sHtML
+
+echo $((1 + 2 * 3))
+来源：http://3g.tarul.cn/Article/details/gapvmguhb.sHtML
+
+[R28] 浮点运算
+来源：http://www.share.yfazqb.com/Article/details/gpifovmwd.sHtML
+
+echo "scale=2; 10/3" | bc
+来源：http://3g.epnwcf.com/Article/details/gfaemxxnp.sHtML
+
+[R29] 定义函数
+来源：http://3g.vehdjk.com/Article/details/ghegkysjh.sHtML
+
+add() { echo $(($1 + $2)); }; add 1 2
+来源：http://wap.epnwcf.com/Article/details/gtvvjybqy.sHtML
+
+[R30] 函数返回状态码
+来源：http://www.share.yfazqb.com/Article/details/ggqnrszep.sHtML
+
+f() { return 0; }; f || echo "失败了"
+来源：http://blog.tarul.cn/Article/details/gnjycptbx.sHtML
+
+[R31] 局部变量
+来源：http://www.share.bbcook.cn/Article/details/gwlzszjkn.sHtML
+
+f() { local x=1; echo "$x"; }
+来源：http://baike.sjlbkw.cn/Article/details/gmhyxldrb.sHtML
+
+[R32] 参数个数校验
+来源：http://wap.bbcook.cn/Article/details/gibjtucsj.sHtML
+
+[[ $# -lt 2 ]] && { echo "用法: $0 a b"; exit 1; }
+来源：http://m.share.sjlbkw.cn/Article/details/gxtgrjgcc.sHtML
+
+[R33] 捕获错误并提示行号
+来源：http://www.blog.fktsv.cn/Article/details/gkbzsktog.sHtML
+
+trap 'echo "出错于第 $LINENO 行"' ERR
+来源：http://www.m.share.epnwcf.com/Article/details/gsrgtremj.sHtML
+
+[R34] 退出时清理
+来源：http://mobile.tarul.cn/Article/details/gomozchpd.sHtML
+
+trap 'rm -f "$tmp"' EXIT
+来源：http://wap.bbcook.cn/Article/details/ggrbkhjnn.sHtML
+
+[R35] 后台执行并等待
+来源：http://mobile.sjlbkw.cn/Article/details/gxhskysno.sHtML
+
+sleep 5 & pid=$!; wait "$pid"
+来源：http://mobile.vehdjk.com/Article/details/gjwdyepkw.sHtML
+
+[R36] 并发执行多个任务
+来源：http://3g.yfazqb.com/Article/details/gnexmsyql.sHtML
+
+for i in 1 2 3; do (sleep 1; echo "$i") & done; wait
+来源：http://3g.bbcook.cn/Article/details/gbcenpeva.sHtML
+
+[R37] 把输出赋给变量
+来源：http://wap.vehdjk.com/Article/details/ggmlylqwx.sHtML
+
+files=$(ls -1)
+来源：http://read.share.bbcook.cn/Article/details/gbuekxdlt.sHtML
+
+[R38] 管道串联
+来源：http://3g.tarul.cn/Article/details/gqiavkgcw.sHtML
+
+cat a.txt | grep -i error | wc -l
+来源：http://3g.fktsv.cn/Article/details/ganjfssch.sHtML
+
+[R39] 重定向标准输出与错误
+来源：http://m.share.sjlbkw.cn/Article/details/gqkotehmg.sHtML
+
+cmd > out.log 2>&1
+来源：http://wap.vehdjk.com/Article/details/glhllyzsw.sHtML
+
+[R40] 追加写日志
+来源：http://read.share.fktsv.cn/Article/details/gndyvkpnv.sHtML
+
+echo "log" >> out.log
+来源：http://3g.fktsv.cn/Article/details/gleruzebg.sHtML
+
+[R41] 丢弃输出
+来源：http://baike.epnwcf.com/Article/details/gdjwoqnta.sHtML
+
+cmd >/dev/null 2>&1
+来源：http://3g.bbcook.cn/Article/details/gknvrxrbj.sHtML
+
+[R42] 输入重定向
+来源：http://baike.epnwcf.com/Article/details/gujsejukl.sHtML
+
+wc -l < a.txt
+来源：http://www.share.tarul.cn/Article/details/gvawiyjln.sHtML
+
+[R43] 按名字查找文件
+来源：http://mobile.tarul.cn/Article/details/gzxvsantx.sHtML
+
+find . -name "*.log" -type f
+来源：http://mobile.bbcook.cn/Article/details/gpxekauts.sHtML
+
+[R44] 按修改时间查找
+来源：http://baike.sjlbkw.cn/Article/details/gfsmsmwsg.sHtML
+
+find . -mtime -7 -type f
+来源：http://m.share.tarul.cn/Article/details/gqldukelu.sHtML
+
+[R45] 批量删除
+来源：http://baike.sjlbkw.cn/Article/details/gikekhbjh.sHtML
+
+find . -name "*.tmp" -delete
+来源：http://wap.epnwcf.com/Article/details/grhiyqjyz.sHtML
+
+[R46] 递归替换文件内容
+来源：http://www.blog.fktsv.cn/Article/details/gqyboejtx.sHtML
+
+grep -rl 'old' . | xargs sed -i 's/old/new/g'
+来源：http://blog.fktsv.cn/Article/details/grddmaidx.sHtML
+
+[R47] sed 单行替换
+来源：http://blog.fktsv.cn/Article/details/gjfswfekc.sHtML
+
+sed -i 's/foo/bar/g' a.txt
+来源：http://baike.epnwcf.com/Article/details/gmcpctiby.sHtML
+
+[R48] awk 取指定列
+来源：http://mobile.sjlbkw.cn/Article/details/gqcuqurlf.sHtML
+
+awk '{print $1, $3}' a.txt
+来源：http://wap.sjlbkw.cn/Article/details/ggjbiebhn.sHtML
+
+[R49] awk 带条件
+来源：http://www.m.share.sjlbkw.cn/Article/details/gkxqglyxu.sHtML
+
+awk -F, '$3 > 100 {print $1}' a.csv
+来源：http://read.share.fktsv.cn/Article/details/gbbubavbn.sHtML
+
+[R50] awk 求和
+来源：http://mobile.sjlbkw.cn/Article/details/gjeqdiexx.sHtML
+
+awk '{s += $2} END {print s}' a.txt
+来源：http://read.share.tarul.cn/Article/details/gkofudxtr.sHtML
+
+[R51] 排序去重取前几
+来源：http://mobile.fktsv.cn/Article/details/gaydnmjme.sHtML
+
+sort a.txt | uniq -c | sort -rn | head
+来源：http://www.share.tarul.cn/Article/details/gubmbsxsq.sHtML
+
+[R52] 统计行数
+来源：http://m.share.vehdjk.com/Article/details/glljmofko.sHtML
+
+wc -l a.txt
+来源：http://blog.fktsv.cn/Article/details/gjgepnhiz.sHtML
+
+[R53] 查看文件头与实时尾
+来源：http://www.share.yfazqb.com/Article/details/gvphrghqu.sHtML
+
+head -n 20 a.txt;  tail -f -n 100 app.log
+来源：http://www.share.vehdjk.com/Article/details/ghtzyuufz.sHtML
+
+[R54] 比较两个文件
+来源：http://m.share.yfazqb.com/Article/details/gkaprqfsf.sHtML
+
+diff a.txt b.txt
+来源：http://m.share.vehdjk.com/Article/details/gtcchvern.sHtML
+
+[R55] 压缩与解压
+来源：http://wap.sjlbkw.cn/Article/details/gamybhmlq.sHtML
+
+tar -czf x.tar.gz dir/;  tar -xzf x.tar.gz
+来源：http://baike.bbcook.cn/Article/details/gocpfzpnf.sHtML
+
+[R56] 远程拷贝
+来源：http://www.blog.vehdjk.com/Article/details/gkpkeiesq.sHtML
+
+scp file user@host:/path/
+来源：http://blog.fktsv.cn/Article/details/guguiyrtc.sHtML
+
+[R57] 远程执行命令
+来源：http://wap.fktsv.cn/Article/details/guttlfmke.sHtML
+
+ssh user@host 'uptime'
+来源：http://m.share.bbcook.cn/Article/details/gyylmkjff.sHtML
+
+[R58] 下载文件
+来源：http://www.m.share.fktsv.cn/Article/details/gkcngswhk.sHtML
+
+curl -LO https://a.com/file.zip;  wget https://a.com/file.zip
+来源：http://www.share.vehdjk.com/Article/details/gycicwoha.sHtML
+
+[R59] 发 POST JSON
+来源：http://m.share.vehdjk.com/Article/details/gjdnwsxkr.sHtML
+
+curl -X POST -H 'Content-Type: application/json' -d '{"a":1}' https://api.example.com
+来源：http://www.blog.epnwcf.com/Article/details/gwkfubeai.sHtML
+
+[R60] 只看 HTTP 状态码
+来源：http://wap.epnwcf.com/Article/details/gewfixgpt.sHtML
+
+curl -s -o /dev/null -w "%{http_code}\n" https://a.com
+来源：http://m.share.fktsv.cn/Article/details/gtnoljotr.sHtML
+
+[R61] 磁盘占用
+来源：http://3g.fktsv.cn/Article/details/ggosjghni.sHtML
+
+df -h;  du -sh *
+来源：http://www.m.share.sjlbkw.cn/Article/details/gwlvepdsw.sHtML
+
+[R62] 找最占空间的文件
+来源：http://baike.sjlbkw.cn/Article/details/gsvdpybfr.sHtML
+
+du -ah . | sort -rh | head -10
+来源：http://blog.bbcook.cn/Article/details/gxqplozzn.sHtML
+
+[R63] 内存与进程
+来源：http://wap.epnwcf.com/Article/details/gahrhcisd.sHtML
+
+free -h;  ps aux | grep nginx
+来源：http://www.blog.yfazqb.com/Article/details/gehewswaw.sHtML
+
+[R64] 结束进程
+来源：http://m.share.vehdjk.com/Article/details/gjvlrnpaf.sHtML
+
+kill -9 $(pgrep -f app.py)
+来源：http://m.share.vehdjk.com/Article/details/ghmsulqci.sHtML
+
+[R65] 查看端口占用
+来源：http://www.blog.sjlbkw.cn/Article/details/gpcibfatx.sHtML
+
+ss -tlnp | grep 8080;  lsof -i:8080
+来源：http://www.m.share.sjlbkw.cn/Article/details/gckkbkued.sHtML
+
+[R66] 定时任务
+来源：http://m.share.yfazqb.com/Article/details/gljehoigm.sHtML
+
+crontab -e;  crontab -l
+来源：http://read.share.yfazqb.com/Article/details/ghwqcxkly.sHtML
+
+[R67] 生成随机十六进制串
+来源：http://read.share.fktsv.cn/Article/details/gkptdzgmr.sHtML
+
+openssl rand -hex 16
+来源：http://wap.sjlbkw.cn/Article/details/gjmcffghx.sHtML
+
+[R68] 计算文件校验值
+来源：http://www.share.sjlbkw.cn/Article/details/gxmjgvukx.sHtML
+
+sha256sum a.txt;  md5sum a.txt
+来源：http://read.share.bbcook.cn/Article/details/gnqdmootm.sHtML
+
+[R69] 生成随机密码
+来源：http://wap.fktsv.cn/Article/details/gxalnfxlh.sHtML
+
+head -c 16 /dev/urandom | base64
+来源：http://mobile.tarul.cn/Article/details/gqtdwekuf.sHtML
+
+[R70] 时间戳与互转
+来源：http://mobile.vehdjk.com/Article/details/grmdankcg.sHtML
+
+date +%s;  date -d @1700000000
+来源：http://www.share.fktsv.cn/Article/details/gynbemsuq.sHtML
+
+[R71] 日期格式化
+来源：http://www.share.sjlbkw.cn/Article/details/gluvtrzcj.sHtML
+
+date +"%Y-%m-%d %H:%M:%S"
+来源：http://www.blog.tarul.cn/Article/details/gxrgjheiu.sHtML
+
+[R72] 等待端口就绪
+来源：http://baike.fktsv.cn/Article/details/gzzzojzyo.sHtML
+
+until nc -z localhost 3306; do sleep 1; done
+来源：http://m.share.yfazqb.com/Article/details/gwqdgnirw.sHtML
+
+[R73] 分割大日志
+来源：http://www.blog.epnwcf.com/Article/details/gkyrgatdq.sHtML
+
+split -l 1000 big.log part_
+来源：http://www.m.share.tarul.cn/Article/details/guvcgkhdp.sHtML
+
+[R74] 批量重命名
+来源：http://blog.fktsv.cn/Article/details/gcpkxohjm.sHtML
+
+for f in *.jpeg; do mv "$f" "${f%.jpeg}.jpg"; done
+来源：http://wap.epnwcf.com/Article/details/gpyyxfjfu.sHtML
+
+[R75] 导出环境变量
+来源：http://blog.tarul.cn/Article/details/gqvfkztmk.sHtML
+
+export PATH="$HOME/bin:$PATH"
+来源：http://www.blog.bbcook.cn/Article/details/ggxhuyigy.sHtML
+
+[R76] 使用临时文件
+来源：http://m.share.epnwcf.com/Article/details/gtxugkdyo.sHtML
+
+tmp=$(mktemp); trap 'rm -f "$tmp"' EXIT
+来源：http://read.share.bbcook.cn/Article/details/gdearmgjm.sHtML
+
+[R77] 读取用户输入
+来源：http://read.share.tarul.cn/Article/details/gpbtnuwjd.sHtML
+
+read -rp "请输入: " ans
+来源：http://m.share.fktsv.cn/Article/details/ghzilfeia.sHtML
+
+[R78] 交互式菜单
+来源：http://3g.tarul.cn/Article/details/glwaknnal.sHtML
+
+select opt in a b c; do echo "$opt"; break; done
+来源：http://baike.tarul.cn/Article/details/gzvqpfkft.sHtML
+
+[R79] 解析命令行选项
+来源：http://www.blog.fktsv.cn/Article/details/gjolgjphg.sHtML
+
+while getopts "v:f:" o; do case $o in v) V=$OPTARG ;; f) F=$OPTARG ;; esac; done
+来源：http://www.blog.sjlbkw.cn/Article/details/gjfiohgkj.sHtML
+
+[R80] 查看脚本执行耗时
+来源：http://blog.yfazqb.com/Article/details/ghsfawtvf.sHtML
+
+time ./run.sh
+来源：http://www.m.share.sjlbkw.cn/Article/details/gjrzzwsyo.sHtML
+
+================================================================================
+来源：http://baike.epnwcf.com/Article/details/gaoedrtmf.sHtML
+
+S. C / C++ 专题
+来源：http://read.share.bbcook.cn/Article/details/ggxbwkbai.sHtML
+
+================================================================================
+来源：http://m.share.fktsv.cn/Article/details/gyqdhcohz.sHtML
+
+[S01] C：Hello World
+来源：http://wap.tarul.cn/Article/details/gemetqiyp.sHtML
+
+#include <stdio.h>
+来源：http://m.share.vehdjk.com/Article/details/gjbbhuwiy.sHtML
+
+int main(void) { printf("Hello\n"); return 0; }
+来源：http://wap.yfazqb.com/Article/details/ggpgbjjaq.sHtML
+
+[S02] C：变量与格式化输出
+来源：http://mobile.vehdjk.com/Article/details/grazhozkk.sHtML
+
+int a = 10; printf("%d\n", a);
+来源：http://www.m.share.vehdjk.com/Article/details/ghadxhwpe.sHtML
+
+[S03] C：读入整数
+来源：http://www.share.sjlbkw.cn/Article/details/gktgorvea.sHtML
+
+int x; scanf("%d", &x);
+来源：http://www.share.sjlbkw.cn/Article/details/gsyzhmaph.sHtML
+
+[S04] C：字符串复制
+来源：http://3g.fktsv.cn/Article/details/gwhuwoddp.sHtML
+
+char dst[32]; strcpy(dst, "hi");
+来源：http://m.share.fktsv.cn/Article/details/gsrfcibio.sHtML
+
+[S05] C：字符串长度
+来源：http://www.share.epnwcf.com/Article/details/gyaakufnb.sHtML
+
+strlen(s)
+来源：http://www.share.fktsv.cn/Article/details/gjnuqejwb.sHtML
+
+[S06] C：字符串比较
+来源：http://read.share.epnwcf.com/Article/details/gberwejsi.sHtML
+
+strcmp(a, b) == 0
+来源：http://3g.epnwcf.com/Article/details/givksbxes.sHtML
+
+[S07] C：数组遍历求和
+来源：http://m.share.fktsv.cn/Article/details/gknsvhfeq.sHtML
+
+for (int i = 0; i < n; i++) sum += a[i];
+来源：http://3g.epnwcf.com/Article/details/gbhrdixjg.sHtML
+
+[S08] C：动态内存分配与释放
+来源：http://3g.vehdjk.com/Article/details/glgldjcal.sHtML
+
+int *p = malloc(sizeof(int) * n); ... free(p);
+来源：http://read.share.bbcook.cn/Article/details/gupqedqct.sHtML
+
+[S09] C：结构体定义与初始化
+来源：http://wap.tarul.cn/Article/details/gejopfpcq.sHtML
+
+struct Point { int x, y; };  struct Point p = {1, 2};
+来源：http://wap.epnwcf.com/Article/details/gviapmdfz.sHtML
+
+[S10] C：指针与解引用
+来源：http://mobile.yfazqb.com/Article/details/gabthrphj.sHtML
+
+int *p = &a;  *p = 5;
+来源：http://www.m.share.yfazqb.com/Article/details/gthrfwobl.sHtML
+
+[S11] C：逐行读文件
+来源：http://3g.sjlbkw.cn/Article/details/gabmahdck.sHtML
+
+FILE *f = fopen("a.txt", "r");
+来源：http://m.share.yfazqb.com/Article/details/gekivdqoh.sHtML
+
+while (fgets(buf, sizeof buf, f)) { }
+来源：http://wap.vehdjk.com/Article/details/ggwcbiogl.sHtML
+
+fclose(f);
+来源：http://www.blog.sjlbkw.cn/Article/details/gnghumevz.sHtML
+
+[S12] C：写文件
+来源：http://www.blog.fktsv.cn/Article/details/gfjhmetza.sHtML
+
+FILE *f = fopen("a.txt", "w");  fprintf(f, "hi\n");  fclose(f);
+来源：http://www.m.share.bbcook.cn/Article/details/gtubikpys.sHtML
+
+[S13] C：宏定义
+来源：http://wap.bbcook.cn/Article/details/glozmbxor.sHtML
+
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
+来源：http://baike.yfazqb.com/Article/details/geclngssj.sHtML
+
+[S14] C：枚举
+来源：http://3g.tarul.cn/Article/details/gbqndmjxq.sHtML
+
+
+<!-- 参考信息 -->
