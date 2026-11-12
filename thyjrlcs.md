@@ -1,0 +1,904 @@
+代发 wailian999
+
+Go:   // 手写 map[int]int
+来源：http://gzm.yvedp.cn
+
+Ruby: // 手写 Hash
+来源：http://ohu.shanyushiyangkeji.top
+
+C#:   // 手写 Dictionary<int, int>
+来源：http://pdg.tian-w.cn
+
+[N08] 生成全排列
+来源：http://bdw.shuidangran.top
+
+Py:   itertools.permutations(arr)
+来源：http://buj.sysykeji.top
+
+PHP:  // 手写递归交换
+来源：http://mxb.xuetiantiany.cn
+
+JS:   // 手写回溯递归
+来源：http://rfz.xinyue.icu
+
+TS:   // 手写回溯递归
+来源：http://iih.jinqigfzy.top
+
+Java: // 手写回溯递归
+来源：http://wek.shzxlz.cn
+
+Go:   // 手写回溯递归
+来源：http://uui.tianlin.xyz
+
+Ruby: arr.permutation.to_a
+来源：http://led.52xcode.cn
+
+C#:   // 手写回溯递归
+来源：http://mvg.vqdsnc.cn
+
+[N09] 栈与队列
+来源：http://sco.vqdsnc.cn
+
+Py:   stack.append(x) / stack.pop()；deque.popleft() 作队列
+来源：http://rty.ehwqpu.com
+
+PHP:  array_push/array_pop 作栈；array_shift 作队列
+来源：http://xht.cheryme.top
+
+JS:   arr.push(x) / arr.pop() 作栈；arr.push / arr.shift 作队列
+来源：http://rso.daxiang520.top
+
+TS:   arr.push(x) / arr.pop() 作栈
+来源：http://tpg.pengpengdd.cyou
+
+Java: new ArrayDeque<>() 同时支持栈与队列
+来源：http://eie.vqdsnc.cn
+
+Go:   append(s, x) 与 s[len(s)-1] 出栈
+来源：http://tjh.gogol.net.cn
+
+Ruby: arr.push / arr.pop 作栈；arr.shift 作队列
+来源：http://fjl.redwolf501.top
+
+C#:   new Stack<T>() 与 new Queue<T>()
+来源：http://xpp.yj202588.top
+
+[N10] 链表节点定义
+来源：http://pji.xingfuxueyuan.xyz
+
+Py:   class Node:⏎    def __init__(self, v, nxt=None): self.v, self.next = v, nxt
+来源：http://yvf.ydjk.org.cn
+
+PHP:  class Node { public $v; public $next = null; }
+来源：http://dqi.jyoumei.cn
+
+JS:   class Node { constructor(v) { this.v = v; this.next = null; } }
+来源：http://jtt.nanxuanxn.top
+
+TS:   class Node { constructor(public v: number, public next: Node | null = null) {} }
+来源：http://jyk.kuanghao11.cn
+
+Java: class Node { int v; Node next; }
+来源：http://slj.hammf.cn
+
+Go:   type Node struct { V int; Next *Node }
+来源：http://yor.jinyuanbaomall.cn
+
+Ruby: Node = Struct.new(:v, :next)
+来源：http://iwg.svipenyu.cn
+
+C#:   class Node { public int V; public Node? Next; }
+来源：http://jsi.jqgfzy.top
+
+[N11] 二叉树中序遍历
+来源：http://hnr.cashguo.top
+
+Py:   def inorder(n): return inorder(n.left) + [n.val] + inorder(n.right) if n else []
+来源：http://rhf.bbcook.cn
+
+PHP:  // 手写递归函数
+来源：http://jxy.cucudq.cn
+
+JS:   const inorder = n => n ? [...inorder(n.left), n.val, ...inorder(n.right)] : [];
+来源：http://htf.jianghu66.top
+
+TS:   const inorder = (n: T | null): number[] => n ? [...inorder(n.left), n.val, ...inorder(n.right)] : [];
+来源：http://uup.shangyingyoupin.top
+
+Java: // 手写递归
+来源：http://lmx.dianchejie.cn
+
+Go:   // 手写递归
+来源：http://unu.dianchejie.cn
+
+Ruby: def inorder(n) = n ? inorder(n.left) + [n.val] + inorder(n.right) : []
+来源：http://vxs.tarul.cn
+
+C#:   // 手写递归
+来源：http://rxh.havefunace.top
+
+[N12] 动态规划：爬楼梯（每次 1 或 2 级）
+来源：http://lmj.yj202588.top
+
+Py:   from functools import reduce;  climb = lambda n: reduce(lambda p, _: (p[1], p[0] + p[1]), range(n), (1, 1))[0]
+来源：http://onb.xuetiantiany.cn
+
+PHP:  // 递推：$a=1;$b=1;for(...){[$a,$b]=[$b,$a+$b];}
+来源：http://xkd.yj202588.top
+
+JS:   // 递推：let [a, b] = [1, 1]; for (let i = 0; i < n; i++) [a, b] = [b, a + b];
+来源：http://khw.mhx1999.top
+
+TS:   let [a, b] = [1, 1]; for (let i = 0; i < n; i++) [a, b] = [b, a + b];
+来源：http://eqb.gogol.net.cn
+
+Java: // 递推：int a = 1, b = 1; 循环更新
+来源：http://oil.mhx1999.top
+
+Go:   // 递推：a, b := 1, 1; for i := 0; i < n; i++ { a, b = b, a+b }
+来源：http://rmi.hammf.cn
+
+Ruby: a, b = 1, 1;  n.times { a, b = b, a + b }
+来源：http://ush.cucudq.cn
+
+C#:   // 递推：int a = 1, b = 1; 循环更新
+来源：http://fcj.zhiwuduotai.top
+
+================================================================================
+来源：http://hwm.0kj1m.cn
+
+O. 并发与异步
+来源：http://abe.xingfuxueyuan.xyz
+
+================================================================================
+来源：http://nge.hesvh.cn
+
+[O01] 启动一个线程
+来源：http://pyu.fengsongda.top
+
+Py:   threading.Thread(target=f, args=(1,)).start()
+来源：http://kqt.yuanzhike.top
+
+PHP:  // 无原生线程：用 pcntl_fork 或消息队列
+来源：http://gvp.zhiwuduotai.top
+
+JS:   // 单线程事件循环：CPU 密集用 worker_threads
+来源：http://vmc.cheryme.top
+
+TS:   // 同 JS
+来源：http://iub.cashguo.top
+
+Java: new Thread(() -> f()).start()
+来源：http://yec.ydzc1.top
+
+Go:   go f()
+来源：http://bwf.hysaishi.cn
+
+Ruby: Thread.new { f }
+来源：http://vtm.yueranfly.top
+
+C#:   Task.Run(() => F());
+来源：http://vft.sjlbkw.cn
+
+[O02] 使用线程池
+来源：http://okd.smart0.xyz
+
+Py:   concurrent.futures.ThreadPoolExecutor(max_workers=4)
+来源：http://rgi.hfpthk.cn
+
+PHP:  // 用 Swoole / ReactPHP 等扩展实现
+来源：http://vmt.haohaochexian.top
+
+JS:   // worker_threads 线程池
+来源：http://vqk.hammf.cn
+
+TS:   // worker_threads 线程池
+来源：http://owl.daxiang520.top
+
+Java: Executors.newFixedThreadPool(4)
+来源：http://fwz.cqqwz.cn
+
+Go:   // 协程轻量，无需池；限并发用带缓冲 channel 当信号量
+来源：http://wvl.ydzc1.top
+
+Ruby: // 用 concurrent-ruby 的 ThreadPool
+来源：http://ybl.bbcook.cn
+
+C#:   Task.WhenAll(...)  或 Parallel.ForEach
+来源：http://kvg.ehwqpu.com
+
+[O03] 加锁保护共享数据
+来源：http://szj.tanke756.top
+
+Py:   with lock: shared += 1
+来源：http://hqw.jinghuilouyu.cn
+
+PHP:  // 用 flock() 做文件锁
+来源：http://sgx.ctjpmb.com
+
+JS:   // 单线程无需锁；跨线程共享内存用 Atomics
+来源：http://kki.chenlongwang.top
+
+TS:   // 同 JS
+来源：http://ypf.0kj1m.cn
+
+Java: synchronized (this) { shared++; }
+来源：http://hxr.hammf.cn
+
+Go:   mu.Lock();  defer mu.Unlock()
+来源：http://ukv.tanke756.top
+
+Ruby: mutex.synchronize { shared += 1 }
+来源：http://qxg.zhaomingkeji.xyz
+
+C#:   lock (gate) { shared++; }
+来源：http://ixh.feifeiyinyue.top
+
+[O04] 定义异步函数并等待
+来源：http://olh.yuxming.cn
+
+Py:   async def f():⏎    await g()
+来源：http://jrf.jqgufenzy.top
+
+PHP:  // 无原生 async：用 Fiber 或 Swoole
+来源：http://xjb.guowangkeji.top
+
+JS:   async function f() { await g(); }
+来源：http://ojs.0kj1m.cn
+
+TS:   async function f(): Promise<void> { await g(); }
+来源：http://emh.ppjwa.cn
+
+Java: // 用 CompletableFuture 或虚拟线程
+来源：http://gpo.jianghu66.top
+
+Go:   // 无 async 关键字：直接 go 调用，用 channel 收结果
+来源：http://jtu.yongpay.top
+
+Ruby: # 用 Fiber 或 async gem
+来源：http://vcn.shanyushiyangkeji.top
+
+C#:   async Task F() { await G(); }
+来源：http://nlb.hnxiangtu.top
+
+[O05] 并发执行并等待全部完成
+来源：http://mel.epnwcf.com
+
+Py:   asyncio.gather(*tasks)
+来源：http://kaq.fengsongda.top
+
+PHP:  // curl_multi 或 Amp 的 Promise\all
+来源：http://yke.nanxuanxn.top
+
+JS:   await Promise.all(tasks)
+来源：http://ntb.gogol.net.cn
+
+TS:   await Promise.all(tasks)
+来源：http://rnh.jinghuilouyu.cn
+
+Java: CompletableFuture.allOf(f1, f2).join()
+来源：http://iag.hnqzz.top
+
+Go:   sync.WaitGroup 或 errgroup.Wait()
+来源：http://ngn.cucudq.cn
+
+Ruby: threads.map(&:join)
+来源：http://fst.shzxlz.cn
+
+C#:   await Task.WhenAll(t1, t2)
+来源：http://ijb.yj202588.top
+
+[O06] 使用进程池
+来源：http://wgy.yongpay.top
+
+Py:   concurrent.futures.ProcessPoolExecutor()
+来源：http://ssa.hywenlv.cn
+
+PHP:  // pcntl_fork 或多进程队列
+来源：http://jnj.shzxlz.cn
+
+JS:   // child_process / cluster 模块
+来源：http://hvx.gotoacloud.top
+
+TS:   // child_process / cluster 模块
+来源：http://bxc.yongpay.top
+
+Java: // ForkJoinPool 或 ProcessBuilder
+来源：http://bvc.hnxiangtu.top
+
+Go:   // goroutine 已占用多核，直接并发即可
+来源：http://tze.hnqzz.top
+
+Ruby: // fork 块
+来源：http://kya.smart0.xyz
+
+C#:   Parallel.For
+来源：http://vue.guannengcc.top
+
+================================================================================
+来源：http://tlb.svipenyu.cn
+
+P. 常用工具函数
+来源：http://tdl.gogol.net.cn
+
+================================================================================
+来源：http://rtc.zhijiandao.cn
+
+[P01] 生成 UUID
+来源：http://abz.fengsongda.top
+
+Py:   str(uuid.uuid4())
+来源：http://znl.ppjwa.cn
+
+PHP:  bin2hex(random_bytes(16));        // 或 ramsey/uuid
+来源：http://mxg.c1oappe.top
+
+JS:   crypto.randomUUID()
+来源：http://jtd.bbcook.cn
+
+TS:   crypto.randomUUID()
+来源：http://yvv.hywenlv.cn
+
+Java: UUID.randomUUID().toString()
+来源：http://gai.sxryk.cn
+
+Go:   // 用 github.com/google/uuid
+来源：http://kjo.jianghu66.top
+
+Ruby: SecureRandom.uuid
+来源：http://awd.guowangkeji.top
+
+C#:   Guid.NewGuid().ToString()
+来源：http://uqi.zhongyouzk.top
+
+[P02] MD5 / SHA256 摘要
+来源：http://swa.zdqjudy.top
+
+Py:   hashlib.sha256(b).hexdigest();  hashlib.md5(b).hexdigest()
+来源：http://tqy.pycfn.com
+
+PHP:  hash("sha256", $s);  md5($s);
+来源：http://yep.yvedp.cn
+
+JS:   crypto.createHash("sha256").update(s).digest("hex")     // Node
+来源：http://gif.cqqwz.cn
+
+TS:   crypto.createHash("sha256").update(s).digest("hex")
+来源：http://alo.yfazqb.com
+
+Java: MessageDigest.getInstance("SHA-256").digest(bytes)
+来源：http://xdf.hesvh.cn
+
+Go:   fmt.Sprintf("%x", sha256.Sum256([]byte(s)))
+来源：http://pdu.bjfxy.top
+
+Ruby: Digest::SHA256.hexdigest(s)
+来源：http://vfm.cucudq.cn
+
+C#:   Convert.ToHexString(SHA256.HashData(bytes))
+来源：http://jro.pycfn.com
+
+[P03] 生成短随机字符串
+来源：http://pzo.gogol.net.cn
+
+Py:   "".join(random.choices(string.ascii_letters + string.digits, k=16))
+来源：http://tth.daria6918.cn
+
+PHP:  substr(str_shuffle(str_repeat("abcdefghijklmnopqrstuvwxyz0123456789", 2)), 0, 16);
+来源：http://ppw.zhoulong.xyz
+
+JS:   [...crypto.getRandomValues(new Uint8Array(16))].map(b => (b % 36).toString(36)).join("")
+来源：http://tau.cashguo.top
+
+TS:   [...crypto.getRandomValues(new Uint8Array(16))].map(b => (b % 36).toString(36)).join("")
+来源：http://hpq.tian-w.cn
+
+Java: new BigInteger(130, new SecureRandom()).toString(36).substring(0, 16)
+来源：http://lbz.cucudq.cn
+
+Go:   // crypto/rand 生成随机字节后 base64 或 hex 编码
+来源：http://ziq.zycfv.cn
+
+Ruby: SecureRandom.alphanumeric(16)
+来源：http://xzs.cqqwz.cn
+
+C#:   RandomNumberGenerator.GetHexString(16)     // .NET 8+
+来源：http://gge.yj20258.top
+
+[P04] 求长度
+来源：http://uiw.ehwqpu.com
+
+Py:   len(x)            # 字符串、列表、字典通用
+来源：http://hgj.0kj1m.cn
+
+PHP:  count($arr);  strlen($s);  mb_strlen($s, "UTF-8");
+来源：http://fas.9152youxi.cn
+
+JS:   Array.isArray(x) ? x.length : Object.keys(x).length
+来源：http://jgy.yonumen.top
+
+TS:   Array.isArray(x) ? x.length : Object.keys(x).length
+来源：http://mtm.wangdashe.top
+
+Java: list.size();  map.size();  s.length()
+来源：http://amf.yuxming.cn
+
+Go:   len(arr);  len(m)
+来源：http://smo.dashuyun.cn
+
+Ruby: x.length;  x.size
+来源：http://ezy.yanxiufei.cn
+
+C#:   list.Count;  dict.Count;  s.Length
+来源：http://kxr.quarkkingdee.top
+
+[P05] 判断两个对象内容是否相等
+来源：http://blz.pycfn.com
+
+Py:   a == b              # 列表与字典递归比较内容
+来源：http://arh.aizwys.cn
+
+PHP:  $a == $b            // 值比较；$a === $b 要求顺序与类型一致
+来源：http://yxy.chenzaomai.com
+
+JS:   JSON.stringify(a) === JSON.stringify(b)   // 简单场景；复杂用深比较库
+来源：http://vfr.zhengqikj.top
+
+TS:   JSON.stringify(a) === JSON.stringify(b)
+来源：http://tye.cqqwz.cn
+
+Java: a.equals(b)         // 需正确实现 equals；数组用 Arrays.equals
+来源：http://gdd.hywenlv.cn
+
+Go:   reflect.DeepEqual(a, b)
+来源：http://vlk.nwbrower.top
+
+Ruby: a == b
+来源：http://ecy.jqgfzy.top
+
+C#:   Equals(a, b)  或 StructuralComparisons
+来源：http://tfv.svipenyu.cn
+
+[P06] 综合判空（null / 空串 / 空集合）
+来源：http://sgb.wangshuangyany.cn
+
+Py:   if not x:           # None、""、[]、{}、0 均为假
+来源：http://qmb.hnxiangtu.top
+
+PHP:  if (empty($x)) {}
+来源：http://tse.jinqigufen.top
+
+JS:   if (x == null) {}    // 同时覆盖 null 与 undefined
+来源：http://vqf.tianlin.xyz
+
+TS:   if (x == null) {}
+来源：http://yyq.gogol.net.cn
+
+Java: if (x == null || x.isEmpty()) {}
+来源：http://hpj.nanxuanxn.top
+
+Go:   if x == nil {}
+来源：http://xir.haohaochexian.top
+
+Ruby: if x.nil? || (x.respond_to?(:empty?) && x.empty?)
+来源：http://cxg.aizwys.cn
+
+C#:   if (x is null) {}
+来源：http://whq.hysaishi.cn
+
+[P07] 防抖与节流
+来源：http://iwl.zhongyouzk.top
+
+Py:   # 用装饰器 + threading.Timer 实现；或 functools.lru_cache 做缓存
+来源：http://ozh.tanke756.top
+
+PHP:  // 手写时间戳比较
+来源：http://fmo.hfpthk.cn
+
+JS:   const debounce = (fn, ms) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };
+来源：http://jbt.guowangkeji.top
+
+TS:   const debounce = <A extends unknown[]>(fn: (...a: A) => void, ms: number) => { let t: ReturnType<typeof setTimeout>; return (...a: A) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };
+来源：http://mdm.hesvh.cn
+
+Java: long last = 0;  if (now - last > ms) { last = now; run(); }
+来源：http://qli.xuanzx.com
+
+Go:   time.AfterFunc 实现，或用带缓冲 channel 丢弃
+来源：http://wsf.jyoumei.cn
+
+Ruby: // 手写闭包 + Time.now 判断
+来源：http://sgk.yongpay.top
+
+C#:   // 用 System.Timers.Timer 重置实现
+来源：http://fdq.shangyingyoupin.top
+
+[P08] 处理浮点精度问题
+来源：http://fcd.jqgufenzy.top
+
+Py:   Decimal("0.1") + Decimal("0.2");  round(0.1 + 0.2, 10)
+来源：http://lja.pengpengdd.cyou
+
+PHP:  bcadd("0.1", "0.2", 2);
+来源：http://jan.ydzc1.top
+
+JS:   (0.1 + 0.2).toFixed(2);  Math.round((0.1 + 0.2) * 100) / 100
+来源：http://hho.yj202588.top
+
+TS:   (0.1 + 0.2).toFixed(2)
+来源：http://rbv.fanxiaobao.xyz
+
+Java: BigDecimal.valueOf(0.1).add(BigDecimal.valueOf(0.2))
+来源：http://fec.yongpay.top
+
+Go:   math/big.Float，或全部换算成整数分再算
+来源：http://jhk.cucudq.cn
+
+Ruby: BigDecimal("0.1") + BigDecimal("0.2")
+来源：http://jvp.ivvv.top
+
+C#:   decimal d = 0.1m + 0.2m;      // decimal 为精确十进制
+来源：http://cuu.ydzc1.top
+
+================================================================================
+来源：http://cfy.yfazqb.com
+
+Q. SQL 专题（以 MySQL 8 为主，附 PostgreSQL 差异）
+来源：http://lch.fanxiaobao.xyz
+
+================================================================================
+来源：http://yul.bjfxy.top
+
+[Q01] 创建表
+来源：http://tub.jinyuanbaomall.cn
+
+CREATE TABLE users (
+来源：http://inm.hywenlv.cn
+
+id INT PRIMARY KEY AUTO_INCREMENT,
+来源：http://nyy.xylfe.cn
+
+name VARCHAR(50) NOT NULL,
+来源：http://txo.guowangkeji.top
+
+email VARCHAR(100) UNIQUE,
+来源：http://nnh.jyoumei.cn
+
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+来源：http://ndh.xuanzx.com
+
+);
+来源：http://asz.uphjek.com
+
+[Q02] 创建带外键的表
+来源：http://icf.zhiwuduotai.top
+
+CREATE TABLE orders (
+来源：http://cnr.hongshengwenyu.top
+
+id BIGINT PRIMARY KEY AUTO_INCREMENT,
+来源：http://hks.jiagoushi.top
+
+user_id INT NOT NULL,
+来源：http://scm.aizwys.cn
+
+amount DECIMAL(10, 2),
+来源：http://qna.daria6918.cn
+
+FOREIGN KEY (user_id) REFERENCES users(id)
+来源：http://bho.nanxinkj.top
+
+);
+来源：http://nre.zdqjudy.top
+
+[Q03] 增加列
+来源：http://abs.aizwys.cn
+
+ALTER TABLE users ADD COLUMN age INT DEFAULT 0;
+来源：http://jtz.feifeiyinyue.top
+
+[Q04] 修改列类型
+来源：http://fiy.chenzaomai.com
+
+ALTER TABLE users MODIFY COLUMN name VARCHAR(100) NOT NULL;
+来源：http://qsb.ywan-chungtsiang.top
+
+[Q05] 重命名列
+来源：http://jer.hnxiangtu.top
+
+ALTER TABLE users RENAME COLUMN name TO full_name;
+来源：http://nzh.yj202588.top
+
+[Q06] 删除列
+来源：http://peg.yuxming.cn
+
+ALTER TABLE users DROP COLUMN age;
+来源：http://ghf.hammf.cn
+
+[Q07] 删除表
+来源：http://izi.ppjwa.cn
+
+DROP TABLE IF EXISTS orders;
+来源：http://jux.kuanghao11.cn
+
+[Q08] 创建普通索引
+来源：http://rbm.xinyue.icu
+
+CREATE INDEX idx_users_email ON users(email);
+来源：http://zve.gogol.net.cn
+
+[Q09] 创建唯一索引
+来源：http://isx.9152youxi.cn
+
+CREATE UNIQUE INDEX uq_users_email ON users(email);
+来源：http://qkn.ydjk.org.cn
+
+[Q10] 插入单行
+来源：http://xdj.jlsjyb.cn
+
+INSERT INTO users (name, email) VALUES ('Tom', 'tom@a.com');
+来源：http://gwe.daxiang520.top
+
+[Q11] 一次插入多行
+来源：http://lof.ehwqpu.com
+
+INSERT INTO users (name, email) VALUES ('A', 'a@a.com'), ('B', 'b@a.com');
+来源：http://pzd.yanxiufei.cn
+
+[Q12] 插入后取自增 ID
+来源：http://khs.hnxiangtu.top
+
+INSERT INTO users (name) VALUES ('C');
+来源：http://czp.hcnkem.com
+
+SELECT LAST_INSERT_ID();          -- PostgreSQL: INSERT ... RETURNING id
+来源：http://bfb.yueranfly.top
+
+[Q13] 忽略重复插入
+来源：http://mid.sufxvd.cn
+
+INSERT IGNORE INTO users (email) VALUES ('a@a.com');
+来源：http://pnf.zdqjudy.top
+
+[Q14] 存在则更新（upsert）
+来源：http://zam.guowangkeji.top
+
+INSERT INTO users (email, name) VALUES ('a@a.com', 'A')
+来源：http://lik.yongpay.top
+
+ON DUPLICATE KEY UPDATE name = VALUES(name);
+来源：http://cso.zdbjq.cn
+
+[Q15] 查询全部
+来源：http://cxb.jinghuilouyu.cn
+
+SELECT * FROM users;
+来源：http://bkk.mhx1999.top
+
+[Q16] 查询指定列
+来源：http://ynn.hnqzz.top
+
+SELECT id, name FROM users;
+来源：http://jxv.redwolf501.top
+
+[Q17] 条件查询
+来源：http://rcq.zhijiandao.cn
+
+SELECT * FROM users WHERE age > 18 AND status = 1;
+来源：http://kux.xuanzx.com
+
+[Q18] 模糊匹配
+来源：http://vyw.jinqigfzy.top
+
+SELECT * FROM users WHERE name LIKE '张%';
+来源：http://owh.yonumen.top
+
+[Q19] 范围查询
+来源：http://ndm.bjfxy.top
+
+SELECT * FROM users WHERE age BETWEEN 18 AND 30;
+来源：http://ntg.zycfv.cn
+
+[Q20] IN 列表
+来源：http://wke.vqdsnc.cn
+
+SELECT * FROM users WHERE id IN (1, 2, 3);
+来源：http://gxm.ppjwa.cn
+
+[Q21] 空值判断
+来源：http://jrt.jiagoushi.top
+
+SELECT * FROM users WHERE email IS NULL;
+来源：http://gew.wangshuangyany.cn
+
+[Q22] 排序
+来源：http://vgu.tanke756.top
+
+SELECT * FROM users ORDER BY age DESC, id ASC;
+来源：http://lji.tian-w.cn
+
+[Q23] 分页
+来源：http://itc.sufxvd.cn
+
+SELECT * FROM users ORDER BY id LIMIT 20 OFFSET 40;
+来源：http://nch.hongshengwenyu.top
+
+[Q24] 去重
+来源：http://ntq.tian-w.cn
+
+SELECT DISTINCT city FROM users;
+来源：http://pcz.yonumen.top
+
+[Q25] 只取前 N 条
+来源：http://vas.gogol.net.cn
+
+SELECT * FROM users LIMIT 10;      -- SQL Server: SELECT TOP 10 *
+来源：http://gno.zhiwuduotai.top
+
+[Q26] 计数
+来源：http://jht.shangyingyoupin.top
+
+SELECT COUNT(*) FROM users;
+来源：http://yyu.ppjwa.cn
+
+[Q27] 条件计数
+来源：http://jta.hesvh.cn
+
+SELECT COUNT(CASE WHEN age > 18 THEN 1 END) AS adults FROM users;
+来源：http://ohl.xuanzx.com
+
+[Q28] 求和与平均
+来源：http://hyo.sjlbkw.cn
+
+SELECT SUM(amount), AVG(amount) FROM orders;
+来源：http://ukx.shanyushiyangtech.top
+
+[Q29] 最大最小值
+来源：http://nvp.jqgufenzy.top
+
+SELECT MAX(age), MIN(age) FROM users;
+来源：http://jxi.jqgufenzy.top
+
+[Q30] 分组统计
+来源：http://bbh.ydzc1.top
+
+SELECT city, COUNT(*) FROM users GROUP BY city;
+来源：http://rqz.pycfn.com
+
+[Q31] 分组后过滤
+来源：http://jpk.kuanghao11.cn
+
+SELECT city, COUNT(*) AS c FROM users GROUP BY city HAVING c > 10;
+来源：http://wvm.zhijiandao.cn
+
+[Q32] 分组拼接字符串
+来源：http://ofs.tianlin.xyz
+
+SELECT city, GROUP_CONCAT(name) FROM users GROUP BY city;
+来源：http://aks.xingfuxueyuan.xyz
+
+-- PostgreSQL: STRING_AGG(name, ',')
+来源：http://tfw.meibo888.top
+
+[Q33] 多列分组
+来源：http://dmh.zhoulong.xyz
+
+SELECT city, gender, COUNT(*) FROM users GROUP BY city, gender;
+来源：http://btx.hcnkem.com
+
+[Q34] 每组取第一条
+来源：http://hiy.0kj1m.cn
+
+SELECT * FROM (
+来源：http://sew.nanxinkj.top
+
+SELECT *, ROW_NUMBER() OVER (PARTITION BY city ORDER BY age DESC) AS rn FROM users
+来源：http://kte.cdnleiting.top
+
+) t WHERE rn = 1;
+来源：http://vxf.epnwcf.com
+
+[Q35] 内连接
+来源：http://cks.birdmap.top
+
+SELECT u.name, o.amount FROM users u JOIN orders o ON o.user_id = u.id;
+来源：http://izu.fengsongda.top
+
+[Q36] 左连接
+来源：http://mba.ybcxt.top
+
+SELECT u.name, o.amount FROM users u LEFT JOIN orders o ON o.user_id = u.id;
+来源：http://kdk.bjfxy.top
+
+[Q37] 右连接
+来源：http://lie.hfpthk.cn
+
+SELECT * FROM orders o RIGHT JOIN users u ON u.id = o.user_id;
+来源：http://scq.hfpthk.cn
+
+[Q38] 全外连接（PostgreSQL）
+来源：http://tcf.tianlin.xyz
+
+SELECT * FROM a FULL OUTER JOIN b ON a.id = b.a_id;
+来源：http://pen.tanke756.top
+
+[Q39] 自连接（查上下级）
+来源：http://sqx.shanyushiyangtech.top
+
+SELECT e.name, m.name AS manager FROM employees e
+来源：http://wmo.vehdjk.com
+
+LEFT JOIN employees m ON e.manager_id = m.id;
+来源：http://nga.jinqigfzy.top
+
+[Q40] 交叉连接（笛卡尔积）
+来源：http://lvn.0kj1m.cn
+
+SELECT * FROM colors CROSS JOIN sizes;
+来源：http://kjl.xinyue.icu
+
+[Q41] 多表连接
+来源：http://aeo.hesvh.cn
+
+SELECT o.id, u.name, p.title FROM orders o
+来源：http://ubd.ehwqpu.com
+
+JOIN users u ON u.id = o.user_id
+来源：http://jmi.daxiang520.top
+
+JOIN products p ON p.id = o.product_id;
+来源：http://dpe.guowangkeji.top
+
+[Q42] 连接条件附加过滤
+来源：http://cvj.yuxming.cn
+
+SELECT u.name, o.amount FROM users u
+来源：http://ryt.chenlongwang.top
+
+JOIN orders o ON o.user_id = u.id AND o.amount > 100;
+来源：http://rst.fktsv.cn
+
+[Q43] 标量子查询
+来源：http://jme.hesvh.cn
+
+SELECT name, (SELECT COUNT(*) FROM orders o WHERE o.user_id = u.id) AS cnt FROM users u;
+来源：http://emf.hfpthk.cn
+
+[Q44] IN 子查询
+来源：http://klm.havefunace.top
+
+SELECT * FROM users WHERE id IN (SELECT user_id FROM orders);
+来源：http://liq.gotoacloud.top
+
+[Q45] EXISTS 判断存在
+来源：http://tad.xinyue.icu
+
+SELECT * FROM users u WHERE EXISTS (SELECT 1 FROM orders o WHERE o.user_id = u.id);
+来源：http://wav.yuxming.cn
+
+[Q46] NOT EXISTS 判断不存在
+来源：http://xfp.xingfuxueyuan.xyz
+
+SELECT * FROM users u WHERE NOT EXISTS (SELECT 1 FROM orders o WHERE o.user_id = u.id);
+来源：http://bbd.redwolf501.top
+
+[Q47] 与平均值比较
+来源：http://xng.fengsongda.top
+
+SELECT * FROM users WHERE age > (SELECT AVG(age) FROM users);
+来源：http://dfj.vqdsnc.cn
+
+[Q48] CTE 公用表表达式
+来源：http://thp.sufxvd.cn
+
+WITH t AS (SELECT city, COUNT(*) AS c FROM users GROUP BY city)
+来源：http://dvi.quarkkingdee.top
+
+SELECT * FROM t WHERE c > 5;
+来源：http://rhr.haohaochexian.top
+
+[Q49] 更新单行
+来源：http://ebv.fzhhl.top
+
+
+<!-- 参考信息 -->

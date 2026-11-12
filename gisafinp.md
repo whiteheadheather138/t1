@@ -1,0 +1,904 @@
+代发 wailian999
+
+SELECT * FROM users WHERE email IS NULL;
+来源：http://cwr.feifeiyinyue.top
+
+[Q22] 排序
+来源：http://fzv.jinqigfzy.top
+
+SELECT * FROM users ORDER BY age DESC, id ASC;
+来源：http://rid.cdnleiting.top
+
+[Q23] 分页
+来源：http://zot.zhaomingkeji.xyz
+
+SELECT * FROM users ORDER BY id LIMIT 20 OFFSET 40;
+来源：http://khs.ehwqpu.com
+
+[Q24] 去重
+来源：http://zud.hfpthk.cn
+
+SELECT DISTINCT city FROM users;
+来源：http://yhs.pengpengdd.cyou
+
+[Q25] 只取前 N 条
+来源：http://upr.ywan-chungtsiang.top
+
+SELECT * FROM users LIMIT 10;      -- SQL Server: SELECT TOP 10 *
+来源：http://kjb.hysaishi.cn
+
+[Q26] 计数
+来源：http://osx.jinqigfzy.top
+
+SELECT COUNT(*) FROM users;
+来源：http://cbe.jqgufenzy.top
+
+[Q27] 条件计数
+来源：http://llu.xziqi.cn
+
+SELECT COUNT(CASE WHEN age > 18 THEN 1 END) AS adults FROM users;
+来源：http://fmh.yuanzhike.top
+
+[Q28] 求和与平均
+来源：http://cpj.yanxiufei.cn
+
+SELECT SUM(amount), AVG(amount) FROM orders;
+来源：http://fxr.pengpengdd.cyou
+
+[Q29] 最大最小值
+来源：http://uyp.jqgfzy.top
+
+SELECT MAX(age), MIN(age) FROM users;
+来源：http://lqa.andypj.xyz
+
+[Q30] 分组统计
+来源：http://uvf.bjfxy.top
+
+SELECT city, COUNT(*) FROM users GROUP BY city;
+来源：http://ydr.zdqjudy.top
+
+[Q31] 分组后过滤
+来源：http://lha.xziqi.cn
+
+SELECT city, COUNT(*) AS c FROM users GROUP BY city HAVING c > 10;
+来源：http://ece.pengpengdd.cyou
+
+[Q32] 分组拼接字符串
+来源：http://bhe.cdnleiting.top
+
+SELECT city, GROUP_CONCAT(name) FROM users GROUP BY city;
+来源：http://okg.wangshuangyany.cn
+
+-- PostgreSQL: STRING_AGG(name, ',')
+来源：http://uqr.feifeiyinyue.top
+
+[Q33] 多列分组
+来源：http://eed.xinyue.icu
+
+SELECT city, gender, COUNT(*) FROM users GROUP BY city, gender;
+来源：http://agp.tarul.cn
+
+[Q34] 每组取第一条
+来源：http://ewf.svipenyu.cn
+
+SELECT * FROM (
+来源：http://nyq.ehwqpu.com
+
+SELECT *, ROW_NUMBER() OVER (PARTITION BY city ORDER BY age DESC) AS rn FROM users
+来源：http://jnz.bbcook.cn
+
+) t WHERE rn = 1;
+来源：http://ies.shuidangran.top
+
+[Q35] 内连接
+来源：http://vap.shzxlz.cn
+
+SELECT u.name, o.amount FROM users u JOIN orders o ON o.user_id = u.id;
+来源：http://amw.pycfn.com
+
+[Q36] 左连接
+来源：http://sic.guannengcc.top
+
+SELECT u.name, o.amount FROM users u LEFT JOIN orders o ON o.user_id = u.id;
+来源：http://bku.jinghuilouyu.cn
+
+[Q37] 右连接
+来源：http://mzq.svipenyu.cn
+
+SELECT * FROM orders o RIGHT JOIN users u ON u.id = o.user_id;
+来源：http://cki.zhaomingkeji.xyz
+
+[Q38] 全外连接（PostgreSQL）
+来源：http://ijw.sjlbkw.cn
+
+SELECT * FROM a FULL OUTER JOIN b ON a.id = b.a_id;
+来源：http://avo.chenlongwang.top
+
+[Q39] 自连接（查上下级）
+来源：http://xrw.shangyingyoupin.top
+
+SELECT e.name, m.name AS manager FROM employees e
+来源：http://rbs.nwbrower.top
+
+LEFT JOIN employees m ON e.manager_id = m.id;
+来源：http://pkx.yuanzhike.top
+
+[Q40] 交叉连接（笛卡尔积）
+来源：http://xrr.zhixingplan.top
+
+SELECT * FROM colors CROSS JOIN sizes;
+来源：http://ioi.yangfankeji.com
+
+[Q41] 多表连接
+来源：http://ecb.cheryme.top
+
+SELECT o.id, u.name, p.title FROM orders o
+来源：http://gud.jyoumei.cn
+
+JOIN users u ON u.id = o.user_id
+来源：http://ihz.zhengqikj.top
+
+JOIN products p ON p.id = o.product_id;
+来源：http://grb.redwolf501.top
+
+[Q42] 连接条件附加过滤
+来源：http://ppa.nanxuanxn.top
+
+SELECT u.name, o.amount FROM users u
+来源：http://tig.iojbl.cn
+
+JOIN orders o ON o.user_id = u.id AND o.amount > 100;
+来源：http://plo.cheryme.top
+
+[Q43] 标量子查询
+来源：http://eco.wangdashe.top
+
+SELECT name, (SELECT COUNT(*) FROM orders o WHERE o.user_id = u.id) AS cnt FROM users u;
+来源：http://lkg.gotoacloud.top
+
+[Q44] IN 子查询
+来源：http://igq.ywan-chungtsiang.top
+
+SELECT * FROM users WHERE id IN (SELECT user_id FROM orders);
+来源：http://hlb.andypj.xyz
+
+[Q45] EXISTS 判断存在
+来源：http://lkw.shangyingyoupin.top
+
+SELECT * FROM users u WHERE EXISTS (SELECT 1 FROM orders o WHERE o.user_id = u.id);
+来源：http://wtk.yonumen.top
+
+[Q46] NOT EXISTS 判断不存在
+来源：http://nhr.fzhhl.top
+
+SELECT * FROM users u WHERE NOT EXISTS (SELECT 1 FROM orders o WHERE o.user_id = u.id);
+来源：http://xmd.xuetiantiany.cn
+
+[Q47] 与平均值比较
+来源：http://gds.chenzaomai.com
+
+SELECT * FROM users WHERE age > (SELECT AVG(age) FROM users);
+来源：http://val.zhoulong.xyz
+
+[Q48] CTE 公用表表达式
+来源：http://cnh.tianlin.xyz
+
+WITH t AS (SELECT city, COUNT(*) AS c FROM users GROUP BY city)
+来源：http://qnn.tarul.cn
+
+SELECT * FROM t WHERE c > 5;
+来源：http://smz.zhoulong.xyz
+
+[Q49] 更新单行
+来源：http://cik.tian-w.cn
+
+UPDATE users SET status = 1 WHERE id = 10;
+来源：http://pmv.nanxuanxn.top
+
+[Q50] 批量更新
+来源：http://mrc.9152youxi.cn
+
+UPDATE users SET status = 2 WHERE created_at < '2024-01-01';
+来源：http://pdc.sufxvd.cn
+
+[Q51] 用子查询更新
+来源：http://ujf.fengsongda.top
+
+UPDATE users SET age = (SELECT MAX(age) FROM users) WHERE id = 1;
+来源：http://ngz.zhoulong.xyz
+
+[Q52] 删除指定行
+来源：http://tfc.fehbvm.com
+
+DELETE FROM users WHERE id = 10;
+来源：http://zci.hcnkem.com
+
+[Q53] 按条件删除
+来源：http://dux.yj20258.top
+
+DELETE FROM orders WHERE created_at < '2020-01-01';
+来源：http://vtr.aizwys.cn
+
+[Q54] 清空表
+来源：http://gie.fanxiaobao.xyz
+
+TRUNCATE TABLE logs;
+来源：http://vjs.cucudq.cn
+
+[Q55] 排名（并列占位）
+来源：http://hmy.cashguo.top
+
+SELECT name, RANK() OVER (ORDER BY score DESC) AS rk FROM scores;
+来源：http://ljm.sjlbkw.cn
+
+[Q56] 密集排名（并列不占位）
+来源：http://msd.iojbl.cn
+
+SELECT name, DENSE_RANK() OVER (ORDER BY score DESC) FROM scores;
+来源：http://olf.yj202588.top
+
+[Q57] 行号
+来源：http://bdj.meibo888.top
+
+SELECT ROW_NUMBER() OVER (ORDER BY id) AS seq FROM users;
+来源：http://pnm.sxryk.cn
+
+[Q58] 累计求和
+来源：http://sem.tianlin.xyz
+
+SELECT id, amount, SUM(amount) OVER (ORDER BY id) AS running FROM orders;
+来源：http://ugv.316326.xyz
+
+[Q59] 分组内累计
+来源：http://zjj.hesvh.cn
+
+SELECT city, id, SUM(amount) OVER (PARTITION BY city ORDER BY id) FROM orders;
+来源：http://noa.ppjwa.cn
+
+[Q60] 取上一行 / 下一行
+来源：http://hzm.yanxiufei.cn
+
+SELECT id, LAG(amount) OVER (ORDER BY id) AS prev,
+来源：http://nrv.pengpengdd.cyou
+
+LEAD(amount) OVER (ORDER BY id) AS next FROM orders;
+来源：http://qli.cheryme.top
+
+[Q61] 移动平均
+来源：http://dlo.ywan-chungtsiang.top
+
+SELECT id, AVG(amount) OVER (ORDER BY id ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) FROM orders;
+来源：http://oux.ybcxt.top
+
+[Q62] 分组占比
+来源：http://qei.snrcjt.cn
+
+SELECT city, COUNT(*) * 100.0 / SUM(COUNT(*)) OVER () AS pct FROM users GROUP BY city;
+来源：http://hmk.hongshengwenyu.top
+
+[Q63] 开启事务
+来源：http://cqn.zhoulong.xyz
+
+START TRANSACTION;                -- 或 BEGIN
+来源：http://iht.zhiwuduotai.top
+
+[Q64] 提交事务
+来源：http://bdd.jqgufenzy.top
+
+COMMIT;
+来源：http://bpc.yangfankeji.com
+
+[Q65] 回滚事务
+来源：http://tot.jianghu66.top
+
+ROLLBACK;
+来源：http://yzy.ywan-chungtsiang.top
+
+[Q66] 行锁查询
+来源：http://yor.smart0.xyz
+
+SELECT * FROM users WHERE id = 1 FOR UPDATE;
+来源：http://uaf.birdmap.top
+
+[Q67] 设置隔离级别
+来源：http://jiz.zhijiandao.cn
+
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+来源：http://snh.shanyushiyangkeji.top
+
+[Q68] 保存点
+来源：http://neh.yonumen.top
+
+SAVEPOINT sp1;
+来源：http://axp.jqgfzy.top
+
+ROLLBACK TO sp1;
+来源：http://myq.zhoulong.xyz
+
+[Q69] 查看执行计划
+来源：http://fbz.zhongyouzk.top
+
+EXPLAIN SELECT * FROM users WHERE email = 'a@a.com';
+来源：http://ntn.cdnleiting.top
+
+[Q70] 更新统计信息
+来源：http://bij.0kj1m.cn
+
+ANALYZE TABLE users;
+来源：http://atz.kuanghao11.cn
+
+[Q71] 查看建表语句
+来源：http://ysr.wangdashe.top
+
+SHOW CREATE TABLE users;          -- PostgreSQL: \d users
+来源：http://vkd.sweek.top
+
+[Q72] 查看索引
+来源：http://utg.xuetiantiany.cn
+
+SHOW INDEX FROM users;
+来源：http://oyt.sxryk.cn
+
+[Q73] 查看表状态
+来源：http://tbh.daria6918.cn
+
+SHOW TABLE STATUS LIKE 'users';
+来源：http://gkc.epnwcf.com
+
+[Q74] 强制使用索引
+来源：http://rsg.jinyuanbaomall.cn
+
+SELECT * FROM users FORCE INDEX (idx_users_email) WHERE email = 'x';
+来源：http://grs.guowangkeji.top
+
+[Q75] 日期格式化
+来源：http://afm.jinqigfzy.top
+
+SELECT DATE_FORMAT(created_at, '%Y-%m') FROM orders;
+来源：http://dil.ivvv.top
+
+-- PostgreSQL: to_char(created_at, 'YYYY-MM')
+来源：http://lia.zdbjq.cn
+
+[Q76] 按天统计
+来源：http://hfh.tarul.cn
+
+SELECT DATE(created_at) AS d, COUNT(*) FROM orders GROUP BY d;
+来源：http://kpn.zdqjudy.top
+
+[Q77] 时间加减
+来源：http://rwi.cdnleiting.top
+
+SELECT DATE_ADD(NOW(), INTERVAL 7 DAY);   -- PostgreSQL: now() + interval '7 day'
+来源：http://thp.fengsongda.top
+
+[Q78] 当前时间
+来源：http://xkt.uphjek.com
+
+SELECT NOW(), CURDATE(), UNIX_TIMESTAMP();
+来源：http://ftg.meibo888.top
+
+[Q79] 字符串拼接
+来源：http://kaz.wangdashe.top
+
+SELECT CONCAT(first_name, ' ', last_name) FROM users;   -- PostgreSQL: ||
+来源：http://mph.hesvh.cn
+
+[Q80] 字符串截取
+来源：http://umf.svipenyu.cn
+
+SELECT SUBSTRING(name, 1, 3) FROM users;
+来源：http://ygc.pycfn.com
+
+[Q81] 字符串替换
+来源：http://acm.shuidangran.top
+
+SELECT REPLACE(name, 'a', 'b') FROM users;
+来源：http://xei.bjfxy.top
+
+[Q82] 字符长度与字节长度
+来源：http://vye.zhijiandao.cn
+
+SELECT CHAR_LENGTH(name), LENGTH(name) FROM users;
+来源：http://vvd.xinyue.icu
+
+[Q83] 大小写转换
+来源：http://rdz.cdnleiting.top
+
+SELECT UPPER(name), LOWER(name) FROM users;
+来源：http://mqx.quarkkingdee.top
+
+[Q84] 去除首尾空格
+来源：http://ozm.smart0.xyz
+
+SELECT TRIM(name) FROM users;
+来源：http://pmy.ywan-chungtsiang.top
+
+[Q85] 数值取整
+来源：http://ekv.smart0.xyz
+
+SELECT ROUND(3.567, 2), CEIL(3.1), FLOOR(3.9);
+来源：http://cln.tianlin.xyz
+
+[Q86] 读取 JSON 字段
+来源：http://qjn.vehdjk.com
+
+SELECT data->>'$.name' FROM t;    -- PostgreSQL: data->>'name'
+来源：http://gyp.pycfn.com
+
+[Q87] JSON 字段做条件
+来源：http://uyp.jlsjyb.cn
+
+SELECT * FROM t WHERE JSON_EXTRACT(data, '$.age') > 18;
+来源：http://anx.yueranfly.top
+
+[Q88] 行转列（条件聚合）
+来源：http://wie.jinqigfzy.top
+
+SELECT SUM(CASE WHEN status = 1 THEN 1 ELSE 0 END) AS s1,
+来源：http://dhn.chenjidiqi.icu
+
+SUM(CASE WHEN status = 2 THEN 1 ELSE 0 END) AS s2 FROM users;
+来源：http://ioq.cashguo.top
+
+[Q89] 判断表是否存在
+来源：http://xzg.cashguo.top
+
+SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'users';
+来源：http://usn.jyoumei.cn
+
+[Q90] 生成序号列
+来源：http://zuy.wangshuangyany.cn
+
+SELECT @i := @i + 1 AS seq, name FROM users, (SELECT @i := 0) x;
+来源：http://byj.hysaishi.cn
+
+================================================================================
+来源：http://jjy.wangdashe.top
+
+R. Bash 专题
+来源：http://oet.zhiwuduotai.top
+
+================================================================================
+来源：http://snc.chenzaomai.com
+
+[R01] shebang 与严格模式
+来源：http://uze.cqqwz.cn
+
+#!/usr/bin/env bash
+来源：http://aix.zdqjudy.top
+
+set -euo pipefail
+来源：http://erg.hnxiangtu.top
+
+[R02] 变量赋值与使用
+来源：http://atp.yuxming.cn
+
+name="Tom"; echo "$name"
+来源：http://dum.yueranfly.top
+
+[R03] 只读变量
+来源：http://ahe.wangshuangyany.cn
+
+readonly PI=3.14
+来源：http://gsl.birdmap.top
+
+[R04] 位置参数
+来源：http://abk.birdmap.top
+
+echo "$0 $1 $2 | 全部: $@ | 个数: $#"
+来源：http://sul.cashguo.top
+
+[R05] 参数默认值
+来源：http://kbe.andypj.xyz
+
+name="${1:-default}"
+来源：http://ots.gzhubu.top
+
+[R06] 判断命令是否存在
+来源：http://btb.ctjpmb.com
+
+command -v git >/dev/null || { echo "缺少 git"; exit 1; }
+来源：http://aoc.andypj.xyz
+
+[R07] if 判断文件
+来源：http://tyt.hongshengwenyu.top
+
+if [[ -f "$f" ]]; then echo "是文件"; fi
+来源：http://qic.meibo888.top
+
+[R08] 数值比较
+来源：http://mma.hnqzz.top
+
+if (( a > b )); then echo "a 更大"; fi
+来源：http://rbd.tanke756.top
+
+[R09] 字符串比较
+来源：http://rcm.c1oappe.top
+
+if [[ "$a" == "$b" ]]; then echo "相等"; fi
+来源：http://gsi.yvedp.cn
+
+[R10] 正则匹配
+来源：http://pvl.316326.xyz
+
+if [[ "$s" =~ ^[0-9]+$ ]]; then echo "纯数字"; fi
+来源：http://ozd.daxiang520.top
+
+[R11] case 多分支
+来源：http://enq.dashuyun.cn
+
+case "$1" in
+来源：http://fpm.snrcjt.cn
+
+start) echo "启动" ;;
+来源：http://gnw.hcnkem.com
+
+stop)  echo "停止" ;;
+来源：http://kbc.zycfv.cn
+
+*)     echo "未知命令" ;;
+来源：http://hdh.shangyingyoupin.top
+
+esac
+来源：http://tah.cucudq.cn
+
+[R12] for 遍历文件
+来源：http://jnc.xuetiantiany.cn
+
+for f in *.txt; do echo "$f"; done
+来源：http://ads.hywenlv.cn
+
+[R13] for 计数循环
+来源：http://bna.ppjwa.cn
+
+for i in {1..10}; do echo "$i"; done
+来源：http://wjo.c1oappe.top
+
+[R14] C 风格 for
+来源：http://ape.jinghuilouyu.cn
+
+for ((i = 0; i < 10; i++)); do echo "$i"; done
+来源：http://wbj.shuidangran.top
+
+[R15] while 逐行读文件
+来源：http://mln.cqqwz.cn
+
+while IFS= read -r line; do echo "$line"; done < file.txt
+来源：http://qeu.jlsjyb.cn
+
+[R16] until 等待条件
+来源：http://hgh.nanxinkj.top
+
+until [[ -f done.flag ]]; do sleep 1; done
+来源：http://ukx.nwbrower.top
+
+[R17] 数组定义与取值
+来源：http://nza.316326.xyz
+
+arr=(a b c); echo "${arr[0]}"
+来源：http://uqt.jianghu66.top
+
+[R18] 遍历数组
+来源：http://wkd.yj20258888.top
+
+for x in "${arr[@]}"; do echo "$x"; done
+来源：http://jsw.dianchejie.cn
+
+[R19] 数组长度
+来源：http://owe.chenzaomai.com
+
+echo "${#arr[@]}"
+来源：http://rpj.chenzaomai.com
+
+[R20] 关联数组（字典）
+来源：http://rkc.52xcode.cn
+
+declare -A m; m[k]=v; echo "${m[k]}"
+来源：http://agq.pycfn.com
+
+[R21] 字符串长度
+来源：http://prj.zhongyouzk.top
+
+echo "${#s}"
+来源：http://rbo.zhiwuduotai.top
+
+[R22] 截取子串
+来源：http://wnj.kuanghao11.cn
+
+echo "${s:0:5}"
+来源：http://daz.jyoumei.cn
+
+[R23] 字符串替换
+来源：http://tqq.hongshengwenyu.top
+
+echo "${s/old/new}"; echo "${s//old/new}"    # 后者全部替换
+来源：http://fgm.gaohongyu789.top
+
+[R24] 大小写转换
+来源：http://xhv.yonumen.top
+
+echo "${s^^}"; echo "${s,,}"
+来源：http://ylx.uphjek.com
+
+[R25] 去后缀 / 去前缀
+来源：http://xad.bbcook.cn
+
+echo "${f%.txt}"; echo "${f#./}"
+来源：http://toa.tian-w.cn
+
+[R26] 命令替换
+来源：http://tbs.zycfv.cn
+
+now=$(date +%F); echo "$now"
+来源：http://tvy.sysykeji.top
+
+[R27] 算术展开
+来源：http://mxz.ctjpmb.com
+
+echo $((1 + 2 * 3))
+来源：http://rpu.vehdjk.com
+
+[R28] 浮点运算
+来源：http://egb.meibo888.top
+
+echo "scale=2; 10/3" | bc
+来源：http://inj.redwolf501.top
+
+[R29] 定义函数
+来源：http://plg.dashuyun.cn
+
+add() { echo $(($1 + $2)); }; add 1 2
+来源：http://jnq.smart0.xyz
+
+[R30] 函数返回状态码
+来源：http://wmj.ctjpmb.com
+
+f() { return 0; }; f || echo "失败了"
+来源：http://unp.pycfn.com
+
+[R31] 局部变量
+来源：http://cqg.guannengcc.top
+
+f() { local x=1; echo "$x"; }
+来源：http://mnj.wangdashe.top
+
+[R32] 参数个数校验
+来源：http://cup.fktsv.cn
+
+[[ $# -lt 2 ]] && { echo "用法: $0 a b"; exit 1; }
+来源：http://zrc.zdqjudy.top
+
+[R33] 捕获错误并提示行号
+来源：http://qih.zhengqikj.top
+
+trap 'echo "出错于第 $LINENO 行"' ERR
+来源：http://kxq.cucudq.cn
+
+[R34] 退出时清理
+来源：http://nfv.hnxiangtu.top
+
+trap 'rm -f "$tmp"' EXIT
+来源：http://qcy.fehbvm.com
+
+[R35] 后台执行并等待
+来源：http://ngl.yj202588.top
+
+sleep 5 & pid=$!; wait "$pid"
+来源：http://tca.haohaochexian.top
+
+[R36] 并发执行多个任务
+来源：http://mst.kuanghao11.cn
+
+for i in 1 2 3; do (sleep 1; echo "$i") & done; wait
+来源：http://xzc.yuxming.cn
+
+[R37] 把输出赋给变量
+来源：http://phv.wangshuangyany.cn
+
+files=$(ls -1)
+来源：http://cke.sufxvd.cn
+
+[R38] 管道串联
+来源：http://nfy.xuanzx.com
+
+cat a.txt | grep -i error | wc -l
+来源：http://roj.cucudq.cn
+
+[R39] 重定向标准输出与错误
+来源：http://fov.guannengcc.top
+
+cmd > out.log 2>&1
+来源：http://gqa.fehbvm.com
+
+[R40] 追加写日志
+来源：http://gfg.zhijiandao.cn
+
+echo "log" >> out.log
+来源：http://kus.jinghuilouyu.cn
+
+[R41] 丢弃输出
+来源：http://gqv.yj20258888.top
+
+cmd >/dev/null 2>&1
+来源：http://fcz.hesvh.cn
+
+[R42] 输入重定向
+来源：http://zce.tianlin.xyz
+
+wc -l < a.txt
+来源：http://lsn.feifeiyinyue.top
+
+[R43] 按名字查找文件
+来源：http://xip.jlsjyb.cn
+
+find . -name "*.log" -type f
+来源：http://twl.52xcode.cn
+
+[R44] 按修改时间查找
+来源：http://ltq.jlsjyb.cn
+
+find . -mtime -7 -type f
+来源：http://rbl.fanxiaobao.xyz
+
+[R45] 批量删除
+来源：http://hpv.sxryk.cn
+
+find . -name "*.tmp" -delete
+来源：http://bnm.yfazqb.com
+
+[R46] 递归替换文件内容
+来源：http://cmr.quarkkingdee.top
+
+grep -rl 'old' . | xargs sed -i 's/old/new/g'
+来源：http://foy.0kj1m.cn
+
+[R47] sed 单行替换
+来源：http://mbb.zhongyouzk.top
+
+sed -i 's/foo/bar/g' a.txt
+来源：http://yoj.daria6918.cn
+
+[R48] awk 取指定列
+来源：http://utd.shanyushiyangtech.top
+
+awk '{print $1, $3}' a.txt
+来源：http://ywk.ctjpmb.com
+
+[R49] awk 带条件
+来源：http://rgw.hnxiangtu.top
+
+awk -F, '$3 > 100 {print $1}' a.csv
+来源：http://gja.gaohongyu789.top
+
+[R50] awk 求和
+来源：http://lpg.chenjidiqi.icu
+
+awk '{s += $2} END {print s}' a.txt
+来源：http://igq.guowangkeji.top
+
+[R51] 排序去重取前几
+来源：http://teq.sjlbkw.cn
+
+sort a.txt | uniq -c | sort -rn | head
+来源：http://saq.shanyushiyangtech.top
+
+[R52] 统计行数
+来源：http://jnd.sweek.top
+
+wc -l a.txt
+来源：http://njz.cdnleiting.top
+
+[R53] 查看文件头与实时尾
+来源：http://lpy.pengpengdd.cyou
+
+head -n 20 a.txt;  tail -f -n 100 app.log
+来源：http://kwp.ydzc1.top
+
+[R54] 比较两个文件
+来源：http://tsm.316326.xyz
+
+diff a.txt b.txt
+来源：http://yia.gotoacloud.top
+
+[R55] 压缩与解压
+来源：http://fyy.ctjpmb.com
+
+tar -czf x.tar.gz dir/;  tar -xzf x.tar.gz
+来源：http://jbg.haohaochexian.top
+
+[R56] 远程拷贝
+来源：http://kcc.xuetiantiany.cn
+
+scp file user@host:/path/
+来源：http://dug.mhx1999.top
+
+[R57] 远程执行命令
+来源：http://qzv.vehdjk.com
+
+ssh user@host 'uptime'
+来源：http://ucz.quarkkingdee.top
+
+[R58] 下载文件
+来源：http://kli.52xcode.cn
+
+curl -LO https://a.com/file.zip;  wget https://a.com/file.zip
+来源：http://tox.havefunace.top
+
+[R59] 发 POST JSON
+来源：http://aaa.c1oappe.top
+
+curl -X POST -H 'Content-Type: application/json' -d '{"a":1}' https://api.example.com
+来源：http://rne.zhongyouzk.top
+
+[R60] 只看 HTTP 状态码
+来源：http://luc.gogol.net.cn
+
+curl -s -o /dev/null -w "%{http_code}\n" https://a.com
+来源：http://zye.yangfankeji.com
+
+[R61] 磁盘占用
+来源：http://gdy.shanyushiyangtech.top
+
+df -h;  du -sh *
+来源：http://heb.shzxlz.cn
+
+[R62] 找最占空间的文件
+来源：http://osc.hysaishi.cn
+
+du -ah . | sort -rh | head -10
+来源：http://liw.uphjek.com
+
+[R63] 内存与进程
+来源：http://yqv.chenlongwang.top
+
+free -h;  ps aux | grep nginx
+来源：http://zmx.cucudq.cn
+
+[R64] 结束进程
+来源：http://esc.sweek.top
+
+kill -9 $(pgrep -f app.py)
+来源：http://oil.fktsv.cn
+
+[R65] 查看端口占用
+来源：http://tuv.tianlin.xyz
+
+ss -tlnp | grep 8080;  lsof -i:8080
+来源：http://njr.snrcjt.cn
+
+[R66] 定时任务
+来源：http://xja.jyoumei.cn
+
+crontab -e;  crontab -l
+来源：http://dcv.ehwqpu.com
+
+[R67] 生成随机十六进制串
+来源：http://lbh.yonumen.top
+
+openssl rand -hex 16
+来源：http://lvb.jinghuilouyu.cn
+
+[R68] 计算文件校验值
+来源：http://tke.xuetiantiany.cn
+
+sha256sum a.txt;  md5sum a.txt
+来源：http://aqk.sjlbkw.cn
+
+[R69] 生成随机密码
+来源：http://guf.snrcjt.cn
+
+head -c 16 /dev/urandom | base64
+来源：http://odc.yuanzhike.top
+
+[R70] 时间戳与互转
+来源：http://meb.hysaishi.cn
+
+date +%s;  date -d @1700000000
+来源：http://plp.nwbrower.top
+
+[R71] 日期格式化
+来源：http://gbh.fehbvm.com
+
+
+<!-- 参考信息 -->

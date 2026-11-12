@@ -1,0 +1,904 @@
+代发 wailian999
+
+SELECT ROW_NUMBER() OVER (ORDER BY id) AS seq FROM users;
+来源：http://zwv.quarkkingdee.top
+
+[Q58] 累计求和
+来源：http://hqt.shuidangran.top
+
+SELECT id, amount, SUM(amount) OVER (ORDER BY id) AS running FROM orders;
+来源：http://tdt.jinqigfzy.top
+
+[Q59] 分组内累计
+来源：http://vkw.shanyushiyangtech.top
+
+SELECT city, id, SUM(amount) OVER (PARTITION BY city ORDER BY id) FROM orders;
+来源：http://hwl.zhongyouzk.top
+
+[Q60] 取上一行 / 下一行
+来源：http://rse.nanxinkj.top
+
+SELECT id, LAG(amount) OVER (ORDER BY id) AS prev,
+来源：http://hzb.daxiang520.top
+
+LEAD(amount) OVER (ORDER BY id) AS next FROM orders;
+来源：http://iyg.haohaochexian.top
+
+[Q61] 移动平均
+来源：http://jjn.dashuyun.cn
+
+SELECT id, AVG(amount) OVER (ORDER BY id ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) FROM orders;
+来源：http://tkr.hnxiangtu.top
+
+[Q62] 分组占比
+来源：http://frw.ybcxt.top
+
+SELECT city, COUNT(*) * 100.0 / SUM(COUNT(*)) OVER () AS pct FROM users GROUP BY city;
+来源：http://nvl.xinyue.icu
+
+[Q63] 开启事务
+来源：http://fzv.c1oappe.top
+
+START TRANSACTION;                -- 或 BEGIN
+来源：http://lwa.nanxinkj.top
+
+[Q64] 提交事务
+来源：http://dse.ehwqpu.com
+
+COMMIT;
+来源：http://jfa.ppjwa.cn
+
+[Q65] 回滚事务
+来源：http://zqa.gzhubu.top
+
+ROLLBACK;
+来源：http://asb.redwolf501.top
+
+[Q66] 行锁查询
+来源：http://gpt.ppjwa.cn
+
+SELECT * FROM users WHERE id = 1 FOR UPDATE;
+来源：http://ykh.c1oappe.top
+
+[Q67] 设置隔离级别
+来源：http://cra.pycfn.com
+
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+来源：http://uki.ydzc1.top
+
+[Q68] 保存点
+来源：http://ecp.jinqigfzy.top
+
+SAVEPOINT sp1;
+来源：http://mri.redwolf501.top
+
+ROLLBACK TO sp1;
+来源：http://jwq.fanxiaobao.xyz
+
+[Q69] 查看执行计划
+来源：http://mmo.vehdjk.com
+
+EXPLAIN SELECT * FROM users WHERE email = 'a@a.com';
+来源：http://ngw.zhaomingkeji.xyz
+
+[Q70] 更新统计信息
+来源：http://flq.daria6918.cn
+
+ANALYZE TABLE users;
+来源：http://zcp.hnxiangtu.top
+
+[Q71] 查看建表语句
+来源：http://npc.jinyuanbaomall.cn
+
+SHOW CREATE TABLE users;          -- PostgreSQL: \d users
+来源：http://kyo.hongshengwenyu.top
+
+[Q72] 查看索引
+来源：http://wsv.vqdsnc.cn
+
+SHOW INDEX FROM users;
+来源：http://pwc.yueranfly.top
+
+[Q73] 查看表状态
+来源：http://nhy.feifeiyinyue.top
+
+SHOW TABLE STATUS LIKE 'users';
+来源：http://yqz.c1oappe.top
+
+[Q74] 强制使用索引
+来源：http://fon.zdbjq.cn
+
+SELECT * FROM users FORCE INDEX (idx_users_email) WHERE email = 'x';
+来源：http://fbx.pengpengdd.cyou
+
+[Q75] 日期格式化
+来源：http://aac.ctjpmb.com
+
+SELECT DATE_FORMAT(created_at, '%Y-%m') FROM orders;
+来源：http://uqj.cdnleiting.top
+
+-- PostgreSQL: to_char(created_at, 'YYYY-MM')
+来源：http://jae.ydjk.org.cn
+
+[Q76] 按天统计
+来源：http://nvy.chenjidiqi.icu
+
+SELECT DATE(created_at) AS d, COUNT(*) FROM orders GROUP BY d;
+来源：http://ykc.yangfankeji.com
+
+[Q77] 时间加减
+来源：http://yew.havefunace.top
+
+SELECT DATE_ADD(NOW(), INTERVAL 7 DAY);   -- PostgreSQL: now() + interval '7 day'
+来源：http://qfy.zdqjudy.top
+
+[Q78] 当前时间
+来源：http://lpr.zdqjudy.top
+
+SELECT NOW(), CURDATE(), UNIX_TIMESTAMP();
+来源：http://tif.tanke756.top
+
+[Q79] 字符串拼接
+来源：http://zmx.mhx1999.top
+
+SELECT CONCAT(first_name, ' ', last_name) FROM users;   -- PostgreSQL: ||
+来源：http://hco.zhaomingkeji.xyz
+
+[Q80] 字符串截取
+来源：http://eef.hysaishi.cn
+
+SELECT SUBSTRING(name, 1, 3) FROM users;
+来源：http://vkk.cheryme.top
+
+[Q81] 字符串替换
+来源：http://umm.tanke756.top
+
+SELECT REPLACE(name, 'a', 'b') FROM users;
+来源：http://kvg.hongshengwenyu.top
+
+[Q82] 字符长度与字节长度
+来源：http://oxd.9152youxi.cn
+
+SELECT CHAR_LENGTH(name), LENGTH(name) FROM users;
+来源：http://bgk.xziqi.cn
+
+[Q83] 大小写转换
+来源：http://pwa.dianchejie.cn
+
+SELECT UPPER(name), LOWER(name) FROM users;
+来源：http://ckn.sufxvd.cn
+
+[Q84] 去除首尾空格
+来源：http://pqm.316326.xyz
+
+SELECT TRIM(name) FROM users;
+来源：http://jto.52xcode.cn
+
+[Q85] 数值取整
+来源：http://vqx.sweek.top
+
+SELECT ROUND(3.567, 2), CEIL(3.1), FLOOR(3.9);
+来源：http://soi.zhongyouzk.top
+
+[Q86] 读取 JSON 字段
+来源：http://cye.epnwcf.com
+
+SELECT data->>'$.name' FROM t;    -- PostgreSQL: data->>'name'
+来源：http://cik.hysaishi.cn
+
+[Q87] JSON 字段做条件
+来源：http://dai.sysykeji.top
+
+SELECT * FROM t WHERE JSON_EXTRACT(data, '$.age') > 18;
+来源：http://chn.fengsongda.top
+
+[Q88] 行转列（条件聚合）
+来源：http://ifk.bbcook.cn
+
+SELECT SUM(CASE WHEN status = 1 THEN 1 ELSE 0 END) AS s1,
+来源：http://mae.svipenyu.cn
+
+SUM(CASE WHEN status = 2 THEN 1 ELSE 0 END) AS s2 FROM users;
+来源：http://uwt.ydjk.org.cn
+
+[Q89] 判断表是否存在
+来源：http://qby.yuanzhike.top
+
+SELECT COUNT(*) FROM information_schema.tables WHERE table_name = 'users';
+来源：http://tqh.zycfv.cn
+
+[Q90] 生成序号列
+来源：http://yso.shzxlz.cn
+
+SELECT @i := @i + 1 AS seq, name FROM users, (SELECT @i := 0) x;
+来源：http://buj.fktsv.cn
+
+================================================================================
+来源：http://scr.c1oappe.top
+
+R. Bash 专题
+来源：http://kdo.shanyushiyangtech.top
+
+================================================================================
+来源：http://bdw.dianchejie.cn
+
+[R01] shebang 与严格模式
+来源：http://cag.ybcxt.top
+
+#!/usr/bin/env bash
+来源：http://ife.yuxming.cn
+
+set -euo pipefail
+来源：http://wgu.ydjk.org.cn
+
+[R02] 变量赋值与使用
+来源：http://vtq.xuanzx.com
+
+name="Tom"; echo "$name"
+来源：http://foa.chenjidiqi.icu
+
+[R03] 只读变量
+来源：http://eel.jinyuanbaomall.cn
+
+readonly PI=3.14
+来源：http://hbo.yvedp.cn
+
+[R04] 位置参数
+来源：http://ydt.aizwys.cn
+
+echo "$0 $1 $2 | 全部: $@ | 个数: $#"
+来源：http://ysb.yuxming.cn
+
+[R05] 参数默认值
+来源：http://oyd.haohaochexian.top
+
+name="${1:-default}"
+来源：http://yak.aizwys.cn
+
+[R06] 判断命令是否存在
+来源：http://sxh.feifeiyinyue.top
+
+command -v git >/dev/null || { echo "缺少 git"; exit 1; }
+来源：http://wyx.gogol.net.cn
+
+[R07] if 判断文件
+来源：http://yef.jinyuanbaomall.cn
+
+if [[ -f "$f" ]]; then echo "是文件"; fi
+来源：http://nia.zhaomingkeji.xyz
+
+[R08] 数值比较
+来源：http://eun.vehdjk.com
+
+if (( a > b )); then echo "a 更大"; fi
+来源：http://jmp.zhoulong.xyz
+
+[R09] 字符串比较
+来源：http://aaq.daxiang520.top
+
+if [[ "$a" == "$b" ]]; then echo "相等"; fi
+来源：http://zfm.c1oappe.top
+
+[R10] 正则匹配
+来源：http://vjb.vehdjk.com
+
+if [[ "$s" =~ ^[0-9]+$ ]]; then echo "纯数字"; fi
+来源：http://hhu.aibaodan.cn
+
+[R11] case 多分支
+来源：http://zmt.tian-w.cn
+
+case "$1" in
+来源：http://jrm.cqqwz.cn
+
+start) echo "启动" ;;
+来源：http://fsk.vehdjk.com
+
+stop)  echo "停止" ;;
+来源：http://kqr.tianlin.xyz
+
+*)     echo "未知命令" ;;
+来源：http://khs.jinqigufen.top
+
+esac
+来源：http://jcj.sxryk.cn
+
+[R12] for 遍历文件
+来源：http://zhi.ydjk.org.cn
+
+for f in *.txt; do echo "$f"; done
+来源：http://vys.sjlbkw.cn
+
+[R13] for 计数循环
+来源：http://vqy.snrcjt.cn
+
+for i in {1..10}; do echo "$i"; done
+来源：http://bum.jiagoushi.top
+
+[R14] C 风格 for
+来源：http://wbd.birdmap.top
+
+for ((i = 0; i < 10; i++)); do echo "$i"; done
+来源：http://vfs.jinyuanbaomall.cn
+
+[R15] while 逐行读文件
+来源：http://jdk.tianlin.xyz
+
+while IFS= read -r line; do echo "$line"; done < file.txt
+来源：http://bno.vqdsnc.cn
+
+[R16] until 等待条件
+来源：http://fwv.xuanzx.com
+
+until [[ -f done.flag ]]; do sleep 1; done
+来源：http://sbr.svipenyu.cn
+
+[R17] 数组定义与取值
+来源：http://ddx.quarkkingdee.top
+
+arr=(a b c); echo "${arr[0]}"
+来源：http://fqn.zdbjq.cn
+
+[R18] 遍历数组
+来源：http://wyh.yonumen.top
+
+for x in "${arr[@]}"; do echo "$x"; done
+来源：http://ddb.ydjk.org.cn
+
+[R19] 数组长度
+来源：http://wdx.hammf.cn
+
+echo "${#arr[@]}"
+来源：http://trd.ywan-chungtsiang.top
+
+[R20] 关联数组（字典）
+来源：http://zcr.zhixingplan.top
+
+declare -A m; m[k]=v; echo "${m[k]}"
+来源：http://ymr.yanxiufei.cn
+
+[R21] 字符串长度
+来源：http://gki.vqdsnc.cn
+
+echo "${#s}"
+来源：http://kev.cqqwz.cn
+
+[R22] 截取子串
+来源：http://fje.jianghu66.top
+
+echo "${s:0:5}"
+来源：http://vcy.yfazqb.com
+
+[R23] 字符串替换
+来源：http://ahp.havefunace.top
+
+echo "${s/old/new}"; echo "${s//old/new}"    # 后者全部替换
+来源：http://kqf.guowangkeji.top
+
+[R24] 大小写转换
+来源：http://xjv.yuanzhike.top
+
+echo "${s^^}"; echo "${s,,}"
+来源：http://raz.mhx1999.top
+
+[R25] 去后缀 / 去前缀
+来源：http://gwk.chenzaomai.com
+
+echo "${f%.txt}"; echo "${f#./}"
+来源：http://ckl.52xcode.cn
+
+[R26] 命令替换
+来源：http://ify.fehbvm.com
+
+now=$(date +%F); echo "$now"
+来源：http://zia.haohaochexian.top
+
+[R27] 算术展开
+来源：http://krg.shzxlz.cn
+
+echo $((1 + 2 * 3))
+来源：http://zqv.quarkkingdee.top
+
+[R28] 浮点运算
+来源：http://kkn.redwolf501.top
+
+echo "scale=2; 10/3" | bc
+来源：http://qsa.yueranfly.top
+
+[R29] 定义函数
+来源：http://ioa.jinyuanbaomall.cn
+
+add() { echo $(($1 + $2)); }; add 1 2
+来源：http://dai.daxiang520.top
+
+[R30] 函数返回状态码
+来源：http://yow.jqgfzy.top
+
+f() { return 0; }; f || echo "失败了"
+来源：http://mcw.redwolf501.top
+
+[R31] 局部变量
+来源：http://wwm.cashguo.top
+
+f() { local x=1; echo "$x"; }
+来源：http://wuj.shangyingyoupin.top
+
+[R32] 参数个数校验
+来源：http://gwf.yongpay.top
+
+[[ $# -lt 2 ]] && { echo "用法: $0 a b"; exit 1; }
+来源：http://muh.xuetiantiany.cn
+
+[R33] 捕获错误并提示行号
+来源：http://rxq.vqdsnc.cn
+
+trap 'echo "出错于第 $LINENO 行"' ERR
+来源：http://ret.bbcook.cn
+
+[R34] 退出时清理
+来源：http://kxl.xuetiantiany.cn
+
+trap 'rm -f "$tmp"' EXIT
+来源：http://aip.pengpengdd.cyou
+
+[R35] 后台执行并等待
+来源：http://lfx.jinqigfzy.top
+
+sleep 5 & pid=$!; wait "$pid"
+来源：http://viv.gaohongyu789.top
+
+[R36] 并发执行多个任务
+来源：http://zil.zhaomingkeji.xyz
+
+for i in 1 2 3; do (sleep 1; echo "$i") & done; wait
+来源：http://xpg.smart0.xyz
+
+[R37] 把输出赋给变量
+来源：http://tco.cqqwz.cn
+
+files=$(ls -1)
+来源：http://rvr.hywenlv.cn
+
+[R38] 管道串联
+来源：http://pzn.ybcxt.top
+
+cat a.txt | grep -i error | wc -l
+来源：http://ril.cheryme.top
+
+[R39] 重定向标准输出与错误
+来源：http://xig.zdqjudy.top
+
+cmd > out.log 2>&1
+来源：http://qsc.epnwcf.com
+
+[R40] 追加写日志
+来源：http://orc.hesvh.cn
+
+echo "log" >> out.log
+来源：http://jly.shanyushiyangkeji.top
+
+[R41] 丢弃输出
+来源：http://vej.shanyushiyangkeji.top
+
+cmd >/dev/null 2>&1
+来源：http://dhk.yonumen.top
+
+[R42] 输入重定向
+来源：http://ukr.fktsv.cn
+
+wc -l < a.txt
+来源：http://wsr.ydzc1.top
+
+[R43] 按名字查找文件
+来源：http://slb.hongshengwenyu.top
+
+find . -name "*.log" -type f
+来源：http://ydv.hcnkem.com
+
+[R44] 按修改时间查找
+来源：http://oec.jqgfzy.top
+
+find . -mtime -7 -type f
+来源：http://daa.yuxming.cn
+
+[R45] 批量删除
+来源：http://eft.havefunace.top
+
+find . -name "*.tmp" -delete
+来源：http://knn.shangyingyoupin.top
+
+[R46] 递归替换文件内容
+来源：http://ifs.sxryk.cn
+
+grep -rl 'old' . | xargs sed -i 's/old/new/g'
+来源：http://xeo.cheryme.top
+
+[R47] sed 单行替换
+来源：http://elt.sysykeji.top
+
+sed -i 's/foo/bar/g' a.txt
+来源：http://ntn.aizwys.cn
+
+[R48] awk 取指定列
+来源：http://qka.jqgufenzy.top
+
+awk '{print $1, $3}' a.txt
+来源：http://zrv.mhx1999.top
+
+[R49] awk 带条件
+来源：http://uuv.wangshuangyany.cn
+
+awk -F, '$3 > 100 {print $1}' a.csv
+来源：http://dve.shzxlz.cn
+
+[R50] awk 求和
+来源：http://ple.sysykeji.top
+
+awk '{s += $2} END {print s}' a.txt
+来源：http://qmz.shanyushiyangtech.top
+
+[R51] 排序去重取前几
+来源：http://toz.gaohongyu789.top
+
+sort a.txt | uniq -c | sort -rn | head
+来源：http://att.feifeiyinyue.top
+
+[R52] 统计行数
+来源：http://ggk.yvedp.cn
+
+wc -l a.txt
+来源：http://nhx.chenzaomai.com
+
+[R53] 查看文件头与实时尾
+来源：http://hnn.nanxinkj.top
+
+head -n 20 a.txt;  tail -f -n 100 app.log
+来源：http://vvn.shanyushiyangtech.top
+
+[R54] 比较两个文件
+来源：http://tvr.jqgfzy.top
+
+diff a.txt b.txt
+来源：http://jqs.gzhubu.top
+
+[R55] 压缩与解压
+来源：http://sab.haohaochexian.top
+
+tar -czf x.tar.gz dir/;  tar -xzf x.tar.gz
+来源：http://owc.chenjidiqi.icu
+
+[R56] 远程拷贝
+来源：http://gyz.yj202588.top
+
+scp file user@host:/path/
+来源：http://fav.zhoulong.xyz
+
+[R57] 远程执行命令
+来源：http://hul.zdbjq.cn
+
+ssh user@host 'uptime'
+来源：http://scd.0kj1m.cn
+
+[R58] 下载文件
+来源：http://yil.iojbl.cn
+
+curl -LO https://a.com/file.zip;  wget https://a.com/file.zip
+来源：http://shq.shzxlz.cn
+
+[R59] 发 POST JSON
+来源：http://scg.shanyushiyangkeji.top
+
+curl -X POST -H 'Content-Type: application/json' -d '{"a":1}' https://api.example.com
+来源：http://mrk.ybcxt.top
+
+[R60] 只看 HTTP 状态码
+来源：http://qmb.zhongyouzk.top
+
+curl -s -o /dev/null -w "%{http_code}\n" https://a.com
+来源：http://vrb.ehwqpu.com
+
+[R61] 磁盘占用
+来源：http://rdg.fengsongda.top
+
+df -h;  du -sh *
+来源：http://lmo.hesvh.cn
+
+[R62] 找最占空间的文件
+来源：http://zyt.hongshengwenyu.top
+
+du -ah . | sort -rh | head -10
+来源：http://axc.fzhhl.top
+
+[R63] 内存与进程
+来源：http://shq.zhixingplan.top
+
+free -h;  ps aux | grep nginx
+来源：http://shn.jinghuilouyu.cn
+
+[R64] 结束进程
+来源：http://tul.yj20258.top
+
+kill -9 $(pgrep -f app.py)
+来源：http://omz.ctjpmb.com
+
+[R65] 查看端口占用
+来源：http://szz.sweek.top
+
+ss -tlnp | grep 8080;  lsof -i:8080
+来源：http://ozr.hammf.cn
+
+[R66] 定时任务
+来源：http://lft.wangshuangyany.cn
+
+crontab -e;  crontab -l
+来源：http://uiy.nanxinkj.top
+
+[R67] 生成随机十六进制串
+来源：http://ikv.kuanghao11.cn
+
+openssl rand -hex 16
+来源：http://ziq.tarul.cn
+
+[R68] 计算文件校验值
+来源：http://ziu.meibo888.top
+
+sha256sum a.txt;  md5sum a.txt
+来源：http://ibf.gaohongyu789.top
+
+[R69] 生成随机密码
+来源：http://naz.ppjwa.cn
+
+head -c 16 /dev/urandom | base64
+来源：http://cii.iojbl.cn
+
+[R70] 时间戳与互转
+来源：http://nvl.bbcook.cn
+
+date +%s;  date -d @1700000000
+来源：http://xva.birdmap.top
+
+[R71] 日期格式化
+来源：http://txk.316326.xyz
+
+date +"%Y-%m-%d %H:%M:%S"
+来源：http://qgd.zdqjudy.top
+
+[R72] 等待端口就绪
+来源：http://xva.xinyue.icu
+
+until nc -z localhost 3306; do sleep 1; done
+来源：http://jba.xuanzx.com
+
+[R73] 分割大日志
+来源：http://lmv.cashguo.top
+
+split -l 1000 big.log part_
+来源：http://urm.yj20258888.top
+
+[R74] 批量重命名
+来源：http://wsb.vqdsnc.cn
+
+for f in *.jpeg; do mv "$f" "${f%.jpeg}.jpg"; done
+来源：http://wyf.yj202588.top
+
+[R75] 导出环境变量
+来源：http://knn.smart0.xyz
+
+export PATH="$HOME/bin:$PATH"
+来源：http://ahs.ydjk.org.cn
+
+[R76] 使用临时文件
+来源：http://hrz.sysykeji.top
+
+tmp=$(mktemp); trap 'rm -f "$tmp"' EXIT
+来源：http://dgy.zhijiandao.cn
+
+[R77] 读取用户输入
+来源：http://qzv.guowangkeji.top
+
+read -rp "请输入: " ans
+来源：http://bnc.zhengqikj.top
+
+[R78] 交互式菜单
+来源：http://uwc.nwbrower.top
+
+select opt in a b c; do echo "$opt"; break; done
+来源：http://zcl.yuanzhike.top
+
+[R79] 解析命令行选项
+来源：http://lhx.jqgufenzy.top
+
+while getopts "v:f:" o; do case $o in v) V=$OPTARG ;; f) F=$OPTARG ;; esac; done
+来源：http://ihp.jqgufenzy.top
+
+[R80] 查看脚本执行耗时
+来源：http://qvv.ehwqpu.com
+
+time ./run.sh
+来源：http://gkm.gaohongyu789.top
+
+================================================================================
+来源：http://wou.ydzc1.top
+
+S. C / C++ 专题
+来源：http://kss.sufxvd.cn
+
+================================================================================
+来源：http://uih.meibo888.top
+
+[S01] C：Hello World
+来源：http://oqo.svipenyu.cn
+
+#include <stdio.h>
+来源：http://vcd.yangfankeji.com
+
+int main(void) { printf("Hello\n"); return 0; }
+来源：http://ltt.guowangkeji.top
+
+[S02] C：变量与格式化输出
+来源：http://tbm.cucudq.cn
+
+int a = 10; printf("%d\n", a);
+来源：http://zkj.epnwcf.com
+
+[S03] C：读入整数
+来源：http://fxl.sjlbkw.cn
+
+int x; scanf("%d", &x);
+来源：http://yph.tianlin.xyz
+
+[S04] C：字符串复制
+来源：http://akx.wangshuangyany.cn
+
+char dst[32]; strcpy(dst, "hi");
+来源：http://cwk.yueranfly.top
+
+[S05] C：字符串长度
+来源：http://rht.yfazqb.com
+
+strlen(s)
+来源：http://ibe.c1oappe.top
+
+[S06] C：字符串比较
+来源：http://ktf.hesvh.cn
+
+strcmp(a, b) == 0
+来源：http://omb.hesvh.cn
+
+[S07] C：数组遍历求和
+来源：http://djb.kuanghao11.cn
+
+for (int i = 0; i < n; i++) sum += a[i];
+来源：http://bqg.yj20258888.top
+
+[S08] C：动态内存分配与释放
+来源：http://xel.zhiwuduotai.top
+
+int *p = malloc(sizeof(int) * n); ... free(p);
+来源：http://brk.nwbrower.top
+
+[S09] C：结构体定义与初始化
+来源：http://zxm.sxryk.cn
+
+struct Point { int x, y; };  struct Point p = {1, 2};
+来源：http://mcz.cucudq.cn
+
+[S10] C：指针与解引用
+来源：http://wqr.kuanghao11.cn
+
+int *p = &a;  *p = 5;
+来源：http://tox.yuanzhike.top
+
+[S11] C：逐行读文件
+来源：http://sdi.fzhhl.top
+
+FILE *f = fopen("a.txt", "r");
+来源：http://gsm.svipenyu.cn
+
+while (fgets(buf, sizeof buf, f)) { }
+来源：http://wun.yuanzhike.top
+
+fclose(f);
+来源：http://tfr.jyoumei.cn
+
+[S12] C：写文件
+来源：http://ezm.9152youxi.cn
+
+FILE *f = fopen("a.txt", "w");  fprintf(f, "hi\n");  fclose(f);
+来源：http://jdb.birdmap.top
+
+[S13] C：宏定义
+来源：http://bsy.dashuyun.cn
+
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
+来源：http://jvh.zdbjq.cn
+
+[S14] C：枚举
+来源：http://vco.redwolf501.top
+
+enum Color { RED, GREEN, BLUE };
+来源：http://qyz.birdmap.top
+
+[S15] C：类型转换
+来源：http://zaz.mhx1999.top
+
+(double) a / b
+来源：http://djt.52xcode.cn
+
+[S16] C：位操作置位
+来源：http://xrw.fehbvm.com
+
+x |= (1 << 3);
+来源：http://gad.zhixingplan.top
+
+[S17] C：安全拼接字符串
+来源：http://nbv.jianghu66.top
+
+snprintf(buf, sizeof buf, "%s%s", a, b);
+来源：http://hkd.yangfankeji.com
+
+[S18] C：命令行参数
+来源：http://fxr.smart0.xyz
+
+int main(int argc, char **argv)
+来源：http://gwx.yueranfly.top
+
+[S19] C：快速排序
+来源：http://zpp.hammf.cn
+
+qsort(a, n, sizeof(int), cmp);
+来源：http://amd.hesvh.cn
+
+[S20] C：二分查找
+来源：http://zol.nanxuanxn.top
+
+bsearch(&key, a, n, sizeof(int), cmp);
+来源：http://avq.hesvh.cn
+
+[S21] C：字符类别判断
+来源：http://mnk.jqgfzy.top
+
+isdigit(c);  isalpha(c);  isspace(c);
+来源：http://djy.nanxinkj.top
+
+[S22] C：字符串转数字
+来源：http://yox.mhx1999.top
+
+atoi("42");  strtod("3.14", NULL);
+来源：http://pvv.epnwcf.com
+
+[S23] C：随机数
+来源：http://bit.hysaishi.cn
+
+srand(time(NULL));  int r = rand() % 100;
+来源：http://kmm.zdbjq.cn
+
+[S24] C：获取本地时间
+来源：http://svf.tarul.cn
+
+time_t t = time(NULL);  struct tm *tm = localtime(&t);
+来源：http://ygi.yvedp.cn
+
+[S25] C：内存拷贝
+来源：http://qoo.jlsjyb.cn
+
+memcpy(dst, src, n);
+来源：http://wvr.yuxming.cn
+
+[S26] C：内存清零
+来源：http://gpx.jinghuilouyu.cn
+
+memset(a, 0, sizeof a);
+来源：http://fqp.hammf.cn
+
+[S27] C：定义常量
+来源：http://rvu.jiagoushi.top
+
+const double PI = 3.14159;
+来源：http://dig.hcnkem.com
+
+[S28] C：静态变量
+来源：http://dix.guannengcc.top
+
+
+<!-- 参考信息 -->
