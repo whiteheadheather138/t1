@@ -1,0 +1,904 @@
+代发 wailian999
+
+Ruby: h["k"] = 1;  h["k"];  h.key?("k");  h.delete("k")
+来源：http://svf.jinqigufen.top
+
+C#:   dict["k"] = 1;  dict.TryGetValue("k", out var v);  dict.Remove("k");
+来源：http://hyu.hammf.cn
+
+[D25] Set 集合去重与交并差
+来源：http://iio.chenjidiqi.icu
+
+Py:   s = {1, 2, 3};  s | {3, 4};  s & {2};  s - {1}
+来源：http://eio.yfazqb.com
+
+PHP:  // 无原生 Set：用数组键或 SplObjectStorage 变通
+来源：http://mbd.yangfankeji.com
+
+JS:   const s = new Set([1, 2, 3]);  s.add(4);  s.has(1);  s.delete(1)
+来源：http://gxj.sweek.top
+
+TS:   const s = new Set<number>([1, 2, 3]);
+来源：http://xfs.zhiwuduotai.top
+
+Java: var s = new HashSet<>(List.of(1, 2, 3));  s.add(4);  s.contains(1)
+来源：http://qdj.xingfuxueyuan.xyz
+
+Go:   // 无原生 Set：用 map[int]struct{}
+来源：http://hta.yongpay.top
+
+Ruby: s = Set[1, 2, 3];  s.add(4);  s.include?(1)
+来源：http://eun.fehbvm.com
+
+C#:   var s = new HashSet<int> { 1, 2, 3 };  s.Add(4);  s.Contains(1)
+来源：http://gve.zdqjudy.top
+
+[D26] 数组转字符串
+来源：http://kqo.ydjk.org.cn
+
+Py:   ", ".join(map(str, arr))
+来源：http://jyp.jlsjyb.cn
+
+PHP:  implode(", ", $arr);
+来源：http://wlv.yueranfly.top
+
+JS:   arr.join(", ")
+来源：http://bmu.aibaodan.cn
+
+TS:   arr.join(", ")
+来源：http://ygv.jqgufenzy.top
+
+Java: String.join(", ", list)
+来源：http://knh.hammf.cn
+
+Go:   strings.Join(strs, ", ")
+来源：http://fhz.zdqjudy.top
+
+Ruby: arr.join(", ")
+来源：http://pjq.sjlbkw.cn
+
+C#:   string.Join(", ", list)
+来源：http://rxj.yanxiufei.cn
+
+================================================================================
+来源：http://vwu.jlsjyb.cn
+
+E. 字符串处理
+来源：http://vrg.jyoumei.cn
+
+================================================================================
+来源：http://vls.yueranfly.top
+
+[E01] 拼接字符串
+来源：http://npg.guowangkeji.top
+
+Py:   "a" + "b";  "".join(["a", "b"])
+来源：http://yyc.zhengqikj.top
+
+PHP:  "a" . "b";  implode("", ["a", "b"]);
+来源：http://fhq.gotoacloud.top
+
+JS:   "a" + "b";  ["a", "b"].join("")
+来源：http://yrs.smart0.xyz
+
+TS:   "a" + "b";  ["a", "b"].join("")
+来源：http://jzg.bbcook.cn
+
+Java: "a" + "b";  String.join("", List.of("a", "b"))
+来源：http://nsy.zhengqikj.top
+
+Go:   "a" + "b";  strings.Join([]string{"a", "b"}, "")
+来源：http://lxt.jyoumei.cn
+
+Ruby: "a" + "b";  ["a", "b"].join
+来源：http://xhb.ydzc1.top
+
+C#:   "a" + "b";  string.Concat("a", "b")
+来源：http://dix.zhongyouzk.top
+
+[E02] 重复字符串
+来源：http://kff.yj20258.top
+
+Py:   "ab" * 3
+来源：http://onh.hesvh.cn
+
+PHP:  str_repeat("ab", 3);
+来源：http://ubs.gaohongyu789.top
+
+JS:   "ab".repeat(3)
+来源：http://xzx.zhaomingkeji.xyz
+
+TS:   "ab".repeat(3)
+来源：http://bhh.havefunace.top
+
+Java: "ab".repeat(3)
+来源：http://qrd.feifeiyinyue.top
+
+Go:   strings.Repeat("ab", 3)
+来源：http://zsp.shzxlz.cn
+
+Ruby: "ab" * 3
+来源：http://vgv.hysaishi.cn
+
+C#:   string.Concat(Enumerable.Repeat("ab", 3))
+来源：http://ndc.shuidangran.top
+
+[E03] 截取子串
+来源：http://wcl.cqqwz.cn
+
+Py:   s[1:4];  s[:3];  s[3:]
+来源：http://son.zycfv.cn
+
+PHP:  substr($s, 1, 3);  mb_substr($s, 1, 3, "UTF-8");
+来源：http://jjk.jinqigufen.top
+
+JS:   s.slice(1, 4);  s.substring(1, 4)
+来源：http://inn.tarul.cn
+
+TS:   s.slice(1, 4)
+来源：http://ffx.daxiang520.top
+
+Java: s.substring(1, 4)
+来源：http://ldi.tanke756.top
+
+Go:   s[1:4]        // 按字节；中文用 []rune(s)[1:4] 再转回 string
+来源：http://ail.fktsv.cn
+
+Ruby: s[1, 3];  s[1..3]
+来源：http://qsj.hnxiangtu.top
+
+C#:   s.Substring(1, 3)
+来源：http://zin.zhaomingkeji.xyz
+
+[E04] 查找子串位置
+来源：http://qko.shuidangran.top
+
+Py:   s.find("x");  s.index("x")
+来源：http://rxa.shanyushiyangtech.top
+
+PHP:  strpos($s, "x");
+来源：http://oar.gotoacloud.top
+
+JS:   s.indexOf("x");  s.search(/x/)
+来源：http://ucd.guannengcc.top
+
+TS:   s.indexOf("x")
+来源：http://tlq.fzhhl.top
+
+Java: s.indexOf("x")
+来源：http://zph.hammf.cn
+
+Go:   strings.Index(s, "x")
+来源：http://rrp.zhaomingkeji.xyz
+
+Ruby: s.index("x")
+来源：http://yiz.aibaodan.cn
+
+C#:   s.IndexOf("x")
+来源：http://sdm.chenzaomai.com
+
+[E05] 判断包含 / 前缀 / 后缀
+来源：http://lyq.zhijiandao.cn
+
+Py:   "x" in s;  s.startswith("a");  s.endswith("z")
+来源：http://yup.fanxiaobao.xyz
+
+PHP:  str_contains($s, "x");  str_starts_with($s, "a");  str_ends_with($s, "z");
+来源：http://oqx.dashuyun.cn
+
+JS:   s.includes("x");  s.startsWith("a");  s.endsWith("z")
+来源：http://flo.jinqigufen.top
+
+TS:   s.includes("x");  s.startsWith("a")
+来源：http://rwo.yangfankeji.com
+
+Java: s.contains("x");  s.startsWith("a");  s.endsWith("z")
+来源：http://etb.feifeiyinyue.top
+
+Go:   strings.Contains(s, "x");  strings.HasPrefix(s, "a");  strings.HasSuffix(s, "z")
+来源：http://dpf.xylfe.cn
+
+Ruby: s.include?("x");  s.start_with?("a");  s.end_with?("z")
+来源：http://cjo.wangshuangyany.cn
+
+C#:   s.Contains("x");  s.StartsWith("a");  s.EndsWith("z")
+来源：http://tfg.zhixingplan.top
+
+[E06] 替换子串
+来源：http://uww.zdqjudy.top
+
+Py:   s.replace("a", "b");  s.replace("a", "b", 1)
+来源：http://gdz.snrcjt.cn
+
+PHP:  str_replace("a", "b", $s);
+来源：http://clt.zhoulong.xyz
+
+JS:   s.replace("a", "b");  s.replaceAll("a", "b")
+来源：http://per.316326.xyz
+
+TS:   s.replaceAll("a", "b")
+来源：http://spd.hywenlv.cn
+
+Java: s.replace("a", "b");  s.replaceAll("a", "b")
+来源：http://nap.yvedp.cn
+
+Go:   strings.ReplaceAll(s, "a", "b");  strings.Replace(s, "a", "b", 1)
+来源：http://zxw.uphjek.com
+
+Ruby: s.gsub("a", "b");  s.sub("a", "b")
+来源：http://wpo.xylfe.cn
+
+C#:   s.Replace("a", "b")
+来源：http://xli.andypj.xyz
+
+[E07] 按分隔符拆分
+来源：http://scn.ydjk.org.cn
+
+Py:   s.split(",");  s.split()      # 无参按任意空白拆
+来源：http://fdz.tian-w.cn
+
+PHP:  explode(",", $s);  preg_split('/\s+/', $s);
+来源：http://hou.fzhhl.top
+
+JS:   s.split(",");  s.split(/\s+/)
+来源：http://hee.jinyuanbaomall.cn
+
+TS:   s.split(",")
+来源：http://gcu.316326.xyz
+
+Java: s.split(",");  s.split("\\s+")
+来源：http://ccu.bbcook.cn
+
+Go:   strings.Split(s, ",");  strings.Fields(s)
+来源：http://vxu.hnxiangtu.top
+
+Ruby: s.split(",");  s.split
+来源：http://sto.jlsjyb.cn
+
+C#:   s.Split(',');  s.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+来源：http://bcq.tian-w.cn
+
+[E08] 数组按分隔符合并
+来源：http://fou.yvedp.cn
+
+Py:   ",".join(items)
+来源：http://wug.wangshuangyany.cn
+
+PHP:  implode(",", $items);
+来源：http://tgs.sjlbkw.cn
+
+JS:   items.join(",")
+来源：http://kcu.gaohongyu789.top
+
+TS:   items.join(",")
+来源：http://ewz.ppjwa.cn
+
+Java: String.join(",", items)
+来源：http://qjl.yfazqb.com
+
+Go:   strings.Join(items, ",")
+来源：http://ccc.daria6918.cn
+
+Ruby: items.join(",")
+来源：http://eot.316326.xyz
+
+C#:   string.Join(",", items)
+来源：http://upl.sysykeji.top
+
+[E09] 去除所有空白字符
+来源：http://pfl.shanyushiyangkeji.top
+
+Py:   "".join(s.split());  re.sub(r"\s+", "", s)
+来源：http://jip.chenjidiqi.icu
+
+PHP:  preg_replace('/\s+/', '', $s);
+来源：http://ofq.sweek.top
+
+JS:   s.replace(/\s+/g, "")
+来源：http://nsy.fengsongda.top
+
+TS:   s.replace(/\s+/g, "")
+来源：http://hfi.fehbvm.com
+
+Java: s.replaceAll("\\s+", "")
+来源：http://ffs.svipenyu.cn
+
+Go:   strings.Join(strings.Fields(s), "")
+来源：http://phf.gotoacloud.top
+
+Ruby: s.gsub(/\s+/, "")
+来源：http://pxq.feifeiyinyue.top
+
+C#:   Regex.Replace(s, @"\s+", "")
+来源：http://wqp.bbcook.cn
+
+[E10] 左侧补零 / 定长填充
+来源：http://tbs.smart0.xyz
+
+Py:   str(7).zfill(3);  "7".rjust(3, "0")
+来源：http://ulm.9152youxi.cn
+
+PHP:  str_pad("7", 3, "0", STR_PAD_LEFT);
+来源：http://gwd.hnqzz.top
+
+JS:   "7".padStart(3, "0")
+来源：http://nms.9152youxi.cn
+
+TS:   "7".padStart(3, "0")
+来源：http://fbq.nanxinkj.top
+
+Java: String.format("%03d", 7)
+来源：http://vjf.gogol.net.cn
+
+Go:   fmt.Sprintf("%03d", 7)
+来源：http://lsp.gzhubu.top
+
+Ruby: 7.to_s.rjust(3, "0");  format("%03d", 7)
+来源：http://iwi.yj20258888.top
+
+C#:   7.ToString("D3");  7.ToString().PadLeft(3, '0')
+来源：http://dxm.ppjwa.cn
+
+[E11] 反转字符串
+来源：http://gtj.andypj.xyz
+
+Py:   s[::-1]
+来源：http://ykv.smart0.xyz
+
+PHP:  strrev($s);
+来源：http://fkm.shangyingyoupin.top
+
+JS:   [...s].reverse().join("")
+来源：http://uha.zhoulong.xyz
+
+TS:   [...s].reverse().join("")
+来源：http://qqr.tian-w.cn
+
+Java: new StringBuilder(s).reverse().toString()
+来源：http://ukt.zhiwuduotai.top
+
+Go:   // 转 []rune 后倒序再转回 string
+来源：http://zuf.xylfe.cn
+
+Ruby: s.reverse
+来源：http://wwr.gzhubu.top
+
+C#:   new string(s.Reverse().ToArray())
+来源：http://rha.daxiang520.top
+
+[E12] 统计某字符出现次数
+来源：http://yuv.cucudq.cn
+
+Py:   s.count("a")
+来源：http://agc.gzhubu.top
+
+PHP:  substr_count($s, "a");
+来源：http://hra.zhixingplan.top
+
+JS:   s.split("a").length - 1
+来源：http://tqn.havefunace.top
+
+TS:   s.split("a").length - 1
+来源：http://use.jiagoushi.top
+
+Java: s.chars().filter(c -> c == 'a').count()
+来源：http://jiv.birdmap.top
+
+Go:   strings.Count(s, "a")
+来源：http://tgt.gotoacloud.top
+
+Ruby: s.count("a")
+来源：http://ssj.haohaochexian.top
+
+C#:   s.Count(c => c == 'a')
+来源：http://llu.fengsongda.top
+
+[E13] 逐字符遍历
+来源：http://vax.daxiang520.top
+
+Py:   for ch in s: print(ch)
+来源：http://bmn.hfpthk.cn
+
+PHP:  foreach (mb_str_split($s) as $ch) { echo $ch; }
+来源：http://fwo.zhixingplan.top
+
+JS:   for (const ch of s) { console.log(ch); }
+来源：http://ris.cashguo.top
+
+TS:   for (const ch of s) { console.log(ch); }
+来源：http://lpy.ehwqpu.com
+
+Java: for (char ch : s.toCharArray()) { System.out.println(ch); }
+来源：http://qdj.vqdsnc.cn
+
+Go:   for _, ch := range s { fmt.Println(string(ch)) }   // 按 rune 遍历
+来源：http://cxd.cdnleiting.top
+
+Ruby: s.each_char { |ch| puts ch }
+来源：http://num.fengsongda.top
+
+C#:   foreach (var ch in s) { Console.WriteLine(ch); }
+来源：http://zkr.hnqzz.top
+
+[E14] URL 编码与 Base64
+来源：http://jha.chenlongwang.top
+
+Py:   urllib.parse.quote(s);  base64.b64encode(b).decode()
+来源：http://rzc.yuanzhike.top
+
+PHP:  urlencode($s);  base64_encode($s);
+来源：http://qre.bbcook.cn
+
+JS:   encodeURIComponent(s);  btoa(s);  atob(b64)
+来源：http://sjr.zhaomingkeji.xyz
+
+TS:   encodeURIComponent(s);  btoa(s)
+来源：http://enm.feifeiyinyue.top
+
+Java: URLEncoder.encode(s, StandardCharsets.UTF_8);  Base64.getEncoder().encodeToString(bytes)
+来源：http://icz.yonumen.top
+
+Go:   url.QueryEscape(s);  base64.StdEncoding.EncodeToString([]byte(s))
+来源：http://hoq.cqqwz.cn
+
+Ruby: URI.encode_www_form_component(s);  [s].pack("m0")
+来源：http://tku.quarkkingdee.top
+
+C#:   Uri.EscapeDataString(s);  Convert.ToBase64String(bytes)
+来源：http://hfg.epnwcf.com
+
+[E15] HTML 转义 / 反转义
+来源：http://cpt.ywan-chungtsiang.top
+
+Py:   html.escape(s);  html.unescape(s)
+来源：http://wfj.yfazqb.com
+
+PHP:  htmlspecialchars($s, ENT_QUOTES, "UTF-8");  htmlspecialchars_decode($s);
+来源：http://hlk.epnwcf.com
+
+JS:   // 文本节点自动转义；拼接 HTML 时用 DOMPurify.sanitize(s)
+来源：http://ged.gaohongyu789.top
+
+TS:   // 同上，务必做 XSS 过滤
+来源：http://tck.quarkkingdee.top
+
+Java: HtmlUtils.htmlEscape(s)   // Spring；通用可用 Apache Commons Text
+来源：http://xky.iojbl.cn
+
+Go:   html.EscapeString(s);  html.UnescapeString(s)
+来源：http://ktr.ydjk.org.cn
+
+Ruby: CGI.escapeHTML(s);  CGI.unescapeHTML(s)
+来源：http://cxu.jinqigfzy.top
+
+C#:   WebUtility.HtmlEncode(s);  WebUtility.HtmlDecode(s)
+来源：http://ras.haohaochexian.top
+
+[E16] 数字千分位
+来源：http://rse.fehbvm.com
+
+Py:   f"{1234567:,}"
+来源：http://lmt.fanxiaobao.xyz
+
+PHP:  number_format(1234567);
+来源：http://yfu.yueranfly.top
+
+JS:   (1234567).toLocaleString("en-US")
+来源：http://kei.nwbrower.top
+
+TS:   (1234567).toLocaleString("en-US")
+来源：http://oem.cucudq.cn
+
+Java: NumberFormat.getNumberInstance(Locale.US).format(1234567)
+来源：http://uim.zhiwuduotai.top
+
+Go:   // 用 golang.org/x/text/message 或手写分组
+来源：http://ims.hywenlv.cn
+
+Ruby: "1234567".reverse.scan(/\d{1,3}/).join(",").reverse
+来源：http://fbb.snrcjt.cn
+
+C#:   1234567.ToString("N0")
+来源：http://yfg.epnwcf.com
+
+[E17] 首字母大写
+来源：http://jwm.nanxinkj.top
+
+Py:   s[0].upper() + s[1:];  s.capitalize();  s.title()
+来源：http://wze.ppjwa.cn
+
+PHP:  ucfirst($s);  ucwords($s);
+来源：http://cfc.yonumen.top
+
+JS:   s.charAt(0).toUpperCase() + s.slice(1)
+来源：http://fgn.hammf.cn
+
+TS:   s.charAt(0).toUpperCase() + s.slice(1)
+来源：http://fmp.xziqi.cn
+
+Java: Character.toUpperCase(s.charAt(0)) + s.substring(1)
+来源：http://yns.tanke756.top
+
+Go:   strings.ToUpper(s[:1]) + s[1:]
+来源：http://vbo.yvedp.cn
+
+Ruby: s.capitalize
+来源：http://lbj.feifeiyinyue.top
+
+C#:   char.ToUpper(s[0]) + s[1..]
+来源：http://nwy.yangfankeji.com
+
+[E18] 模板占位符替换
+来源：http://bof.fengsongda.top
+
+Py:   "Hello, {name}".format(name="A");  tpl.replace("{name}", "A")
+来源：http://lbc.yvedp.cn
+
+PHP:  str_replace("{name}", "A", $tpl);  sprintf("Hello, %s", $name);
+来源：http://bpv.yj20258.top
+
+JS:   tpl.replaceAll("{name}", name)
+来源：http://owx.hcnkem.com
+
+TS:   tpl.replaceAll("{name}", name)
+来源：http://hsa.xylfe.cn
+
+Java: "Hello, %s".formatted(name);  tpl.replace("{name}", name)
+来源：http://acz.jlsjyb.cn
+
+Go:   strings.ReplaceAll(tpl, "{name}", name)
+来源：http://isw.gzhubu.top
+
+Ruby: tpl.gsub("{name}", name);  "Hello, #{name}"
+来源：http://yre.xuetiantiany.cn
+
+C#:   tpl.Replace("{name}", name);  $"Hello, {name}"
+来源：http://zby.xinyue.icu
+
+[E19] 多行文本按行拆分
+来源：http://zkn.yj20258888.top
+
+Py:   s.splitlines()
+来源：http://dyg.yonumen.top
+
+PHP:  preg_split('/\r\n|\r|\n/', $s);
+来源：http://kji.shzxlz.cn
+
+JS:   s.split(/\r?\n/)
+来源：http://qsu.shangyingyoupin.top
+
+TS:   s.split(/\r?\n/)
+来源：http://prv.gaohongyu789.top
+
+Java: s.lines().toList()
+来源：http://yce.shangyingyoupin.top
+
+Go:   strings.Split(s, "\n")
+来源：http://vbt.sweek.top
+
+Ruby: s.lines
+来源：http://gkc.yfazqb.com
+
+C#:   s.Split('\n')
+来源：http://zok.zhaomingkeji.xyz
+
+[E20] 判断字符串是否为空
+来源：http://onf.fktsv.cn
+
+Py:   if not s:
+来源：http://dck.tian-w.cn
+
+PHP:  if ($s === "") {}      // 注意 empty("0") 也为 true
+来源：http://mpd.ehwqpu.com
+
+JS:   if (s === "") {} 或 if (!s) {}
+来源：http://yln.zhiwuduotai.top
+
+TS:   if (s === "") {}
+来源：http://myj.ehwqpu.com
+
+Java: if (s.isEmpty()) {}
+来源：http://ydt.yonumen.top
+
+Go:   if s == "" {}
+来源：http://gjh.vqdsnc.cn
+
+Ruby: if s.empty?
+来源：http://fab.c1oappe.top
+
+C#:   if (string.IsNullOrEmpty(s)) {}
+来源：http://wup.zhixingplan.top
+
+[E21] 超长截断加省略号
+来源：http://xyq.zhongyouzk.top
+
+Py:   (s[:20] + "…") if len(s) > 20 else s
+来源：http://vwl.9152youxi.cn
+
+PHP:  mb_strimwidth($s, 0, 20, "…", "UTF-8");
+来源：http://tpp.yuanzhike.top
+
+JS:   s.length > 20 ? s.slice(0, 20) + "…" : s
+来源：http://gtw.haohaochexian.top
+
+TS:   s.length > 20 ? s.slice(0, 20) + "…" : s
+来源：http://lnc.aizwys.cn
+
+Java: s.length() > 20 ? s.substring(0, 20) + "…" : s
+来源：http://exz.ctjpmb.com
+
+Go:   // 按 rune 判断长度后截断
+来源：http://biq.hysaishi.cn
+
+Ruby: s.length > 20 ? s[0, 20] + "…" : s
+来源：http://gyp.andypj.xyz
+
+C#:   s.Length > 20 ? s[..20] + "…" : s
+来源：http://hjw.gogol.net.cn
+
+[E22] 字节长度与字符长度
+来源：http://stj.jiagoushi.top
+
+Py:   len(s.encode("utf-8"));  len(s)
+来源：http://mph.zycfv.cn
+
+PHP:  strlen($s);  mb_strlen($s, "UTF-8");
+来源：http://lhu.hfpthk.cn
+
+JS:   new TextEncoder().encode(s).length;  s.length
+来源：http://phr.yuxming.cn
+
+TS:   new TextEncoder().encode(s).length;  s.length
+来源：http://rcp.shanyushiyangtech.top
+
+Java: s.getBytes(StandardCharsets.UTF_8).length;  s.length()
+来源：http://mms.shuidangran.top
+
+Go:   len(s);  utf8.RuneCountInString(s)     # 前者字节数，后者字符数
+来源：http://eet.xziqi.cn
+
+Ruby: s.bytesize;  s.length
+来源：http://wno.xuanzx.com
+
+C#:   Encoding.UTF8.GetByteCount(s);  s.Length
+来源：http://zcg.yuxming.cn
+
+================================================================================
+来源：http://pnp.havefunace.top
+
+F. 文件与目录
+来源：http://uig.tian-w.cn
+
+================================================================================
+来源：http://vvi.zycfv.cn
+
+[F01] 读取整个文件
+来源：http://gfc.nwbrower.top
+
+Py:   open("a.txt", encoding="utf-8").read();  Path("a.txt").read_text()
+来源：http://wmx.zhixingplan.top
+
+PHP:  file_get_contents("a.txt");
+来源：http://dek.9152youxi.cn
+
+JS:   fs.readFileSync("a.txt", "utf8")          // Node.js
+来源：http://moy.sysykeji.top
+
+TS:   fs.readFileSync("a.txt", "utf8")
+来源：http://hjn.chenjidiqi.icu
+
+Java: Files.readString(Path.of("a.txt"))
+来源：http://jon.xziqi.cn
+
+Go:   data, err := os.ReadFile("a.txt")        // []byte，用 string(data) 转文本
+来源：http://ttk.c1oappe.top
+
+Ruby: File.read("a.txt")
+来源：http://gqr.hywenlv.cn
+
+C#:   File.ReadAllText("a.txt");
+来源：http://cnc.jqgfzy.top
+
+[F02] 逐行读取文件
+来源：http://pqp.birdmap.top
+
+Py:   for line in open("a.txt", encoding="utf-8"): print(line.rstrip())
+来源：http://jza.yvedp.cn
+
+PHP:  foreach (file("a.txt", FILE_IGNORE_NEW_LINES) as $line) { echo $line; }
+来源：http://ksw.fktsv.cn
+
+JS:   for (const line of fs.readFileSync("a.txt", "utf8").split("\n")) {}
+来源：http://acm.ydzc1.top
+
+TS:   for (const line of fs.readFileSync("a.txt", "utf8").split("\n")) {}
+来源：http://mro.jinyuanbaomall.cn
+
+Java: Files.lines(Path.of("a.txt")).forEach(System.out::println)
+来源：http://now.jlsjyb.cn
+
+Go:   scanner := bufio.NewScanner(f); for scanner.Scan() { fmt.Println(scanner.Text()) }
+来源：http://mtv.guowangkeji.top
+
+Ruby: File.foreach("a.txt") { |line| puts line }
+来源：http://geg.zhaomingkeji.xyz
+
+C#:   foreach (var line in File.ReadLines("a.txt")) { Console.WriteLine(line); }
+来源：http://ulj.ctjpmb.com
+
+[F03] 写入文件（覆盖）
+来源：http://ljr.guowangkeji.top
+
+Py:   open("a.txt", "w", encoding="utf-8").write("hi")
+来源：http://ftf.nanxinkj.top
+
+PHP:  file_put_contents("a.txt", "hi");
+来源：http://ggs.iojbl.cn
+
+JS:   fs.writeFileSync("a.txt", "hi", "utf8")
+来源：http://ihu.zycfv.cn
+
+TS:   fs.writeFileSync("a.txt", "hi", "utf8")
+来源：http://jri.zhijiandao.cn
+
+Java: Files.writeString(Path.of("a.txt"), "hi")
+来源：http://lte.fzhhl.top
+
+Go:   os.WriteFile("a.txt", []byte("hi"), 0644)
+来源：http://coj.316326.xyz
+
+Ruby: File.write("a.txt", "hi")
+来源：http://nyh.sweek.top
+
+C#:   File.WriteAllText("a.txt", "hi");
+来源：http://bte.xinyue.icu
+
+[F04] 追加写入文件
+来源：http://ucz.jlsjyb.cn
+
+Py:   open("a.txt", "a", encoding="utf-8").write("more\n")
+来源：http://oyg.xinyue.icu
+
+PHP:  file_put_contents("a.txt", "more\n", FILE_APPEND);
+来源：http://gvo.yuanzhike.top
+
+JS:   fs.appendFileSync("a.txt", "more\n")
+来源：http://wjl.yvedp.cn
+
+TS:   fs.appendFileSync("a.txt", "more\n")
+来源：http://tme.fzhhl.top
+
+Java: Files.writeString(Path.of("a.txt"), "more\n", StandardOpenOption.APPEND)
+来源：http://rmx.tarul.cn
+
+Go:   f, _ := os.OpenFile("a.txt", os.O_APPEND|os.O_WRONLY, 0644); f.WriteString("more\n")
+来源：http://sbv.kuanghao11.cn
+
+Ruby: File.open("a.txt", "a") { |f| f.puts "more" }
+来源：http://bxu.shanyushiyangtech.top
+
+C#:   File.AppendAllText("a.txt", "more\n");
+来源：http://ztw.jyoumei.cn
+
+[F05] 判断文件或目录是否存在
+来源：http://yuz.fktsv.cn
+
+Py:   os.path.exists("a.txt");  Path("a.txt").exists()
+来源：http://vob.sysykeji.top
+
+PHP:  file_exists("a.txt");
+来源：http://nbr.feifeiyinyue.top
+
+JS:   fs.existsSync("a.txt")
+来源：http://vnb.yj202588.top
+
+TS:   fs.existsSync("a.txt")
+来源：http://wzr.dashuyun.cn
+
+Java: Files.exists(Path.of("a.txt"))
+来源：http://adn.sweek.top
+
+Go:   if _, err := os.Stat("a.txt"); err == nil { /* 存在 */ }
+来源：http://vve.jyoumei.cn
+
+Ruby: File.exist?("a.txt")
+来源：http://ybk.redwolf501.top
+
+C#:   File.Exists("a.txt")
+来源：http://lzn.zhengqikj.top
+
+[F06] 删除文件
+来源：http://ynn.jinqigufen.top
+
+Py:   os.remove("a.txt")
+来源：http://aaa.yueranfly.top
+
+PHP:  unlink("a.txt");
+来源：http://iib.zhiwuduotai.top
+
+JS:   fs.unlinkSync("a.txt")
+来源：http://oeo.316326.xyz
+
+TS:   fs.unlinkSync("a.txt")
+来源：http://qwa.uphjek.com
+
+Java: Files.deleteIfExists(Path.of("a.txt"))
+来源：http://wjy.gaohongyu789.top
+
+Go:   os.Remove("a.txt")
+来源：http://ipz.tanke756.top
+
+Ruby: File.delete("a.txt")
+来源：http://lqf.yj202588.top
+
+C#:   File.Delete("a.txt");
+来源：http://lwr.yuanzhike.top
+
+[F07] 创建目录（含多级）
+来源：http://ilu.ctjpmb.com
+
+Py:   os.makedirs("dir/sub", exist_ok=True)
+来源：http://flx.bbcook.cn
+
+PHP:  mkdir("dir/sub", 0777, true);
+来源：http://qos.wangshuangyany.cn
+
+JS:   fs.mkdirSync("dir/sub", { recursive: true })
+来源：http://jvz.hywenlv.cn
+
+TS:   fs.mkdirSync("dir/sub", { recursive: true })
+来源：http://inx.yueranfly.top
+
+Java: Files.createDirectories(Path.of("dir/sub"))
+来源：http://gjc.meibo888.top
+
+Go:   os.MkdirAll("dir/sub", 0755)
+来源：http://hbq.yfazqb.com
+
+Ruby: FileUtils.mkdir_p("dir/sub")
+来源：http://rte.yj20258888.top
+
+C#:   Directory.CreateDirectory("dir/sub");
+来源：http://uza.xziqi.cn
+
+[F08] 遍历目录
+来源：http://fgw.zhoulong.xyz
+
+Py:   for name in os.listdir("dir"): print(name)
+来源：http://ynl.svipenyu.cn
+
+PHP:  foreach (scandir("dir") as $f) { echo $f; }
+来源：http://qey.yj20258888.top
+
+JS:   fs.readdirSync("dir")
+来源：http://nme.nanxinkj.top
+
+TS:   fs.readdirSync("dir")
+来源：http://oeq.tianlin.xyz
+
+Java: Files.list(Path.of("dir")).forEach(System.out::println)
+来源：http://wyu.shanyushiyangkeji.top
+
+Go:   entries, _ := os.ReadDir("dir")
+来源：http://xme.yuanzhike.top
+
+Ruby: Dir.children("dir")
+来源：http://lat.shangyingyoupin.top
+
+C#:   Directory.GetFiles("dir")
+来源：http://mnq.ppjwa.cn
+
+[F09] 获取文件大小
+来源：http://eni.yj202588.top
+
+Py:   os.path.getsize("a.txt")
+来源：http://wxf.wangdashe.top
+
+PHP:  filesize("a.txt");
+来源：http://nts.gotoacloud.top
+
+JS:   fs.statSync("a.txt").size
+来源：http://qbj.xingfuxueyuan.xyz
+
+
+<!-- 参考信息 -->

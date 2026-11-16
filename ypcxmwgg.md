@@ -1,0 +1,904 @@
+代发 wailian999
+
+[U29] Py：属性校验
+来源：http://dkt.fktsv.cn
+
+@property 与 @x.setter 配合
+来源：http://dkt.pycfn.com
+
+[U30] Py：数据类
+来源：http://jfj.ehwqpu.com
+
+@dataclass(slots=True)
+来源：http://gbq.316326.xyz
+
+[U31] Py：单测
+来源：http://wgj.svipenyu.cn
+
+python -m pytest -q
+来源：http://wdb.yj20258888.top
+
+[U32] Py：代码格式化
+来源：http://jlh.birdmap.top
+
+ruff format . && ruff check --fix .
+来源：http://gym.fehbvm.com
+
+[U33] Py：打包发布
+来源：http://enp.yj20258888.top
+
+python -m build  （依赖 pyproject.toml）
+来源：http://tso.shanyushiyangkeji.top
+
+[U34] Py：判断编码
+来源：http://icx.svipenyu.cn
+
+chardet.detect(raw)
+来源：http://jbv.ivvv.top
+
+[U35] Py：发送邮件
+来源：http://wbk.52xcode.cn
+
+smtplib.SMTP_SSL(...).send_message(msg)
+来源：http://ypp.vqdsnc.cn
+
+[U36] Py：定时任务
+来源：http://rtt.chenzaomai.com
+
+schedule.every(10).minutes.do(job)
+来源：http://dxk.fzhhl.top
+
+[U37] Py：读写 Excel
+来源：http://sgc.tanke756.top
+
+pandas.read_excel / DataFrame.to_excel
+来源：http://pbz.zhijiandao.cn
+
+[U38] Py：获取脚本所在目录
+来源：http://nmc.yvedp.cn
+
+Path(__file__).resolve().parent
+来源：http://hyn.tian-w.cn
+
+[U39] Py：判断是否在交互环境
+来源：http://enf.nanxinkj.top
+
+sys.stdout.isatty()
+来源：http://isx.iojbl.cn
+
+[U40] Py：打印到标准错误
+来源：http://bsa.gogol.net.cn
+
+print("err", file=sys.stderr)
+来源：http://twg.shanyushiyangtech.top
+
+[U41] PHP：初始化 Composer 项目
+来源：http://osy.hywenlv.cn
+
+composer init;  composer require guzzlehttp/guzzle
+来源：http://zdp.dashuyun.cn
+
+[U42] PHP：PSR-4 自动加载
+来源：http://bzy.zycfv.cn
+
+"autoload": { "psr-4": { "App\\": "src/" } }
+来源：http://xts.nanxinkj.top
+
+[U43] PHP：声明命名空间
+来源：http://kmv.dashuyun.cn
+
+namespace App\Http;
+来源：http://spl.wangdashe.top
+
+[U44] PHP：开启严格类型
+来源：http://ssk.epnwcf.com
+
+declare(strict_types=1);
+来源：http://qoo.sufxvd.cn
+
+[U45] PHP：类型声明与返回类型
+来源：http://nns.jiagoushi.top
+
+function add(int $a, int $b): int { return $a + $b; }
+来源：http://ver.jyoumei.cn
+
+[U46] PHP：可空类型
+来源：http://ypr.ydjk.org.cn
+
+?string $name = null
+来源：http://bpf.hesvh.cn
+
+[U47] PHP：联合类型
+来源：http://cds.svipenyu.cn
+
+int|string $id
+来源：http://sbl.vqdsnc.cn
+
+[U48] PHP：纯枚举
+来源：http://qur.cucudq.cn
+
+enum Status: string { case Active = "active"; case Off = "off"; }
+来源：http://lyp.wangdashe.top
+
+[U49] PHP：只读属性
+来源：http://ynj.xylfe.cn
+
+public readonly string $name
+来源：http://wza.zhijiandao.cn
+
+[U50] PHP：构造器属性提升
+来源：http://ifd.jinqigfzy.top
+
+public function __construct(private int $id) {}
+来源：http://sir.nanxuanxn.top
+
+[U51] PHP：数组解构
+来源：http://ada.yj20258888.top
+
+[$a, $b] = $arr;
+来源：http://pzt.sufxvd.cn
+
+[U52] PHP：箭头函数
+来源：http://cso.jinghuilouyu.cn
+
+$double = fn($x) => $x * 2;
+来源：http://wvz.fzhhl.top
+
+[U53] PHP：空合并运算符
+来源：http://gyg.guowangkeji.top
+
+$v = $a ?? $b ?? "default";
+来源：http://deb.yonumen.top
+
+[U54] PHP：空安全调用
+来源：http://vwj.hnqzz.top
+
+$obj?->method()
+来源：http://jsw.zdqjudy.top
+
+[U55] PHP：match 表达式
+来源：http://ynn.ppjwa.cn
+
+$s = match($x) { 1 => "一", default => "其他" };
+来源：http://zov.ppjwa.cn
+
+[U56] PHP：命名参数
+来源：http://hck.gotoacloud.top
+
+f(a: 1, b: 2)
+来源：http://zhw.gogol.net.cn
+
+[U57] PHP：字符串插值
+来源：http://htf.uphjek.com
+
+"值: {$a}"
+来源：http://mdw.yuxming.cn
+
+[U58] PHP：数组三件套
+来源：http://vfa.tarul.cn
+
+array_map($f, $a);  array_filter($a, $f);  array_reduce($a, $f, 0);
+来源：http://asm.shanyushiyangtech.top
+
+[U59] PHP：自定义排序
+来源：http://iow.yongpay.top
+
+usort($arr, fn($a, $b) => $a["age"] <=> $b["age"]);
+来源：http://fjo.sysykeji.top
+
+[U60] PHP：JSON 编解码
+来源：http://voe.yj20258.top
+
+json_encode($d, JSON_UNESCAPED_UNICODE);  json_decode($s, true);
+来源：http://kae.sxryk.cn
+
+[U61] PHP：正则
+来源：http://naq.aizwys.cn
+
+preg_match('/(\d+)/', $s, $m);  preg_replace('/\d+/', '#', $s);
+来源：http://ovj.daxiang520.top
+
+[U62] PHP：日期对象
+来源：http://zsg.nanxuanxn.top
+
+(new DateTimeImmutable())->format("Y-m-d");
+来源：http://wxh.yj20258.top
+
+[U63] PHP：文件读写
+来源：http://agk.yj20258888.top
+
+file_get_contents($f);  file_put_contents($f, $data);
+来源：http://abn.316326.xyz
+
+[U64] PHP：目录遍历
+来源：http://rhe.hysaishi.cn
+
+glob("dir/*.php");  scandir("dir");
+来源：http://aar.nanxuanxn.top
+
+[U65] PHP：会话
+来源：http://kab.zhengqikj.top
+
+session_start();  $_SESSION["uid"] = 1;
+来源：http://zot.yj20258888.top
+
+[U66] PHP：设置 Cookie
+来源：http://esd.ybcxt.top
+
+setcookie("token", $v, ["httponly" => true, "samesite" => "Lax"]);
+来源：http://nbq.fanxiaobao.xyz
+
+[U67] PHP：处理文件上传
+来源：http://tgm.mhx1999.top
+
+$_FILES["file"]["tmp_name"] 与 move_uploaded_file()
+来源：http://wss.zhongyouzk.top
+
+[U68] PHP：PDO 连接
+来源：http://hlg.yuxming.cn
+
+$pdo = new PDO("mysql:host=localhost;dbname=app", "root", "");
+来源：http://ocn.ctjpmb.com
+
+[U69] PHP：PDO 预处理
+来源：http://zpy.fengsongda.top
+
+$stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");  $stmt->execute([$id]);
+来源：http://amy.snrcjt.cn
+
+[U70] PHP：PDO 事务
+来源：http://yws.havefunace.top
+
+$pdo->beginTransaction();  $pdo->commit();  $pdo->rollBack();
+来源：http://cva.zycfv.cn
+
+[U71] PHP：抛出异常
+来源：http://ygu.sysykeji.top
+
+throw new RuntimeException("失败", 500);
+来源：http://dhm.xingfuxueyuan.xyz
+
+[U72] PHP：写错误日志
+来源：http://lhy.guowangkeji.top
+
+error_log("失败: " . $e->getMessage());
+来源：http://kag.shangyingyoupin.top
+
+[U73] PHP：读取 ini 配置
+来源：http://tmo.jianghu66.top
+
+parse_ini_file("config.ini", true)
+来源：http://mmh.gotoacloud.top
+
+[U74] PHP：读取环境变量
+来源：http://lph.snrcjt.cn
+
+getenv("APP_ENV") ?: "production"
+来源：http://hku.wangshuangyany.cn
+
+[U75] PHP：依赖注入
+来源：http://wgg.vqdsnc.cn
+
+composer require psr/container
+来源：http://ldb.c1oappe.top
+
+[U76] PHP：简单路由
+来源：http://spk.52xcode.cn
+
+$path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
+来源：http://oaz.jyoumei.cn
+
+[U77] PHP：模板渲染
+来源：http://ljn.tian-w.cn
+
+composer require twig/twig
+来源：http://bqf.nanxuanxn.top
+
+[U78] PHP：单元测试
+来源：http://ybr.mhx1999.top
+
+composer require --dev phpunit/phpunit
+来源：http://skm.zhixingplan.top
+
+[U79] PHP：静态分析
+来源：http://zpe.jiagoushi.top
+
+composer require --dev phpstan/phpstan
+来源：http://jef.chenlongwang.top
+
+[U80] PHP：代码规范修复
+来源：http://ipo.zdbjq.cn
+
+composer require --dev friendsofphp/php-cs-fixer
+来源：http://bbh.316326.xyz
+
+[U81] JS：初始化项目
+来源：http://ggb.jinghuilouyu.cn
+
+npm init -y;  npm i express
+来源：http://fjn.jiagoushi.top
+
+[U82] JS：package.json 脚本
+来源：http://hdy.havefunace.top
+
+"scripts": { "dev": "vite", "build": "vite build" }
+来源：http://akh.gaohongyu789.top
+
+[U83] JS：ES Module 导入导出
+来源：http://irh.svipenyu.cn
+
+export const a = 1;  import { a } from "./m.js";
+来源：http://nob.shanyushiyangkeji.top
+
+[U84] JS：CommonJS 写法
+来源：http://crz.hysaishi.cn
+
+module.exports = { a };  const { a } = require("./m");
+来源：http://qab.cheryme.top
+
+[U85] JS：可选链
+来源：http://juh.shuidangran.top
+
+a?.b?.c
+来源：http://uhg.shanyushiyangtech.top
+
+[U86] JS：空值合并
+来源：http://nko.yuxming.cn
+
+a ?? b
+来源：http://rpg.yanxiufei.cn
+
+[U87] JS：解构默认值
+来源：http://mqm.quarkkingdee.top
+
+const { a = 1, b = 2 } = obj;
+来源：http://mwi.cashguo.top
+
+[U88] JS：对象展开合并
+来源：http://ssg.shanyushiyangtech.top
+
+{ ...a, ...b }
+来源：http://ibz.guowangkeji.top
+
+[U89] JS：数组去重
+来源：http://ymi.fehbvm.com
+
+[...new Set(arr)]
+来源：http://isb.hongshengwenyu.top
+
+[U90] JS：数字数组排序
+来源：http://vwh.bjfxy.top
+
+[...arr].sort((a, b) => a - b)
+来源：http://gkt.nwbrower.top
+
+[U91] JS：对象键值遍历
+来源：http://ugy.shangyingyoupin.top
+
+Object.entries(obj).forEach(([k, v]) => {});
+来源：http://fix.wangshuangyany.cn
+
+[U92] JS：深拷贝
+来源：http://avw.aizwys.cn
+
+structuredClone(obj)
+来源：http://lgy.jqgufenzy.top
+
+[U93] JS：模板字符串
+来源：http://fkh.wangdashe.top
+
+`共 ${n} 条`
+来源：http://upo.birdmap.top
+
+[U94] JS：箭头函数
+来源：http://ajx.xinyue.icu
+
+const double = x => x * 2;
+来源：http://bdy.9152youxi.cn
+
+[U95] JS：Promise 包装
+来源：http://adh.zdbjq.cn
+
+new Promise((resolve, reject) => {})
+来源：http://heo.pengpengdd.cyou
+
+[U96] JS：async/await 与异常
+来源：http://tjw.guowangkeji.top
+
+try { const d = await f(); } catch (e) { console.error(e); }
+来源：http://dkb.fehbvm.com
+
+[U97] JS：并发请求
+来源：http://krs.gaohongyu789.top
+
+await Promise.all(urls.map(u => fetch(u)))
+来源：http://jnb.cdnleiting.top
+
+[U98] JS：fetch 带 JSON
+来源：http://yuh.zhaomingkeji.xyz
+
+await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(d) })
+来源：http://dbv.vehdjk.com
+
+[U99] JS：事件监听
+来源：http://ysl.316326.xyz
+
+el.addEventListener("click", e => {})
+来源：http://cxm.vehdjk.com
+
+[U100] JS：DOM 查询
+来源：http://ils.svipenyu.cn
+
+document.querySelector(".item")
+来源：http://lmf.tanke756.top
+
+[U101] JS：classList 操作
+来源：http://lxn.jinqigfzy.top
+
+el.classList.toggle("active")
+来源：http://ilb.xuanzx.com
+
+[U102] JS：本地存储
+来源：http://cog.mhx1999.top
+
+localStorage.setItem("k", JSON.stringify(v))
+来源：http://yql.birdmap.top
+
+[U103] JS：定时器
+来源：http://vnf.zhengqikj.top
+
+setTimeout(fn, 1000);  setInterval(fn, 1000);
+来源：http://ovo.hammf.cn
+
+[U104] JS：防抖
+来源：http://wcq.meibo888.top
+
+const debounce = (fn, ms) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };
+来源：http://knn.daria6918.cn
+
+[U105] JS：节流
+来源：http://uul.hesvh.cn
+
+const throttle = (fn, ms) => { let last = 0; return (...a) => { const n = Date.now(); if (n - last >= ms) { last = n; fn(...a); } }; };
+来源：http://bmt.ctjpmb.com
+
+[U106] JS：日期格式化
+来源：http://rns.shangyingyoupin.top
+
+new Intl.DateTimeFormat("zh-CN", { dateStyle: "medium" }).format(new Date())
+来源：http://vgk.0kj1m.cn
+
+[U107] JS：数字千分位
+来源：http://bdo.bbcook.cn
+
+new Intl.NumberFormat("en-US").format(1234567)
+来源：http://hya.yangfankeji.com
+
+[U108] JS：随机整数
+来源：http://oxw.yonumen.top
+
+Math.floor(Math.random() * (max - min + 1)) + min
+来源：http://ect.wangdashe.top
+
+[U109] JS：数组分组
+来源：http://fzp.vqdsnc.cn
+
+Object.groupBy(arr, x => x.type)
+来源：http://ypz.cqqwz.cn
+
+[U110] JS：数组分块
+来源：http://cxg.kuanghao11.cn
+
+arr.reduce((acc, x, i) => (i % size ? acc : [...acc, arr.slice(i, i + size)]), [])
+来源：http://zlo.cdnleiting.top
+
+[U111] JS：对象转 Map
+来源：http://bey.daxiang520.top
+
+new Map(Object.entries(obj))
+来源：http://eum.ivvv.top
+
+[U112] JS：字符串补位
+来源：http://sev.quarkkingdee.top
+
+"7".padStart(3, "0")
+来源：http://qbf.zycfv.cn
+
+[U113] JS：正则替换全部
+来源：http://kpg.ctjpmb.com
+
+s.replaceAll("a", "b")
+来源：http://ihb.daria6918.cn
+
+[U114] JS：JSON 深比较
+来源：http://emy.yj20258888.top
+
+JSON.stringify(a) === JSON.stringify(b)
+来源：http://pxf.fzhhl.top
+
+[U115] JS：生成 UUID
+来源：http://jpm.ybcxt.top
+
+crypto.randomUUID()
+来源：http://zjg.pengpengdd.cyou
+
+[U116] JS：类型检查（JSDoc）
+来源：http://sas.nwbrower.top
+
+/** @param {string} name */ function f(name) {}
+来源：http://unr.chenzaomai.com
+
+[U117] JS：单元测试
+来源：http://jlk.cashguo.top
+
+npm i -D vitest;  npx vitest
+来源：http://aqm.zhongyouzk.top
+
+[U118] JS：开发服务器
+来源：http://ysd.jqgufenzy.top
+
+npm i -D vite;  npx vite
+来源：http://ete.xziqi.cn
+
+[U119] JS：生产构建
+来源：http://fxs.zhijiandao.cn
+
+npx vite build
+来源：http://xrb.zdbjq.cn
+
+[U120] JS：读取环境变量（Vite）
+来源：http://gwn.bjfxy.top
+
+import.meta.env.VITE_API_URL
+来源：http://jng.yj20258888.top
+
+================================================================================
+来源：http://uzf.9152youxi.cn
+
+统计汇总
+来源：http://wop.fehbvm.com
+
+================================================================================
+来源：http://axh.cdnleiting.top
+
+按语言统计（条）：
+来源：http://ckt.jqgufenzy.top
+
+Python ......... 252
+来源：http://gxl.tanke756.top
+
+PHP ............ 252
+来源：http://ube.wangshuangyany.cn
+
+JavaScript ..... 252
+来源：http://mhd.gogol.net.cn
+
+TypeScript ..... 212
+来源：http://uwr.gotoacloud.top
+
+Java ........... 212
+来源：http://qmb.0kj1m.cn
+
+Go ............. 212
+来源：http://ppq.iojbl.cn
+
+Ruby ........... 212
+来源：http://bfa.316326.xyz
+
+C# ............. 212
+来源：http://rjr.zhaomingkeji.xyz
+
+C .............. 30
+来源：http://jtr.yongpay.top
+
+C++ ............ 30
+来源：http://gfg.fanxiaobao.xyz
+
+SQL ............ 90
+来源：http://plc.yongpay.top
+
+Bash ........... 80
+来源：http://tvh.hfpthk.cn
+
+Kotlin ......... 15
+来源：http://xva.chenjidiqi.icu
+
+Swift .......... 15
+来源：http://pmo.ydjk.org.cn
+
+Lua ............ 10
+来源：http://vrx.tianlin.xyz
+
+Perl ........... 10
+来源：http://uqc.xuanzx.com
+
+Scala .......... 10
+来源：http://hge.zhongyouzk.top
+
+------------------------------------
+来源：http://zbw.jqgfzy.top
+
+合计 ........... 2106 条
+来源：http://irh.pycfn.com
+
+按章节统计：
+来源：http://smb.jlsjyb.cn
+
+A 基础语法与类型       26 个任务 × 8 语言 =  208
+来源：http://lps.yj20258.top
+
+B 流程控制             16 个任务 × 8 语言 =  128
+来源：http://jaz.zdqjudy.top
+
+C 函数与作用域         16 个任务 × 8 语言 =  128
+来源：http://xhl.tianlin.xyz
+
+D 数组 / 列表 / 集合   26 个任务 × 8 语言 =  208
+来源：http://bnx.hcnkem.com
+
+E 字符串处理           22 个任务 × 8 语言 =  176
+来源：http://nhe.pycfn.com
+
+F 文件与目录           12 个任务 × 8 语言 =   96
+来源：http://zjo.bbcook.cn
+
+G 面向对象             16 个任务 × 8 语言 =  128
+来源：http://kik.cqqwz.cn
+
+H 异常与错误处理       10 个任务 × 8 语言 =   80
+来源：http://xrk.guowangkeji.top
+
+I 正则表达式            8 个任务 × 8 语言 =   64
+来源：http://dsw.jianghu66.top
+
+J 日期与时间           10 个任务 × 8 语言 =   80
+来源：http://ejt.zhongyouzk.top
+
+K JSON 与序列化         8 个任务 × 8 语言 =   64
+来源：http://sxr.9152youxi.cn
+
+L 网络请求              8 个任务 × 8 语言 =   64
+来源：http://bwl.zhaomingkeji.xyz
+
+M 命令行 / 进程         8 个任务 × 8 语言 =   64
+来源：http://afk.tianlin.xyz
+
+N 数据结构与算法       12 个任务 × 8 语言 =   96
+来源：http://zte.jinqigfzy.top
+
+O 并发与异步            6 个任务 × 8 语言 =   48
+来源：http://ttd.pengpengdd.cyou
+
+P 常用工具函数          8 个任务 × 8 语言 =   64
+来源：http://gat.ydzc1.top
+
+Q SQL 专题                              90
+来源：http://zsp.zycfv.cn
+
+R Bash 专题                             80
+来源：http://olp.snrcjt.cn
+
+S C / C++ 专题                          60
+来源：http://eav.quarkkingdee.top
+
+T 其他语言补充                          60
+来源：http://cll.ydjk.org.cn
+
+U 高频实用片段                         120
+来源：http://jbe.ivvv.top
+
+------------------------------------
+来源：http://apg.shuidangran.top
+
+合计                                  2106 条
+来源：http://zlz.guowangkeji.top
+
+--------------------------------------------------------------------------------
+来源：http://rtl.jqgufenzy.top
+
+使用提醒
+来源：http://vym.guannengcc.top
+
+--------------------------------------------------------------------------------
+来源：http://waj.shangyingyoupin.top
+
+1. 示例追求"最小可用"，正式项目中请补齐导入、错误处理与边界判断。
+来源：http://kol.aibaodan.cn
+
+2. 涉及文件、网络、数据库的示例，注意资源释放与异常捕获。
+来源：http://ejg.jlsjyb.cn
+
+3. 语言版本差异较大（如 Python 3.10 的 match、Java 17 的 record/switch 箭头），
+来源：http://kvg.guowangkeji.top
+
+在旧版本上使用前请先确认语法支持情况。
+来源：http://nkw.kuanghao11.cn
+
+4. 标注"手写"的条目是因为该语言缺少对应内置能力，实际项目中可引入成熟库。
+来源：http://cgd.tian-w.cn
+
+—— 文件结束 ——
+来源：http://iaz.uphjek.com
+
+================================================================================
+来源：http://bvp.haohaochexian.top
+
+程序语言常见例子速查手册（2024 版）
+来源：http://vng.hesvh.cn
+
+Common Programming Examples Cheat Book
+来源：http://vwk.ppjwa.cn
+
+================================================================================
+来源：http://dvo.pengpengdd.cyou
+
+【收录内容】
+来源：http://ylk.yanxiufei.cn
+
+覆盖 12 种语言 / 语法与常见 API：
+来源：http://eyw.zhixingplan.top
+
+Python · PHP · JavaScript · TypeScript · Java · Go · Ruby · C#
+来源：http://yxv.xinyue.icu
+
+SQL · Bash · C · C++
+来源：http://gnt.birdmap.top
+
+按「任务」分组：每个任务下按语言各给出一条最小可用示例。
+来源：http://cwu.yfazqb.com
+
+【使用说明】
+来源：http://pft.hysaishi.cn
+
+1. 每个任务形如 "[编号] 任务名"，下面每行以语言标记开头：
+来源：http://whl.ydzc1.top
+
+Py:    Python        PHP:   PHP           JS:    JavaScript
+来源：http://ejk.ehwqpu.com
+
+TS:    TypeScript    Java:  Java          Go:    Go
+来源：http://zyq.zhongyouzk.top
+
+Ruby:  Ruby          C#:    C#            SQL:   SQL
+来源：http://ait.cashguo.top
+
+Bash:  Shell         C:     C             C++:   C++
+来源：http://aus.aizwys.cn
+
+2. 示例只展示核心写法，刻意省略 import / require / include / using 等样板代码。
+来源：http://lhg.ppjwa.cn
+
+需要完整可运行文件时，请自行补齐当前语言的导入语句。
+来源：http://pvd.fehbvm.com
+
+3. 语法基准：Python 3.10+ / PHP 8.1+ / ES2020+ / TypeScript 5 / Java 17 /
+来源：http://dbc.dashuyun.cn
+
+Go 1.21+ / Ruby 3.x / C# 10+ / C17 / C++17。
+来源：http://lpq.jlsjyb.cn
+
+4. 检索建议：用编辑器或浏览器 Ctrl+F 搜关键词，如 "排序" "读取文件" "正则"。
+来源：http://bno.haohaochexian.top
+
+5. 标记为 "// 无" 表示该语言没有对应的一等语法，需用替代写法（示例给出替代方案）。
+来源：http://vqk.cucudq.cn
+
+6. 符号 "⏎" 表示代码在此处换行（主要用于 Python 等强制缩进、无法压成一行的结构）。
+来源：http://eql.52xcode.cn
+
+【文件统计】
+来源：http://wzo.xziqi.cn
+
+语言示例共 2106 条，分布见本文末尾的「统计汇总」。
+来源：http://esz.xuetiantiany.cn
+
+--------------------------------------------------------------------------------
+来源：http://hal.fktsv.cn
+
+目  录
+来源：http://pwr.jinghuilouyu.cn
+
+--------------------------------------------------------------------------------
+来源：http://uhb.jianghu66.top
+
+A. 基础语法与类型              （第 1 节，26 个任务，208 条）
+来源：http://eeh.ywan-chungtsiang.top
+
+B. 流程控制                    （第 2 节，16 个任务，128 条）
+来源：http://ppt.yonumen.top
+
+C. 函数与作用域                （第 3 节，16 个任务，128 条）
+来源：http://mkg.shangyingyoupin.top
+
+D. 数组 / 列表 / 集合          （第 4 节，26 个任务，208 条）
+来源：http://ijw.yongpay.top
+
+E. 字符串处理                  （第 5 节，22 个任务，176 条）
+来源：http://gzz.sysykeji.top
+
+F. 文件与目录                  （第 6 节，12 个任务，96 条）
+来源：http://xdt.gotoacloud.top
+
+G. 面向对象                    （第 7 节，16 个任务，128 条）
+来源：http://zva.hcnkem.com
+
+H. 异常与错误处理              （第 8 节，10 个任务，80 条）
+来源：http://jgg.gaohongyu789.top
+
+I. 正则表达式                  （第 9 节，8 个任务，64 条）
+来源：http://xhx.shzxlz.cn
+
+J. 日期与时间                  （第 10 节，10 个任务，80 条）
+来源：http://pbz.cqqwz.cn
+
+K. JSON 与序列化               （第 11 节，8 个任务，64 条）
+来源：http://whu.cdnleiting.top
+
+L. 网络请求                    （第 12 节，8 个任务，64 条）
+来源：http://lqr.zycfv.cn
+
+M. 命令行 / 进程 / 环境        （第 13 节，8 个任务，64 条）
+来源：http://bqt.yanxiufei.cn
+
+N. 数据结构与算法              （第 14 节，12 个任务，96 条）
+来源：http://lkq.guannengcc.top
+
+O. 并发与异步                  （第 15 节，6 个任务，48 条）
+来源：http://mkl.zhongyouzk.top
+
+P. 常用工具函数                （第 16 节，8 个任务，64 条）
+来源：http://idt.gogol.net.cn
+
+Q. SQL 专题                    （第 17 节，90 条）
+来源：http://wxl.hnqzz.top
+
+R. Bash 专题                   （第 18 节，80 条）
+来源：http://mdj.zhixingplan.top
+
+S. C / C++ 专题                （第 19 节，60 条）
+来源：http://cie.cheryme.top
+
+T. 其他语言补充                （第 20 节，60 条：Kotlin / Swift / Lua / Perl / Scala）
+来源：http://lbg.yj20258.top
+
+U. 高频实用片段                （第 21 节，120 条：Python / PHP / JavaScript 各 40 条）
+来源：http://pmj.kuanghao11.cn
+
+================================================================================
+来源：http://cjz.feifeiyinyue.top
+
+A. 基础语法与类型
+来源：http://xmv.zhixingplan.top
+
+================================================================================
+来源：http://hyw.ivvv.top
+
+[A01] Hello World
+来源：http://euy.cdnleiting.top
+
+Py:   print("Hello, World!")
+来源：http://ezw.sxryk.cn
+
+PHP:  echo "Hello, World!";
+来源：http://qmz.shanyushiyangkeji.top
+
+JS:   console.log("Hello, World!");
+来源：http://jyn.yj20258888.top
+
+TS:   const msg: string = "Hello, World!"; console.log(msg);
+来源：http://bhk.9152youxi.cn
+
+Java: System.out.println("Hello, World!");
+来源：http://lbk.iojbl.cn
+
+Go:   fmt.Println("Hello, World!")
+来源：http://fqw.quarkkingdee.top
+
+Ruby: puts "Hello, World!"
+来源：http://fiy.jinqigufen.top
+
+C#:   Console.WriteLine("Hello, World!");
+来源：http://xxz.andypj.xyz
+
+
+<!-- 参考信息 -->
